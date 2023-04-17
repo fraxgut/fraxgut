@@ -109,3 +109,31 @@ Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de 
 - `btrfs subvolume create /mnt/gentoo/srv`
 - `chmod 1777 /mnt/gentoo/tmp`
 - `chmod 1777 /mnt/gentoo/var/tmp`
+
+Finalmente, creamos el archivo de intercambio "swapfile". Primero hay que definir de que tamaño será el archivo, pues este puede variar sistema a sistema dependiendo de la cantidad RAM. La regla de oro dice "2 x RAM". Sin embargo, se puede tomar la siguiente tabla como referencia:
+
+| Tamaño RAM | Tamaño del "swapfile" (Sin Hibernar) | Tamaño del "swapfile" (Con Hibernar) |
+|------------|--------------------------------------|--------------------------------------|
+| 256MB      | 256MB                                | 512MB                                |
+| 512MB      | 512MB                                | 1GB                                  |
+| 1GB        | 1GB                                  | 2GB                                  |
+| 2GB        | 1GB                                  | 3GB                                  |
+| 3GB        | 2GB                                  | 5GB                                  |
+| 4GB        | 2GB                                  | 6GB                                  |
+| 6GB        | 2GB                                  | 8GB                                  |
+| 8GB        | 3GB                                  | 11GB                                 |
+| 12GB       | 3GB                                  | 15GB                                 |
+| 16GB       | 4GB                                  | 20GB                                 |
+| 24GB       | 5GB                                  | 29GB                                 |
+| 32GB       | 6GB                                  | 38GB                                 |
+| 64GB       | 8GB                                  | 72GB                                 |
+| 128GB      | 11GB                                 | 139GB                                |
+
+Finalmente, una vez definido el tamaño se aplican los siguientes comandos (no olvidar cambiar "CANTIDADGB" por el número correspondiente):
+- `truncate -s 0 /mnt/gentoo/var/swap/swapfile`
+- `chattr +C /mnt/gentoo/var/swap/swapfile`
+- `btrfs property set /mnt/gentoo/var/swap/swapfile compression none`
+- `chmod 600 /mnt/gentoo/var/swap/swapfile`
+- `dd if=/dev/urandom of=/mnt/gentoo/var/swap/swapfile bs=1G count=CANTIDADGB status=progress`
+- `mkswap /var/swap/swapfile`
+- `swapon /var/swap/swapfile`
