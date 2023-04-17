@@ -59,28 +59,32 @@ Ahora existen dos alternativas, la primera es cerrar el documento y desactivar I
 - `iptables -P INPUT DROP`
 - `iptables -P OUTPUT DROP`
 
-Luego realiza la conexión a SSH en tu sistema anfitrión con `ssh root@ip`, reemplazando "ip" con tu dirección IP correspondiente.
+Arregla la fecha con `ntpd -q -g` y luego realiza la conexión a SSH en tu sistema anfitrión con `ssh root@ip`, reemplazando "ip" con tu dirección IP correspondiente.
 
 #### Configuración del disco
-Desde ahora en adelante la guía tomará un carácter más directo con los comandos y menos explicativo. 
-Primero se debe  descubrir el nombre del disco donde se instalará  `lsblk` o `fdisk -l`, y una vez que se posea su nombre (/dev/sda, por ejemplo), establecer una variable para el disco como `DRIVE=/dev/ndx` (con ndx el nombre del disco).
-Luego realizamos una limpieza total del disco mediante los siguientes comandos:
+A partir de ahora, la guía se centrará en proporcionar los comandos necesarios para realizar la configuración del disco. En primer lugar, es necesario descubrir el nombre del disco donde se instalará el sistema operativo utilizando el comando `lsblk` o `fdisk -l`. Una vez que se ha obtenido el nombre del disco (por ejemplo, /dev/sda), se debe establecer una variable para el disco como `DRIVE=/dev/ndx`, donde ndx es el nombre del disco.
+
+Se debe realizar una limpieza total del disco utilizando los siguientes comandos:
 - `cryptsetup open --type plain $DRIVE container --key-file /dev/urandom`
 - `dd if=/dev/urandom of=/dev/mapper/container status=progress bs=1M`
 - `cryptsetup close container`
 - `sgdisk --zap-all $DRIVE`
-Ahora realizamos la partición y la encriptación ("NOMBRE" será el nombre del sistema anfitrión y "xxx" el número del disco):
+
+A continuación, se debe proceder a crear la partición y encriptarla (donde "NOMBRE" es el nombre del sistema anfitrión y "xxx" es el número del disco):
 - `sgdisk --clear --new=1:0:+1GiB --typecode=1:ef00 --change-name=1:EFI --new=2:0:0 --typecode=2:8300 --change-name=2:NOMBRE_xxx_sys $DRIVE`
 - `cryptsetup --type luks2 --cipher aes-xts-plain64 --hash sha512 --iter-time 5000 --key-size 512 --pbkdf argon2id --use-random --verify-passphrase luksFormat /dev/disk/by-partlabel/NOMBRE_xxx_sys`
 - `cryptsetup open /dev/disk/by-partlabel/NOMBRE_xxx_sys root`
-Configuramos el sistema LVM:
+
+Posteriormente, se debe configurar el sistema LVM:
 - `pvcreate /dev/mapper/root`
 - `vgcreate 1984_vg1 /dev/mapper/root`
 - `lvcreate -l +100%FREE 1984_vg1 --name lv1`
-Procedemos con el formateo para tener un sistema de archivos:
-- `mkfs.fat -F 32 -n EFI /dev/disk/by-partlabel/EFI`
+
+Después de crear el sistema LVM, se procede a formatear el disco para tener un sistema de archivos:
+- `mkfs.vfat -F 32 -n EFI /dev/disk/by-partlabel/EFI`
 - `mkfs.btrfs --force --label BTRFS /dev/mapper/1984_vg1-lv1`
-Establecemos los subvolumenes de BTRFS junto con el montaje:
+
+Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de BTRFS junto con el montaje:
 - `o=defaults,x-mount.mkdir`
 - `o_btrfs=$o,commit=120,compress=lzo,rw,space_cache,ssd,noatime,nodev,nosuid`
 - `o_boot=defaults,nosuid,nodev,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro`
@@ -95,6 +99,7 @@ Establecemos los subvolumenes de BTRFS junto con el montaje:
 - `mkdir /mnt/gentoo/.snapshots`
 - `mkdir /mnt/gentoo/opt`
 - `mkdir /mnt/gentoo/srv`
+- `mkdir /mnt/gentoo/tmp`
 - `mkdir -p /mnt/gentoo/boot/efi`
 - `mkdir -p /mnt/gentoo/var/cache`
 - `mount -t btrfs -o $o_btrfs,subvol=@home LABEL=BTRFS /mnt/gentoo/home`
@@ -104,3 +109,5 @@ Establecemos los subvolumenes de BTRFS junto con el montaje:
 - `btrfs subvolume create /mnt/gentoo/var/swap`
 - `btrfs subvolume create /mnt/gentoo/opt`
 - `btrfs subvolume create /mnt/gentoo/srv`
+- `chmod 1777 /mnt/gentoo/tmp`
+- `chmod 1777 /mnt/gentoo/var/tmp`
