@@ -1,4 +1,4 @@
-## Guía para la instalación de Gentoo (BTRFS + LUKS)
+## Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM)
 *@fraxgut* - *VPL+ACR* - *Guia_InstalarGentoo.md*
 
 #### Descargar un sistema para la instalación
@@ -60,3 +60,47 @@ Ahora existen dos alternativas, la primera es cerrar el documento y desactivar I
 - `iptables -P OUTPUT DROP`
 
 Luego realiza la conexión a SSH en tu sistema anfitrión con `ssh root@ip`, reemplazando "ip" con tu dirección IP correspondiente.
+
+#### Configuración del disco
+Desde ahora en adelante la guía tomará un carácter más directo con los comandos y menos explicativo. 
+Primero se debe  descubrir el nombre del disco donde se instalará  `lsblk` o `fdisk -l`, y una vez que se posea su nombre (/dev/sda, por ejemplo), establecer una variable para el disco como `DRIVE=/dev/ndx` (con ndx el nombre del disco).
+Luego realizamos una limpieza total del disco mediante los siguientes comandos:
+- `cryptsetup open --type plain $DRIVE container --key-file /dev/urandom`
+- `dd if=/dev/urandom of=/dev/mapper/container status=progress bs=1M`
+- `cryptsetup close container`
+- `sgdisk --zap-all $DRIVE`
+Ahora realizamos la partición y la encriptación ("NOMBRE" será el nombre del sistema anfitrión y "xxx" el número del disco):
+- `sgdisk --clear --new=1:0:+1GiB --typecode=1:ef00 --change-name=1:EFI --new=2:0:0 --typecode=2:8300 --change-name=2:NOMBRE_xxx_sys $DRIVE`
+- `cryptsetup --type luks2 --cipher aes-xts-plain64 --hash sha512 --iter-time 5000 --key-size 512 --pbkdf argon2id --use-random --verify-passphrase luksFormat /dev/disk/by-partlabel/NOMBRE_xxx_sys`
+- `cryptsetup open /dev/disk/by-partlabel/NOMBRE_xxx_sys root`
+Configuramos el sistema LVM:
+- `pvcreate /dev/mapper/root`
+- `vgcreate 1984_vg1 /dev/mapper/root`
+- `lvcreate -l +100%FREE 1984_vg1 --name lv1`
+Procedemos con el formateo para tener un sistema de archivos:
+- `mkfs.fat -F 32 -n EFI /dev/disk/by-partlabel/EFI`
+- `mkfs.btrfs --force --label BTRFS /dev/mapper/1984_vg1-lv1`
+Establecemos los subvolumenes de BTRFS junto con el montaje:
+- `o=defaults,x-mount.mkdir`
+- `o_btrfs=$o,commit=120,compress=lzo,rw,space_cache,ssd,noatime,nodev,nosuid`
+- `o_boot=defaults,nosuid,nodev,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro`
+- `mkdir -p /mnt/gentoo`
+- `mount -t btrfs LABEL=BTRFS /mnt/gentoo`
+- `btrfs subvolume create /mnt/gentoo/@`
+- `btrfs subvolume create /mnt/gentoo/@home`
+- `btrfs subvolume create /mnt/gentoo/@snapshots`
+- `umount -R /mnt/gentoo`
+- `mount -t btrfs -o $o_btrfs,subvol=@ LABEL=BTRFS /mnt/gentoo`
+- `mkdir /mnt/gentoo/home`
+- `mkdir /mnt/gentoo/.snapshots`
+- `mkdir /mnt/gentoo/opt`
+- `mkdir /mnt/gentoo/srv`
+- `mkdir -p /mnt/gentoo/boot/efi`
+- `mkdir -p /mnt/gentoo/var/cache`
+- `mount -t btrfs -o $o_btrfs,subvol=@home LABEL=BTRFS /mnt/gentoo/home`
+- `mount -t btrfs -o $o_btrfs,subvol=@snapshots LABEL=BTRFS /mnt/gentoo/.snapshots`
+- `mount -t btrfs -o $o_boot /dev/disk/by-partlabel/EFI /mnt/gentoo/boot`
+- `btrfs subvolume create /mnt/gentoo/var/tmp`
+- `btrfs subvolume create /mnt/gentoo/var/swap`
+- `btrfs subvolume create /mnt/gentoo/opt`
+- `btrfs subvolume create /mnt/gentoo/srv`
