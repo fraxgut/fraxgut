@@ -1,9 +1,9 @@
-## Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM)
+## Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM)
 *@fraxgut* - *VPL+ACR* - *Guia_InstalarGentoo.md*
 
 #### Descargar un sistema para la instalación
-Para la instalación de Gentoo, no es necesario utilizar la imagen del sistema operativo, aunque es una opción válida que se puede descargar desde el sitio web oficial.
-Sin embargo, en este caso particular, se sugiere utilizar SystemRescueCD, ya que personalmente lo considero una herramienta confiable y efectiva para el proceso de instalación. Puedes descargarlo desde el siguiente enlace: https://www.system-rescue.org/Download/.
+Para la instalación de Gentoo, no es necesario utilizar la imagen oficial del sistema operativo, aunque es una opción válida que se puede descargar desde su portal.
+Personalmente, sugiero utilizar SystemRescueCD, ya que personalmente lo considero una herramienta confiable y efectiva para el proceso de instalación. Puedes descargarlo desde el siguiente enlace: https://www.system-rescue.org/Download/.
 Antes de iniciar el proceso de instalación de Gentoo, es importante decidir qué medio se utilizará para llevar a cabo la instalación del sistema operativo. Dependiendo de las circunstancias, el medio de instalación puede ser un dispositivo externo, como un CD/DVD o un USB, la imagen del sistema descargada directamente o la conexión remota mediante herramientas como SSH.
 
 #### Definir el medio de instalación
@@ -110,7 +110,7 @@ Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de 
 - `chmod 1777 /mnt/gentoo/tmp`
 - `chmod 1777 /mnt/gentoo/var/tmp`
 
-Finalmente, creamos el archivo de intercambio "swapfile". Primero hay que definir de que tamaño será el archivo, pues este puede variar sistema a sistema dependiendo de la cantidad RAM. La regla de oro dice "2 x RAM". Sin embargo, se puede tomar la siguiente tabla como referencia:
+Para crear el archivo de intercambio "swapfile", es necesario definir previamente el tamaño que se requiere, el cual puede variar según la cantidad de RAM instalada en el sistema. La regla general es utilizar "2 veces la cantidad de RAM", pero también puedes usar la siguiente tabla como referencia:
 
 | Tamaño RAM | Tamaño del "swapfile" (Sin Hibernar) | Tamaño del "swapfile" (Con Hibernar) |
 |------------|--------------------------------------|--------------------------------------|
@@ -129,11 +129,83 @@ Finalmente, creamos el archivo de intercambio "swapfile". Primero hay que defini
 | 64GB       | 8GB                                  | 72GB                                 |
 | 128GB      | 11GB                                 | 139GB                                |
 
-Finalmente, una vez definido el tamaño se aplican los siguientes comandos (no olvidar cambiar "CANTIDADGB" por el número correspondiente):
+Una vez definido el tamaño del archivo, se aplican los siguientes comandos (asegúrate de reemplazar "CANTIDADGB" con el número correspondiente):
 - `truncate -s 0 /mnt/gentoo/var/swap/swapfile`
 - `chattr +C /mnt/gentoo/var/swap/swapfile`
 - `btrfs property set /mnt/gentoo/var/swap/swapfile compression none`
 - `chmod 600 /mnt/gentoo/var/swap/swapfile`
-- `dd if=/dev/urandom of=/mnt/gentoo/var/swap/swapfile bs=1G count=CANTIDADGB status=progress`
-- `mkswap /var/swap/swapfile`
-- `swapon /var/swap/swapfile`
+
+Luego, ejecuta **uno** de los siguientes comandos:
+1. `dd if=/dev/urandom of=/mnt/gentoo/var/swap/swapfile bs=1G count=CANTIDADGB status=progress`
+2. `dd if=/dev/urandom of=/mnt/gentoo/var/swap/swapfile bs=1M count=CANTIDADMB status=progress`
+
+Para activar el archivo de intercambio, ejecuta los siguientes comandos:
+- `mkswap -L swapfile /mnt/gentoo/var/swap/swapfile`
+- `swapon /mnt/gentoo/var/swap/swapfile`
+- `cd /mnt/gentoo`
+
+#### Instalación de Gentoo
+##### Descarga de Gentoo
+En este paso se determina la versión de Gentoo que se instalará. Si bien esta guía está enfocada en la variante de Hardened MUSL, cualquier versión debería servir. Cabe mencionar que para esta variante, no se establece una zona horaria ni una localización, por lo que no se cubrirán en esta guía. Para comenzar, busca el enlace de la variante que deseas en esta página: https://www.gentoo.org/downloads/. Luego, reemplaza en "GENTOO_LINK" el enlace correspondiente.
+- `GENTOO_LINK=https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20230409T163155Z/stage3-amd64-musl-hardened-20230409T163155Z.tar.xz`
+- `wget $GENTOO_LINK`
+
+A continuación, asegurémonos de que el archivo sea seguro:
+- `wget -O - https://qa-reports.gentoo.org/output/service-keys.gpg | gpg --import`
+- `openssl dgst -r -sha512 archivo.tar.xz` *(reemplaza "archivo" con la variante de Gentoo descargada)*
+- `openssl dgst -r -whirlpool archivo.tar.xz`
+
+Luego, extrae el archivo:
+- `tar xpvf archivo.tar.xz --xattrs-include='*.*' --numeric-owner`
+- `rm archivo.tar.xz`
+
+Después, establece los repositorios y traslada la configuración DNS:
+- `mkdir --parents /mnt/gentoo/etc/portage/repos.conf`
+- `cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf`
+- `cp --dereference /etc/resolv.conf /mnt/gentoo/etc/`
+
+Monta algunos directorios adicionales:
+- `mount -t proc /proc /mnt/gentoo/proc`
+- `mount -R /sys /mnt/gentoo/sys`
+- `mount --make-rslave /mnt/gentoo/sys`
+- `mount -R /dev /mnt/gentoo/dev`
+- `mount --make-rslave /mnt/gentoo/dev`
+- `mount -B /run /mnt/gentoo/run`
+- `mount --make-slave /mnt/gentoo/run`
+- `test -L /dev/shm && rm /dev/shm && mkdir /dev/shm`
+- `mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm`
+- `chmod 1777 /dev/shm /run/shm` *(si /run/shm no existe, no es ningún problema)*
+
+Es importante revisar el archivo "make.conf" para configurar algunas variables básicas. Este archivo se puede modificar posteriormente según sea necesario. Por ahora, solo es necesario hacer algunos cambios básicos. Abre el archivo "make.conf" con vim:
+- `vim /mnt/gentoo/etc/portage/make.conf`
+
+```
+# DEFAULT VARIABLES
+# Compilation
+#COMMON_FLAGS="-O2 -pipe"
+#CFLAGS="${COMMON_FLAGS}"
+#CXXFLAGS="${COMMON_FLAGS}"
+#FCFLAGS="${COMMON_FLAGS}"
+#FFLAGS="${COMMON_FLAGS}"
+#CHOST="x86_64-gentoo-linux-musl"
+
+# Language
+#LC_MESSAGES=C
+
+# CUSTOM VARIABLES
+# Compilation
+NTHREADS="$(nproc)"
+COMMON_FLAGS="-march=native -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+CHOST="x86_64-gentoo-linux-musl"
+MAKEOPTS="-j${NTHREADS}"
+
+# Language
+LC_MESSAGES=C
+```
+
+##### Entrando a Gentoo
+
