@@ -222,18 +222,35 @@ chrt -p -i 0 ${PID}
 Finalmente, ejecutamos `chmod +x /usr/local/bin/io-priority` para poder ejecutar la secuencia.
 
 ##### Entrando a Gentoo
-Ahora se entrará al sistema operativo directamente, lo que se realice será dentro del mismo Gentoo. Ejecuta los siguientes comandos:
+Para entrar al sistema operativo Gentoo, ejecuta los siguientes comandos:
 - `chroot /mnt/gentoo /bin/bash` [x]
 - `source /etc/profile` [x]
 - `export PS1="(chroot) ${PS1}"` [x]
 
-Luego, hay que sincronizar los paquetes para el gestor "Portage" y establecer el repositorio de musl. Pero primero, hay que elegir un servidor y asegurarse de que el perfil correcto esté seleccionado:
+Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el repositorio de musl. Pero primero, debes elegir un servidor y asegurarte de que el perfil correcto esté seleccionado:
 - `emerge-webrsync`
 - `emerge --sync`
 - `eselect profile list`
 - `eselect profile set --force "x"` *(reemplaza x con el perfil de Hardened MUSL, o el de tu elección)*
-- `emerge app-eselect/eselect-repository dev-vcs/git app-portage/mirrorselect`
+- `emerge app-eselect/eselect-repository dev-vcs/git app-portage/mirrorselect app-portage/cpuid2cpuflags`
 - `eselect repository enable musl`
-- `mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf` *(selecciona los servidores que más te acomoden)*
+- `mirrorselect -i -o >> /etc/portage/make.conf` *(selecciona los servidores que más te acomoden)*
 - `emerge --sync`
 - `emerge -uvDN @world`
+- `emerge --depclean`
+- `emerge app-editors/neovim` *(opcional: se puede seguir usando nano)*
+
+En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. A continuación se presentan los comandos para este sistema en particular:
+- `echo "CPU_FLAGS_X86="$(cpuid2cpuflags)"" > /etc/portage/make.conf`
+- `vim /etc/portage/make.conf`
+```
+PLACEHOLDER
+```
+
+#### Enlaces de interés
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
+https://wiki.gentoo.org/wiki/Project:Musl
+https://leo3418.github.io/collections/gentoo-config-luks2-grub-systemd/packages.html
+https://github.com/InBetweenNames/gentooLTO
+https://github.com/clang-musl-overlay/clang-musl-overlay
+
