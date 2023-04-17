@@ -1,4 +1,4 @@
-## Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM)
+### Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM)
 *@fraxgut* - *VPL+ACR* - *Guia_InstalarGentoo.md*
 
 #### Descargar un sistema para la instalación
@@ -80,7 +80,7 @@ Posteriormente, se debe configurar el sistema LVM:
 - `vgcreate 1984_vg1 /dev/mapper/root`
 - `lvcreate -l +100%FREE NOMBRE_vg1 --name lv1`
 
-Después de crear el sistema LVM, se procede a formatear el disco para tener un sistema de archivos:
+Después de crear el sistema LVM, se debe formatear el disco para tener un sistema de archivos:
 - `mkfs.vfat -F 32 -n EFI /dev/disk/by-partlabel/EFI`
 - `mkfs.btrfs --force --label BTRFS /dev/mapper/NOMBRE_vg1-lv1`
 
@@ -194,7 +194,7 @@ Es importante revisar el archivo "make.conf" para configurar algunas variables b
 
 # CUSTOM VARIABLES
 # Compilation
-NTHREADS="$(nproc)"
+NTHREADS="${nproc}"
 COMMON_FLAGS="-march=native -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
@@ -208,4 +208,18 @@ LC_MESSAGES=C
 ```
 
 ##### Entrando a Gentoo
+Ahora se entrará al sistema operativo directamente, lo que se realice será dentro del mismo Gentoo. Ejecuta los siguientes comandos:
+- `chroot /mnt/gentoo /bin/bash`
+- `source /etc/profile`
+- `export PS1="(chroot) ${PS1}"`
 
+Luego, hay que sincronizar los paquetes para el gestor "Portage" y establecer el repositorio de musl. Pero primero, hay que elegir un servidor y asegurarse de que el perfil correcto esté seleccionado:
+- `emerge-webrsync`
+- `emerge --sync`
+- `emerge --ask app-eselect/eselect-repository dev-vcs/git app-portage/mirrorselect`
+- `eselect profile list`
+- `eselect profile set "x"` *(reemplaza x con el perfil de Hardened MUSL, o el de tu elección)*
+- `eselect repository enable musl`
+- `mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf` *(selecciona los servidores que más te acomoden)*
+- `emerge --sync`
+- `emerge -uvDN @world`
