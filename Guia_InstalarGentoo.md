@@ -15,8 +15,8 @@ Se recomienda utilizar un dispositivo USB en lugar de un CD/DVD. Las siguientes 
 2. Abre la terminal (salta al paso 6 si utilizas CD/DVD).
 3. Navega al directorio donde se encuentra la imagen (por ejemplo: cd Descargas).
 4. Identifica el dispositivo USB que utilizarás para grabar la imagen con el comando lsblk (por ejemplo: /dev/sdc).
-5. Formatea el dispositivo USB con los siguientes comandos:
-	- `sgdisk --zap-all`
+5. Formatea el dispositivo USB con los siguientes comandos (reemplazar "DISPOSITIVO"):
+	- `sgdisk --zap-all /dev/DISPOSITIVO`
 	- `sgdisk --clear --new 1:0:0 --typecode=2:8200 --change-name=1:LiveUSB /dev/DISPOSITIVO`
 	- `mkfs.fat -F 32 -n LiveUSB /dev/disk/by-partlabel/LiveUSB`
 6. Aplica los siguientes comandos:
@@ -62,7 +62,7 @@ Ahora existen dos alternativas, la primera es cerrar el documento y desactivar I
 Arregla la fecha con `ntpd -q -g` y luego realiza la conexión a SSH en tu sistema anfitrión con `ssh root@ip`, reemplazando "ip" con tu dirección IP correspondiente.
 
 #### Configuración del disco
-A partir de ahora, la guía se centrará en proporcionar los comandos necesarios para realizar la configuración del disco. En primer lugar, es necesario descubrir el nombre del disco donde se instalará el sistema operativo utilizando el comando `lsblk` o `fdisk -l`. Una vez que se ha obtenido el nombre del disco (por ejemplo, /dev/sda), se debe establecer una variable para el disco como `DRIVE=/dev/ndx`, donde ndx es el nombre del disco.
+A partir de ahora, la guía se centrará en proporcionar los comandos necesarios para realizar la configuración del disco. En primer lugar, es necesario descubrir el nombre del disco donde se instalará el sistema operativo utilizando el comando `lsblk` o `fdisk -l`. Una vez que se ha obtenido el nombre del disco (por ejemplo, /dev/sda), se debe establecer una variable para el disco como `DRIVE=/dev/ndx`, donde ndx es el nombre del disco. Si se interrumpe la instalación por algún motivo, se puede partir desde "[x]".
 
 Se debe realizar una limpieza total del disco utilizando los siguientes comandos:
 - `cryptsetup open --type plain $DRIVE container --key-file /dev/urandom`
@@ -73,7 +73,7 @@ Se debe realizar una limpieza total del disco utilizando los siguientes comandos
 A continuación, se debe proceder a crear la partición y encriptarla (donde "NOMBRE" es el nombre del sistema anfitrión y "xxx" es el número del disco):
 - `sgdisk --clear --new=1:0:+1GiB --typecode=1:ef00 --change-name=1:EFI --new=2:0:0 --typecode=2:8300 --change-name=2:NOMBRE_xxx_sys $DRIVE`
 - `cryptsetup --type luks2 --cipher aes-xts-plain64 --hash sha512 --iter-time 5000 --key-size 512 --pbkdf argon2id --use-random --verify-passphrase luksFormat /dev/disk/by-partlabel/NOMBRE_xxx_sys`
-- `cryptsetup open /dev/disk/by-partlabel/NOMBRE_xxx_sys root`
+- `cryptsetup open /dev/disk/by-partlabel/NOMBRE_xxx_sys root` [x]
 
 Posteriormente, se debe configurar el sistema LVM:
 - `pvcreate /dev/mapper/root`
@@ -85,24 +85,24 @@ Después de crear el sistema LVM, se debe formatear el disco para tener un siste
 - `mkfs.btrfs --force --label BTRFS /dev/mapper/NOMBRE_vg1-lv1`
 
 Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de BTRFS junto con el montaje:
-- `o=defaults,x-mount.mkdir`
-- `o_btrfs=$o,commit=120,compress=lzo,rw,space_cache,ssd,noatime,nodev,nosuid`
-- `o_boot=defaults,nosuid,nodev,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro`
-- `mkdir -p /mnt/gentoo`
+- `o=defaults,x-mount.mkdir` [x]
+- `o_btrfs=$o,commit=120,compress=lzo,rw,space_cache,ssd,noatime,nodev,nosuid` [x]
+- `o_boot=defaults,nosuid,nodev,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro` [x]
+- `mkdir -p /mnt/gentoo` [x]
 - `mount -t btrfs LABEL=BTRFS /mnt/gentoo`
 - `btrfs subvolume create /mnt/gentoo/@`
 - `btrfs subvolume create /mnt/gentoo/@home`
 - `btrfs subvolume create /mnt/gentoo/@snapshots`
 - `umount -R /mnt/gentoo`
-- `mount -t btrfs -o $o_btrfs,subvol=@ LABEL=BTRFS /mnt/gentoo`
+- `mount -t btrfs -o $o_btrfs,subvol=@ LABEL=BTRFS /mnt/gentoo`[x]
 - `mkdir /mnt/gentoo/home`
 - `mkdir /mnt/gentoo/.snapshots`
 - `mkdir /mnt/gentoo/tmp`
 - `mkdir -p /mnt/gentoo/boot/efi`
 - `mkdir -p /mnt/gentoo/var/cache`
-- `mount -t btrfs -o $o_btrfs,subvol=@home LABEL=BTRFS /mnt/gentoo/home`
-- `mount -t btrfs -o $o_btrfs,subvol=@snapshots LABEL=BTRFS /mnt/gentoo/.snapshots`
-- `mount -o $o_boot LABEL=EFI /mnt/gentoo/boot`
+- `mount -t btrfs -o $o_btrfs,subvol=@home LABEL=BTRFS /mnt/gentoo/home` [x]
+- `mount -t btrfs -o $o_btrfs,subvol=@snapshots LABEL=BTRFS /mnt/gentoo/.snapshots` [x]
+- `mount -o $o_boot LABEL=EFI /mnt/gentoo/boot` [x]
 - `btrfs subvolume create /mnt/gentoo/var/tmp`
 - `btrfs subvolume create /mnt/gentoo/var/swap`
 - `btrfs subvolume create /mnt/gentoo/opt`
@@ -141,8 +141,8 @@ Luego, ejecuta **uno** de los siguientes comandos:
 
 Para activar el archivo de intercambio, ejecuta los siguientes comandos:
 - `mkswap -L swapfile /mnt/gentoo/var/swap/swapfile`
-- `swapon /mnt/gentoo/var/swap/swapfile`
-- `cd /mnt/gentoo`
+- `swapon /mnt/gentoo/var/swap/swapfile` [x]
+- `cd /mnt/gentoo` [x]
 
 #### Instalación de Gentoo
 ##### Descarga de Gentoo
@@ -165,16 +165,16 @@ Después, establece los repositorios y traslada la configuración DNS:
 - `cp --dereference /etc/resolv.conf /mnt/gentoo/etc/`
 
 Monta algunos directorios adicionales:
-- `mount -t proc /proc /mnt/gentoo/proc`
-- `mount -R /sys /mnt/gentoo/sys`
-- `mount --make-rslave /mnt/gentoo/sys`
-- `mount -R /dev /mnt/gentoo/dev`
-- `mount --make-rslave /mnt/gentoo/dev`
-- `mount -B /run /mnt/gentoo/run`
-- `mount --make-slave /mnt/gentoo/run`
-- `test -L /dev/shm && rm /dev/shm && mkdir /dev/shm`
-- `mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm`
-- `chmod 1777 /dev/shm /run/shm` *(si /run/shm no existe, no es ningún problema)*
+- `mount -t proc /proc /mnt/gentoo/proc` [x]
+- `mount -R /sys /mnt/gentoo/sys` [x]
+- `mount --make-rslave /mnt/gentoo/sys` [x]
+- `mount -R /dev /mnt/gentoo/dev` [x]
+- `mount --make-rslave /mnt/gentoo/dev` [x]
+- `mount -B /run /mnt/gentoo/run` [x]
+- `mount --make-slave /mnt/gentoo/run` [x]
+- `test -L /dev/shm && rm /dev/shm && mkdir /dev/shm` [x]
+- `mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm` [x]
+- `chmod 1777 /dev/shm /run/shm` [x] *(si /run/shm no existe, no es ningún problema)*
 
 Es importante revisar el archivo "make.conf" para configurar algunas variables básicas. Este archivo se puede modificar posteriormente según sea necesario. Por ahora, solo es necesario hacer algunos cambios básicos. Abre el archivo "make.conf" con vim:
 - `vim /mnt/gentoo/etc/portage/make.conf`
@@ -202,23 +202,39 @@ FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 CHOST="x86_64-gentoo-linux-musl"
 MAKEOPTS="-j${NTHREADS}"
+EMERGE_DEFAULT_OPTS="--jobs ${NTHREADS} --load-average ${NTHREADS}"
+PORTAGE_SCHEDULING_POLICY="idle"
+PORTAGE_NICENESS="19"
+PORTAGE_IONICE_COMMAND="/usr/local/bin/io-priority \${PID}"
 
 # Language
 LC_MESSAGES=C
 ```
 
+Creamos "/usr/local/bin/io-priority":
+```
+#!/bin/bash
+PID=${1}
+
+# Could use `ionice -c 2 -n 7 -p ${PID}` to be slightly less aggressive.
+ionice -c 3 -p ${PID}
+chrt -p -i 0 ${PID}
+```
+
+Finalmente, ejecutamos `chmod +x /usr/local/bin/io-priority` para poder ejecutar la secuencia.
+
 ##### Entrando a Gentoo
 Ahora se entrará al sistema operativo directamente, lo que se realice será dentro del mismo Gentoo. Ejecuta los siguientes comandos:
-- `chroot /mnt/gentoo /bin/bash`
-- `source /etc/profile`
-- `export PS1="(chroot) ${PS1}"`
+- `chroot /mnt/gentoo /bin/bash` [x]
+- `source /etc/profile` [x]
+- `export PS1="(chroot) ${PS1}"` [x]
 
 Luego, hay que sincronizar los paquetes para el gestor "Portage" y establecer el repositorio de musl. Pero primero, hay que elegir un servidor y asegurarse de que el perfil correcto esté seleccionado:
 - `emerge-webrsync`
 - `emerge --sync`
-- `emerge --ask app-eselect/eselect-repository dev-vcs/git app-portage/mirrorselect`
 - `eselect profile list`
-- `eselect profile set "x"` *(reemplaza x con el perfil de Hardened MUSL, o el de tu elección)*
+- `eselect profile set --force "x"` *(reemplaza x con el perfil de Hardened MUSL, o el de tu elección)*
+- `emerge app-eselect/eselect-repository dev-vcs/git app-portage/mirrorselect`
 - `eselect repository enable musl`
 - `mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf` *(selecciona los servidores que más te acomoden)*
 - `emerge --sync`
