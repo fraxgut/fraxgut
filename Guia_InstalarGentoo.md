@@ -176,7 +176,7 @@ Monta algunos directorios adicionales:
 - `mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm` [x]
 - `chmod 1777 /dev/shm /run/shm` [x] *(si /run/shm no existe, no es ningún problema)*
 
-Es importante revisar el archivo "make.conf" para configurar algunas variables básicas. Este archivo se puede modificar posteriormente según sea necesario. Por ahora, solo es necesario hacer algunos cambios básicos. Abre el archivo "make.conf" con vim:
+Es importante revisar el archivo "make.conf" para configurar algunas variables básicas. Este archivo se puede modificar posteriormente según sea necesario. Por ahora, solo es necesario hacer algunos cambios básicos. Abre el archivo "make.conf" con vim (modifica la variable "NTHREADS" a gusto):
 - `vim /mnt/gentoo/etc/portage/make.conf`
 
 ```
@@ -211,12 +211,10 @@ PORTAGE_IONICE_COMMAND="/usr/local/bin/io-priority \${PID}"
 LC_MESSAGES=C
 ```
 
-Creamos "/usr/local/bin/io-priority":
+Hay que crear el archivo "io-priority" con `vim /mnt/gentoo/usr/local/bin/io-priority`:
 ```
 #!/bin/bash
 PID=${1}
-
-# Could use `ionice -c 2 -n 7 -p ${PID}` to be slightly less aggressive.
 ionice -c 3 -p ${PID}
 chrt -p -i 0 ${PID}
 ```
