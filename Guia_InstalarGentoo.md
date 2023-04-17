@@ -78,11 +78,11 @@ A continuación, se debe proceder a crear la partición y encriptarla (donde "NO
 Posteriormente, se debe configurar el sistema LVM:
 - `pvcreate /dev/mapper/root`
 - `vgcreate 1984_vg1 /dev/mapper/root`
-- `lvcreate -l +100%FREE 1984_vg1 --name lv1`
+- `lvcreate -l +100%FREE NOMBRE_vg1 --name lv1`
 
 Después de crear el sistema LVM, se procede a formatear el disco para tener un sistema de archivos:
 - `mkfs.vfat -F 32 -n EFI /dev/disk/by-partlabel/EFI`
-- `mkfs.btrfs --force --label BTRFS /dev/mapper/1984_vg1-lv1`
+- `mkfs.btrfs --force --label BTRFS /dev/mapper/NOMBRE_vg1-lv1`
 
 Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de BTRFS junto con el montaje:
 - `o=defaults,x-mount.mkdir`
@@ -97,14 +97,12 @@ Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de 
 - `mount -t btrfs -o $o_btrfs,subvol=@ LABEL=BTRFS /mnt/gentoo`
 - `mkdir /mnt/gentoo/home`
 - `mkdir /mnt/gentoo/.snapshots`
-- `mkdir /mnt/gentoo/opt`
-- `mkdir /mnt/gentoo/srv`
 - `mkdir /mnt/gentoo/tmp`
 - `mkdir -p /mnt/gentoo/boot/efi`
 - `mkdir -p /mnt/gentoo/var/cache`
 - `mount -t btrfs -o $o_btrfs,subvol=@home LABEL=BTRFS /mnt/gentoo/home`
 - `mount -t btrfs -o $o_btrfs,subvol=@snapshots LABEL=BTRFS /mnt/gentoo/.snapshots`
-- `mount -t btrfs -o $o_boot /dev/disk/by-partlabel/EFI /mnt/gentoo/boot`
+- `mount -o $o_boot LABEL=EFI /mnt/gentoo/boot`
 - `btrfs subvolume create /mnt/gentoo/var/tmp`
 - `btrfs subvolume create /mnt/gentoo/var/swap`
 - `btrfs subvolume create /mnt/gentoo/opt`
