@@ -298,6 +298,12 @@ GENTOO_MIRRORS="https://mirror.ufro.cl/gentoo/ http://mirror.ufro.cl/gentoo/ rsy
 # vim:ft=gentoo-make-conf
 ```
 
+por arreglar:
+`emerge sys-libs/timezone-data`
+`eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git`
+`emerge --sync` 
+`emerge sys-apps/musl-locales`
+
 #### Enlaces de interés
 https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
 https://wiki.gentoo.org/wiki/Project:Musl
