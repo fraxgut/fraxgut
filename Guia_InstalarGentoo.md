@@ -244,7 +244,58 @@ En este punto, se puede realizar una revisión del archivo /etc/portage/make.con
 - `echo 'CPU_FLAGS_X86="'$(cpuid2cpuflags | grep -o 'CPU_FLAGS_X86: .*' | paste -sd " " | sed 's/CPU_FLAGS_X86: //')'"' >> /etc/portage/make.conf`
 - `vim /etc/portage/make.conf`
 ```
-PLACEHOLDER
+# /etc/portage/make.conf
+
+# DEFAULT VARIABLES                                                 
+# Compilation:                                                      
+#COMMON_FLAGS="-O2 -pipe"                                           
+#CFLAGS="${COMMON_FLAGS}"                                           
+#CXXFLAGS="${COMMON_FLAGS}"                                         
+#FCFLAGS="${COMMON_FLAGS}"                                          
+#FFLAGS="${COMMON_FLAGS}"                                           
+#CHOST="x86_64-gentoo-linux-musl"                                   
+                                                                    
+# Language:                                                         
+# #LC_MESSAGES=C                                                    
+                                                                    
+# CUSTOM VARIABLES                                                  
+# Compilation:                                                      
+NTHREADS="1"                                                        
+COMMON_FLAGS="-march=native -O2 -pipe"                              
+CFLAGS="${COMMON_FLAGS}"                                            
+CXXFLAGS="${COMMON_FLAGS}"                                          
+FCFLAGS="${COMMON_FLAGS}"                                           
+FFLAGS="${COMMON_FLAGS}"                                            
+CHOST="x86_64-gentoo-linux-musl"                                    
+MAKEOPTS="-j${NTHREADS}"                                            
+EMERGE_DEFAULT_OPTS="--jobs ${NTHREADS} --load-average ${NTHREADS}" 
+#PORTAGE_SCHEDULING_POLICY="idle"                                  
+PORTAGE_NICENESS="19"                                              
+PORTAGE_IONICE_COMMAND="/usr/local/bin/io-priority \${PID}"        
+                                                                   
+# Language:                                                        
+L10N="es-CL es-ES es en-US en"                                     
+LC_MESSAGES=C                                                      
+LINGUAS="es-CL es-ES es en-US en"                                  
+                                                                   
+# USE Flags:                                                       
+DISABLE="-alsa -gnome -kde -pipewire -pulseaudio -qt -qt5 -qt6 -X" 
+ENABLE="btrfs lto lvm pgo srvdir"                                  
+USE="${DISABLE} ${ENABLE}"                                         
+                                                                   
+# Features:                                                        
+ACCEPT_LICENSE="-* @FREE"                                          
+CPU_FLAGS_X86="mmx mmxext sse sse2 sse3"                           
+FEATURES="buildpkg"                                                
+GRUB_PLATFORMS="efi-64"                                            
+INPUT_DEVICES=""                                                   
+MICROCODE_SIGNATURES="-S"                                          
+VIDEO_CARDS="qxl"
+
+# Mirrors:
+GENTOO_MIRRORS="https://mirror.ufro.cl/gentoo/ http://mirror.ufro.cl/gentoo/ rsync://gentoo.ufro.cl/gentoo/"
+
+# vim:ft=gentoo-make-conf
 ```
 
 #### Enlaces de interés
