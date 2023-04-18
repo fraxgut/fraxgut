@@ -238,7 +238,7 @@ Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el r
 - `emerge --sync`
 - `emerge -uvDN @world`
 - `emerge --depclean`
-- `emerge app-editors/neovim` *(opcional: se puede seguir usando nano)*
+- `emerge app-editors/neovim app-arch/lz4 dev-libs/lzo sys-fs/btrfs-progs sys-fs/cryptsetup sys-fs/lvm`
 
 En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. A continuación se presentan los comandos para este sistema en particular:
 - `echo 'CPU_FLAGS_X86="'$(cpuid2cpuflags | grep -o 'CPU_FLAGS_X86: .*' | paste -sd " " | sed 's/CPU_FLAGS_X86: //')'"' >> /etc/portage/make.conf`
@@ -280,7 +280,7 @@ LINGUAS="es-CL es-ES es en-US en"
                                                                    
 # USE Flags:                                                       
 DISABLE="-alsa -gnome -kde -pipewire -pulseaudio -qt -qt5 -qt6 -X" 
-ENABLE="btrfs lto lvm pgo srvdir"                                  
+ENABLE="btrfs lto lvm lz4 lzo pgo readline srvdir"                                  
 USE="${DISABLE} ${ENABLE}"                                         
                                                                    
 # Features:                                                        
@@ -298,11 +298,28 @@ GENTOO_MIRRORS="https://mirror.ufro.cl/gentoo/ http://mirror.ufro.cl/gentoo/ rsy
 # vim:ft=gentoo-make-conf
 ```
 
-por arreglar:
-`emerge sys-libs/timezone-data`
-`eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git`
-`emerge --sync` 
-`emerge sys-apps/musl-locales`
+Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para que funcione correctamente la localización y la zona horaria:
+- `eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git`
+- `emerge --sync`
+- `rm -rf /etc/portage/package.use /etc/portage/package.accept_keywords` 
+- `echo "sys-apps/musl-locales **" >> /etc/portage/package.accept_keywords`
+- `emerge sys-apps/musl-locales emerge sys-libs/timezone-data net-misc/ntp`
+- `TZ="Country/City"` *(reemplaza "Country/City" con los datos correspondientes)*
+- `export TZ="Country/City"` *(fija la variable TZ al horario que se desee `ls /usr/share/zoneinfo`)*
+- `echo TZ="Country/City" >> /etc/env.d/00musl` 
+- `locale -a` *(elige la localización preferida, en este caso español)*
+- `export MUSL_LOCPATH="/usr/share/i18n/locales/musl"`
+- `export CHARSET="es_ES.UTF-8"`
+- `export LANG="es_ES.UTF-8"`
+- `export LC_COLLATE="es_ES.UTF-8"`
+- `echo MUSL_LOCPATH="/usr/share/i18n/locales/musl" >> /etc/env.d/00musl`
+- `echo CHARSET="es_ES.UTF-8" >> /etc/env.d/00musl` 
+- `echo LANG="es_ES.UTF-8" >> /etc/env.d/00musl` 
+- `echo LC_COLLATE="es_ES.UTF-8" >> /etc/env.d/00musl` 
+- `eselect locale list`
+- `eselect locale set "x"` *(reemplaza x con el número correspondiente)*
+- `ntpd -dnq -p pool.ntp.org`
+- `hwclock -u -w`
 
 #### Enlaces de interés
 https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
@@ -310,4 +327,3 @@ https://wiki.gentoo.org/wiki/Project:Musl
 https://leo3418.github.io/collections/gentoo-config-luks2-grub-systemd/packages.html
 https://github.com/InBetweenNames/gentooLTO
 https://github.com/clang-musl-overlay/clang-musl-overlay
-
