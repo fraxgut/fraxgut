@@ -241,7 +241,7 @@ Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el r
 - `emerge app-editors/neovim` *(opcional: se puede seguir usando nano)*
 
 En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. A continuación se presentan los comandos para este sistema en particular:
-- `echo "CPU_FLAGS_X86="$(cpuid2cpuflags)"" > /etc/portage/make.conf`
+- `echo "CPU_FLAGS_X86="$(cpuid2cpuflags)"" >> /etc/portage/make.conf`
 - `vim /etc/portage/make.conf`
 ```
 PLACEHOLDER
