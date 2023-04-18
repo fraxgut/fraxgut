@@ -1,4 +1,4 @@
-### Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM)
+### Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM + Zen)
 *@fraxgut* - *VPL+ACR* - *Guia_InstalarGentoo.md*
 
 #### Descargar un sistema para la instalación
@@ -221,7 +221,7 @@ chrt -p -i 0 ${PID}
 
 Finalmente, ejecutamos `chmod +x /usr/local/bin/io-priority` para poder ejecutar la secuencia.
 
-##### Entrando a Gentoo
+##### Entrando a Gentoo y Configuración Básica
 Para entrar al sistema operativo Gentoo, ejecuta los siguientes comandos:
 - `chroot /mnt/gentoo /bin/bash` [x]
 - `source /etc/profile` [x]
@@ -238,9 +238,9 @@ Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el r
 - `emerge --sync`
 - `emerge -uvDN @world`
 - `emerge --depclean`
-- `emerge app-editors/neovim app-arch/lz4 dev-libs/lzo sys-fs/btrfs-progs sys-fs/cryptsetup sys-fs/lvm`
+- `emerge app-editors/neovim`
 
-En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. A continuación se presentan los comandos para este sistema en particular:
+En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. También puedes añadir `ACCEPT_KEYWORDS="~amd64"` si quieres tener un sistema actualizado. A continuación se presentan los comandos para este sistema en particular:
 - `echo 'CPU_FLAGS_X86="'$(cpuid2cpuflags | grep -o 'CPU_FLAGS_X86: .*' | paste -sd " " | sed 's/CPU_FLAGS_X86: //')'"' >> /etc/portage/make.conf`
 - `vim /etc/portage/make.conf`
 ```
@@ -280,10 +280,12 @@ LINGUAS="es-CL es-ES es en-US en"
                                                                    
 # USE Flags:                                                       
 DISABLE="-alsa -gnome -kde -pipewire -pulseaudio -qt -qt5 -qt6 -X" 
-ENABLE="btrfs lto lvm lz4 lzo pgo readline srvdir"                                  
+ENABLE="argon2 btrfs lto lvm lz4 lzo pgo readline savedconfig srvdir symlink"                                  
 USE="${DISABLE} ${ENABLE}"                                         
                                                                    
-# Features:                                                        
+# Features:
+ACCEPT_KEYWORDS="" # Gentoo Stable
+# ACCEPT_KEYWORDS="~amd64" # Gentoo Unstable
 ACCEPT_LICENSE="-* @FREE"                                          
 CPU_FLAGS_X86="mmx mmxext sse sse2 sse3"                           
 FEATURES="buildpkg"                                                
@@ -301,9 +303,9 @@ GENTOO_MIRRORS="https://mirror.ufro.cl/gentoo/ http://mirror.ufro.cl/gentoo/ rsy
 Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para que funcione correctamente la localización y la zona horaria:
 - `eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git`
 - `emerge --sync`
-- `rm -rf /etc/portage/package.use /etc/portage/package.accept_keywords` 
+- `rm -rf /etc/portage/package.use /etc/portage/package.accept_keywords /etc/portage/package.license /etc/portage/package.mask` 
 - `echo "sys-apps/musl-locales **" >> /etc/portage/package.accept_keywords`
-- `emerge sys-apps/musl-locales emerge sys-libs/timezone-data net-misc/ntp`
+- `emerge sys-apps/musl-locales emerge sys-libs/timezone-data net-misc/ntp  app-arch/lz4 dev-libs/lzo sys-fs/btrfs-progs sys-fs/cryptsetup sys-fs/lvm2`
 - `TZ="Country/City"` *(reemplaza "Country/City" con los datos correspondientes)*
 - `export TZ="Country/City"` *(fija la variable TZ al horario que se desee `ls /usr/share/zoneinfo`)*
 - `echo TZ="Country/City" >> /etc/env.d/00musl` 
@@ -320,6 +322,17 @@ Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para 
 - `eselect locale set "x"` *(reemplaza x con el número correspondiente)*
 - `ntpd -dnq -p pool.ntp.org`
 - `hwclock -u -w`
+- `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
+
+##### Compilando el Kernel
+Primero, se puede instalar el paquete "linux-firmware" u omitir si no se quiere trabajar con código no completamente libre. No obstante, para la mayoría de los sistemas, es recomendable instalarlo.
+- `echo "sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE" >> /etc/portage/package.license`
+- `emerge sys-kernel/linux-firmware`
+
+La compilación del Kernel es una de las áreas más complejas. Mi recomendación es darse un tiempo para aprender sobre los componentes de tu sistema, investigar a fondo lo más posible, tomar nota y activar o desactivar los componentes innecesarios. De todas formas, dejaré una recomendación sobre componentes que deberían ser posibles de activar/desactivar en la mayoría de los sistemas. Se utilizará zen-sources en esta guía.
+```
+LOL
+```
 
 #### Enlaces de interés
 https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
