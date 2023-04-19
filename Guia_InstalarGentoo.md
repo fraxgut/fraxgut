@@ -243,7 +243,7 @@ Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el r
 
 En este punto, se puede realizar una revisión del archivo /etc/portage/make.conf, si se desea. Es importante fijar las banderas USE necesarias para tu dispositivo. El documento que se mostrará a continuación es solo un ejemplo en particular y no debe ser imitado en su totalidad. Para obtener más información, visita la página https://wiki.gentoo.org/wiki//etc/portage/make.conf para posibles cambios. También puedes añadir `ACCEPT_KEYWORDS="~amd64"` si quieres tener un sistema actualizado. A continuación se presentan los comandos para este sistema en particular:
 - `echo 'CPU_FLAGS_X86="'$(cpuid2cpuflags | grep -o 'CPU_FLAGS_X86: .*' | paste -sd " " | sed 's/CPU_FLAGS_X86: //')'"' >> /etc/portage/make.conf`
-- `vim /etc/portage/make.conf`
+- `nvim /etc/portage/make.conf`
 
 ```
 # /etc/portage/make.conf
@@ -282,7 +282,7 @@ LINGUAS="es-CL es-ES es en-US en"
                                                                    
 # USE Flags:                                                       
 DISABLE="-alsa -gnome -kde -pipewire -pulseaudio -qt -qt5 -qt6 -X" 
-ENABLE="argon2 btrfs lto lvm lz4 lzo pgo readline savedconfig srvdir symlink"                                  
+ENABLE="argon2 btrfs device-mapper lto lvm lz4 lzo pgo readline savedconfig srvdir symlink"                                  
 USE="${DISABLE} ${ENABLE}"                                         
                                                                    
 # Features:
@@ -330,14 +330,156 @@ Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para 
 Primero, se puede instalar el paquete "linux-firmware" u omitir si no se quiere trabajar con código no completamente libre. No obstante, para la mayoría de los sistemas, es recomendable instalarlo.  Se utilizará el kernel "zen-sources" en esta guía.
 
 - `echo "sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE" >> /etc/portage/package.license`
-- `emerge sys-kernel/linux-firmware`
 - `echo "sys-kernel/zen-sources **" >> /etc/portage/package.accept_keywords`
+- `emerge sys-kernel/linux-firmware sys-kernel/zen-sources sys-kernel/dracut`
+- `eselect kernel list`
+- `eselect kernel set "x"` *(cambia x por el kernel que necesitas)*
+- `cd /usr/src/linux`
 
-La compilación del Kernel es una de las áreas más complejas. Mi recomendación es darse un tiempo para aprender sobre los componentes de tu sistema, investigar a fondo lo más posible, tomar nota y activar o desactivar los componentes innecesarios. De todas formas, dejaré una recomendación sobre componentes que deberían ser posibles de activar/desactivar en la mayoría de los sistemas.
+La compilación del Kernel es una de las áreas más complejas. Mi recomendación es darse un tiempo para aprender sobre los componentes de tu sistema, investigar a fondo lo más posible, tomar nota y activar o desactivar los componentes innecesarios. De todas formas, dejaré una recomendación sobre componentes que deberían ser posibles de activar/desactivar en la mayoría de los sistemas. Aségurate de saber cuantos nucleos tienes con `lscpu`
 
 ```
 General setup  --->
     [*] Initial RAM filesystem and RAM disk (initramfs/initrd) support
+	Timers subsystem  --->
+        <*> High Resolution Timer Support
+Processor type and features  --->
+  [*] Symmetric multi-processing support
+  [ ] Machine Check / overheating reporting 
+  [v] Intel MCE Features # selecciona si el procesador es Intel
+  [v] AMD MCE Features # selecciona si el procesador es AMD
+  Processor family (AMD-Opteron/Athlon64)  --->
+     (v) Opteron/Athlon64/Hammer/K8 # selecciona si es AMD
+     (v) Core 2/newer Xeon # selecciona si es Intel (nuevo)
+     (v) Intel Atom # selecciona si es Intel Atom
+  [*] EFI runtime service support 
+  [*] EFI stub support
+  [*] EFI mixed-mode support
+  (v) Maximum Number of CPUs # elige la cantidad de nucleos que tiene tu procesador
+  [*] Linux guest support --->
+  	  [*] Enable Paravirtualization code
+      [*] KVM Guest support (including kvmclock)
+Power management and ACPI options  --->
+    -*- CPU Frequency Scaling
+        Default CPUFreq governor (userspace) --->
+	    (*) userspace
+	-*- 'performance' governor
+	<*> 'powersave' governor
+	<*> 'userspace' governor for userspace frequency scaling
+	<*> 'ondemand' cpufreq policy governor
+	<*> 'conservative' cpufreq policy governor
+Binary Emulations --->
+   [*] IA32 Emulation
+[*] Virtualization --->
+	<*> Kernel-based Virtual Machine (KVM) support
+	<M>   KVM for Intel processors support
+	<M>   KVM for AMD processors support
+[*] Enable loadable module support
+	[*] Module unlodaing
+		[*] Forced module unloading
+-*- Enable the block layer --->
+		[*] Block layer bio throttling support
+		[*] Block layer debugging information in debugfs
+    	Partition Types --->
+    		[*] Advanced partition selection
+			[*] PC BIOS (MSDOS partition tables) support
+    		[*] EFI GUID Partition support
+		IO Schedulers --->
+			< > MQ deadline I/O scheduler
+			< > Kyber I/O scheduler
+			<*> BFQ I/O scheduler
+				[*] BFQ hierarchical scheduling support
+[*] Networking support  --->
+		Networking options  --->
+    		<*> The IPv6 protocol
+   			<*> 802.1d Ethernet Bridging
+Device Drivers --->
+	[*] Virtio drivers  --->
+        <*> PCI driver for virtio devices
+	[*] Staging drivers  --->
+    	[v] Enable modesetting on radeon by default # para GPU de AMD
+	Generic Driver Options --->
+    	[*] Maintain a devtmpfs filesystem to mount at /dev
+    	[*] Automount devtmpfs at /dev, after the kernel mounted the rootfs
+  	SCSI device support  ---> 
+    	<*> SCSI device support
+    	<*> SCSI disk support
+		<*> SCSI CDROM support
+		[*] Asynchronous SCSI scanning
+		<*> Virtual (SCSI) Host Bus Adapter
+		[*] SCSI low-level drivers  --->
+            [*] virtio-scsi support
+  	<*> Serial ATA and Parallel ATA drivers (libata)  --->
+    	[*] ATA ACPI Support
+    	[*] SATA Port Multiplier support
+    	<*> AHCI SATA support (ahci)
+    	[*] ATA BMDMA support
+    	[*] ATA SFF support (for legacy IDE and PATA)
+    	<*> Intel ESB, ICH, PIIX3, PIIX4 PATA/SATA support (ata_piix)
+  	NVME Support --->
+    	<*> NVM Express block device
+    	[*] NVMe multipath support
+    	[*] NVMe hardware monitoring
+    	<M> NVM Express over Fabrics FC host driver
+    	<M> NVM Express over Fabrics TCP host driver
+    	<M> NVMe Target support
+    	[*] NVMe Target Passthrough support
+    	<M> NVMe loopback device support
+    	<M> NVMe over Fabrics FC target driver
+    	< > NVMe over Fabrics FC Transport Loopback Test driver (NEW)
+    	<M> NVMe over Fabrics TCP target support
+  	Network device support --->
+    	<*> PPP (point-to-point protocol) support
+    	<*> PPP over Ethernet
+    	<*> PPP support for async serial ports
+    	<*> PPP support for sync tty ports
+		[*] Network core driver support
+    		<*> Universal TUN/TAP device driver support
+            <*> Virtio network driver
+  	HID support  --->
+    	-*- HID bus support
+    	<*> Generic HID driver
+    	[*] Battery level reporting for HID devices
+    	USB HID support  --->
+        	<*> USB HID transport layer
+  	[*] USB support  --->
+    	<*> xHCI HCD (USB 3.0) support
+    	<*> EHCI HCD (USB 2.0) support
+    	<*> OHCI HCD (USB 1.1) support
+  	<*> Unified support for USB4 and Thunderbolt  --->
+	Firmware Drivers  --->
+    	EFI (Extensible Firmware Interface) Support  --->
+        	<*> EFI Variable Support via sysfs
+ 	Graphics support  --->
+    	Frame buffer Devices  --->
+        	<*> Support for frame buffer devices  --->
+            	[*] EFI-based Framebuffer Support
+    	[ ] Bootup logo  --->
+    	<v> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support)  ---> # para GPU de Intel
+         	<v> Intel 8xx/9xx/G3x/G4x/HD Graphics # para GPU de Intel
+         	[v] Enable modesetting on intel by default # para GPU de Intel
+		<*> Intel 8xx/9xx/G3x/G4x/HD Graphics # para GPu de Intel
+        	[*] Enable Intel GVT-g graphics virtualization host support # para GPU de Intel
+        <*> Enable KVM host support Intel GVT-g graphics virtualization # para GPU de Intel
+	 	<v> Nouveau (nVidia) cards # para GPU de Nvidia
+		<*> Virtio GPU driver
+    [*] Multiple devices driver support (RAID and LVM) --->
+        <*> Device mapper support
+        <*> Crypt target support
+		<*> Thin provisoning support
+	<*> Mirror target
+	<*> Multipath target
+    	<*> I/O Path Selector based on the number of in-flight I/Os
+    	<*> I/O Path Selector based on the service time 
+    [*] Block Devices ---> 
+        <*> Loopback device support
+		(0) Number of loop devices to pre-create at init time
+		<*> Virtio block driver
+	<*> VFIO Non-Privileged userspace driver framework
+            <*> Mediated device driver framework
+	Character devices ---> 
+    <*> Hardware Random Number Generator Core support --->
+    	<*> VirtIO Random Number Generator support
 File systems  --->
     <*> Second extended fs support
     <*> The Extended 3 (ext3) filesystem
@@ -350,94 +492,7 @@ File systems  --->
   Pseudo Filesystems --->
     [*] /proc file system support
     [*] Tmpfs virtual memory file system support (former shm fs)
-Gentoo Linux --->
-  Generic Driver Options --->
-    [*] Gentoo Linux support
-    [*]   Linux dynamic and persistent device naming (userspace devfs) support
-    [*]   Select options required by Portage features
-        Support for init systems, system and service managers  --->
-          [*] OpenRC, runit and other script based systems and managers
-          [ ] systemd
-Device Drivers --->
-  Generic Driver Options --->
-    [*] Maintain a devtmpfs filesystem to mount at /dev
-    [*]   Automount devtmpfs at /dev, after the kernel mounted the rootfs
-  SCSI device support  ---> 
-    <*> SCSI device support
-    <*> SCSI disk support
-  <*> Serial ATA and Parallel ATA drivers (libata)  --->
-    [*] ATA ACPI Support
-    [*] SATA Port Multiplier support
-    <*> AHCI SATA support (ahci)
-    [*] ATA BMDMA support
-    [*] ATA SFF support (for legacy IDE and PATA)
-    <*> Intel ESB, ICH, PIIX3, PIIX4 PATA/SATA support (ata_piix)
-  NVME Support --->
-    <*> NVM Express block device
-    [*] NVMe multipath support
-    [*] NVMe hardware monitoring
-    <M> NVM Express over Fabrics FC host driver
-    <M> NVM Express over Fabrics TCP host driver
-    <M> NVMe Target support
-    [*]   NVMe Target Passthrough support
-    <M>   NVMe loopback device support
-    <M>   NVMe over Fabrics FC target driver
-    < >     NVMe over Fabrics FC Transport Loopback Test driver (NEW)
-    <M>   NVMe over Fabrics TCP target support
-  Network device support --->
-    <*> PPP (point-to-point protocol) support
-    <*> PPP over Ethernet
-    <*> PPP support for async serial ports
-    <*> PPP support for sync tty ports
-  HID support  --->
-    -*- HID bus support
-    <*>   Generic HID driver
-    [*]   Battery level reporting for HID devices
-    USB HID support  --->
-        <*> USB HID transport layer
-  [*] USB support  --->
-    <*>     xHCI HCD (USB 3.0) support
-    <*>     EHCI HCD (USB 2.0) support
-    <*>     OHCI HCD (USB 1.1) support
-  <*> Unified support for USB4 and Thunderbolt  --->
-  Firmware Drivers  --->
-    EFI (Extensible Firmware Interface) Support  --->
-        <*> EFI Variable Support via sysfs
-  Graphics support  --->
-    Frame buffer Devices  --->
-        <*> Support for frame buffer devices  --->
-            [*]   EFI-based Framebuffer Support
-[*] Multiple devices driver support (RAID and LVM) --->
-        <*> Device mapper support
-        <*> Crypt target support
-	<*> Mirror target
-	<*> Multipath target
-            <*> I/O Path Selector based on the number of in-flight I/Os
-            <*> I/O Path Selector based on the service time 
-[*] Block Devices ---> 
-        <*> Loopback device support 
-Processor type and features  --->
-  [*] Symmetric multi-processing support
-  [ ] Machine Check / overheating reporting 
-  [v]   Intel MCE Features # selecciona si el procesador es Intel
-  [v]   AMD MCE Features # selecciona si el procesador es AMD
-  Processor family (AMD-Opteron/Athlon64)  --->
-     (v) Opteron/Athlon64/Hammer/K8 # selecciona si es AMD
-     ( ) Intel P4 / older Netburst based Xeon
-     (v) Core 2/newer Xeon # selecciona si es Intel (nuevo)
-     (v) Intel Atom # selecciona si es Intel Atom
-     ( ) Generic-x86-64
-  [*] EFI runtime service support 
-  [*] EFI stub support
-  [*] EFI mixed-mode support
-Binary Emulations --->
-   [*] IA32 Emulation
--*- Enable the block layer --->
-   Partition Types --->
-      [*] Advanced partition selection
-      [*] EFI GUID Partition support
-[*] Enable loadable module support
-[*] Cryptographic API --->
+-*- Cryptographic API --->
     <*> XTS support
     <*> SHA224 and SHA256 digest algorithm
     <*> AES cipher algorithms
@@ -450,6 +505,14 @@ Binary Emulations --->
     <*> LRW support 
     <*> Serpent cipher algorithm 
     <*> Twofish cipher algorithm
+Gentoo Linux --->
+  Generic Driver Options --->
+    [*] Gentoo Linux support
+    [*] Linux dynamic and persistent device naming (userspace devfs) support
+    [*] Select options required by Portage features
+        Support for init systems, system and service managers  --->
+          [*] OpenRC, runit and other script based systems and managers
+          [ ] systemd
 ```
 
 #### Enlaces de interés
