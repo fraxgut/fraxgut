@@ -1,4 +1,4 @@
-### Guía para la instalación de Gentoo (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM + Zen)
+### Guía para la instalación de Gentoo GNU Linux AMD64 (Hardened MUSL) // (BTRFS + LUKS + LVM + LTO + LLVM + Zen)
 *@fraxgut* - *VPL+ACR* - *Guia_InstalarGentoo.md*
 
 #### Descargar un sistema para la instalación
@@ -109,6 +109,7 @@ Una vez que se ha formateado el disco, se deben establecer los subvolúmenes de 
 - `btrfs subvolume create /mnt/gentoo/srv`
 - `chmod 1777 /mnt/gentoo/tmp`
 - `chmod 1777 /mnt/gentoo/var/tmp`
+- `chmod 755 /mnt/gentoo/home`
 
 Para crear el archivo de intercambio "swapfile", es necesario definir previamente el tamaño que se requiere, el cual puede variar según la cantidad de RAM instalada en el sistema. La regla general es utilizar "2 veces la cantidad de RAM", pero también puedes usar la siguiente tabla como referencia:
 
@@ -227,6 +228,9 @@ Para entrar al sistema operativo Gentoo, ejecuta los siguientes comandos:
 - `chroot /mnt/gentoo /bin/bash` [x]
 - `source /etc/profile` [x]
 - `export PS1="(chroot) ${PS1}"` [x]
+- `o=defaults,x-mount.mkdir` [x]
+- `o_btrfs=$o,commit=120,compress=lzo,rw,space_cache,ssd,noatime,nodev,nosuid` [x]
+- `o_boot=$o,nosuid,nodev,noatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro` [x]
 
 Luego, debes sincronizar los paquetes para el gestor "Portage" y establecer el repositorio de musl. Pero primero, debes elegir un servidor y asegurarte de que el perfil correcto esté seleccionado:
 - `emerge-webrsync`
@@ -282,7 +286,7 @@ LINGUAS="es-CL es-ES es en-US en"
                                                                    
 # USE Flags:                                                       
 DISABLE="-alsa -gnome -kde -pipewire -pulseaudio -qt -qt5 -qt6 -X" 
-ENABLE="argon2 btrfs device-mapper lto lvm lz4 lzo pgo readline savedconfig srvdir symlink"                                  
+ENABLE="argon2 btrfs device-mapper lto lvm lz4 lzo mount networkmanager pgo readline savedconfig srvdir symlink zsh zsh-completions"                                  
 USE="${DISABLE} ${ENABLE}"                                         
                                                                    
 # Features:
@@ -303,11 +307,12 @@ GENTOO_MIRRORS="https://mirror.ufro.cl/gentoo/ http://mirror.ufro.cl/gentoo/ rsy
 ```
 
 Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para que funcione correctamente la localización y la zona horaria:
-- `eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git`
+- `eselect repository add 12101111-overlay git https://github.com/12101111/overlay.git` # repositorio que contiene musl-locales
+- `eselect repository enable guru` # repositorio GURU
 - `emerge --sync`
 - `rm -rf /etc/portage/package.use /etc/portage/package.accept_keywords /etc/portage/package.license /etc/portage/package.mask` 
 - `echo "sys-apps/musl-locales **" >> /etc/portage/package.accept_keywords`
-- `emerge sys-apps/musl-locales emerge sys-libs/timezone-data net-misc/ntp  app-arch/lz4 dev-libs/lzo sys-fs/btrfs-progs sys-fs/cryptsetup sys-fs/lvm2`
+- `emerge sys-apps/musl-locales emerge sys-libs/timezone-data net-misc/ntp  app-arch/lz4 dev-libs/lzo sys-fs/btrfs-progs sys-fs/cryptsetup sys-fs/lvm2 sys-apps/kbd sys-apps/sed sys-apps/grep app-crypt/gnupg dev-libs/openssl app-shells/zsh app-shells/zsh-completions app-shells/gentoo-zsh-completions`
 - `TZ="Country/City"` *(reemplaza "Country/City" con los datos correspondientes)*
 - `export TZ="Country/City"` *(fija la variable TZ al horario que se desee `ls /usr/share/zoneinfo`)*
 - `echo TZ="Country/City" >> /etc/env.d/00musl` 
@@ -327,7 +332,7 @@ Como se está trabajando en un sistema MUSL hay que hacer algunos arreglos para 
 - `env-update && source /etc/profile && export PS1="(chroot) ${PS1}"`
 
 ##### Compilando el Kernel
-Primero, se puede instalar el paquete "linux-firmware" u omitir si no se quiere trabajar con código no completamente libre. No obstante, para la mayoría de los sistemas, es recomendable instalarlo.  Se utilizará el kernel "zen-sources" en esta guía.
+Primero, se puede instalar el paquete "linux-firmware" o omitir si no se quiere trabajar con código que no sea completamente libre. No obstante, para la mayoría de los sistemas, es recomendable instalarlo. Se utilizará el kernel "zen-sources" en esta guía.
 
 - `echo "sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE" >> /etc/portage/package.license`
 - `echo "sys-kernel/zen-sources **" >> /etc/portage/package.accept_keywords`
@@ -336,29 +341,60 @@ Primero, se puede instalar el paquete "linux-firmware" u omitir si no se quiere 
 - `eselect kernel set "x"` *(cambia x por el kernel que necesitas)*
 - `cd /usr/src/linux`
 
-La compilación del Kernel es una de las áreas más complejas. Mi recomendación es darse un tiempo para aprender sobre los componentes de tu sistema, investigar a fondo lo más posible, tomar nota y activar o desactivar los componentes innecesarios. De todas formas, dejaré una recomendación sobre componentes que deberían ser posibles de activar/desactivar en la mayoría de los sistemas. Aségurate de saber cuantos nucleos tienes con `lscpu`
+La compilación del kernel es una de las áreas más complejas. Mi recomendación es darse un tiempo para aprender sobre los componentes de tu sistema, investigar a fondo lo más posible, tomar nota y activar o desactivar los componentes innecesarios. De todas formas, dejaré una recomendación sobre componentes que deberían ser posibles de activar/desactivar en la mayoría de los sistemas. Asegúrate de saber cuántos núcleos/hilos tienes con `lscpu`.
 
 ```
 General setup  --->
-    [*] Initial RAM filesystem and RAM disk (initramfs/initrd) support
-	Timers subsystem  --->
+    [ ] POSIX Message Queues
+    [ ] Enable process_vm_readv/writev syscalls
+    [ ] uselib syscall
+    [*] Auditing support
+    Kernel compression mode --->
+	(*) LZ4
+    Timers subsystem  --->
+	Timer tick handling --->
+	    (*) Periodic timer ticks (constant rate, no dynticks)
+	[ ] Old Idle dynticks config
         <*> High Resolution Timer Support
+    CPU/Task time and stats accounting --->
+	[ ] BSD Process Accounting
+	[ ] Export task/process statistics through netlink
+    (15) Kernel log buffer size
+    (15) CPU kernel log buffer size contribution
+    (13) Temporary per-CPU printk log buffer size
+    [*] Initial RAM filesystem and RAM disk (initramfs/initrd) support
+    Compiler optimization level --->
+    	(*) Optimize more for performance (-O3)
+		
 Processor type and features  --->
   [*] Symmetric multi-processing support
-  [ ] Machine Check / overheating reporting 
-  [v] Intel MCE Features # selecciona si el procesador es Intel
-  [v] AMD MCE Features # selecciona si el procesador es AMD
+  [ ] Enable MPS table
+  [ ] Support for extended (non-PC) x86 platforms
+  [*] Linux guest support --->
+      [*] Enable Paravirtualization code
+      [*] KVM Guest support (including kvmclock)
   Processor family (AMD-Opteron/Athlon64)  --->
-     (v) Opteron/Athlon64/Hammer/K8 # selecciona si es AMD
-     (v) Core 2/newer Xeon # selecciona si es Intel (nuevo)
-     (v) Intel Atom # selecciona si es Intel Atom
+     (v) AMD X # selecciona si es AMD (reemplaza X por tu modelo)
+     (v) Intel X # selecciona si es Intel (reemplaza X por tu modelo)
+     (v) Intel-Native optimizations autodetected by the compiler # selecciona si es Intel y no conoces tu modelo
+     (v) AMD-Native optimizations autodetected by the compiler # selecciona si es AMD/QEMU y no conoces tu modelo
+  (v) Maximum number of CPUs # Reemplaza con la cantidad de hilos que tiene tu CPU
+  [ ] Reroute for broken boot IRQs
+  [*] Machine Check / overheating reporting 
+  	[v] Intel MCE Features # selecciona si el procesador es Intel
+  	[v] AMD MCE Features # selecciona si el procesador es AMD
+  [ ] IOPERM and IOPL Emulation
+  [ ] Enable 5-level page tables support
+  [ ] Check for low memory corruption
+  [*] MTRR cleanup support
+  	(1) MTRR cleanup enable value
+	(1) MTRR cleanup spare reg value
   [*] EFI runtime service support 
   [*] EFI stub support
   [*] EFI mixed-mode support
-  (v) Maximum Number of CPUs # elige la cantidad de nucleos que tiene tu procesador
-  [*] Linux guest support --->
-  	  [*] Enable Paravirtualization code
-      [*] KVM Guest support (including kvmclock)
+  [ ] kexec system call
+  [ ] kernel crash dumps
+  
 Power management and ACPI options  --->
     -*- CPU Frequency Scaling
         Default CPUFreq governor (userspace) --->
@@ -368,15 +404,19 @@ Power management and ACPI options  --->
 	<*> 'userspace' governor for userspace frequency scaling
 	<*> 'ondemand' cpufreq policy governor
 	<*> 'conservative' cpufreq policy governor
+	
 Binary Emulations --->
    [*] IA32 Emulation
+   
 [*] Virtualization --->
 	<*> Kernel-based Virtual Machine (KVM) support
 	<M>   KVM for Intel processors support
 	<M>   KVM for AMD processors support
+	
 [*] Enable loadable module support
 	[*] Module unlodaing
 		[*] Forced module unloading
+		
 -*- Enable the block layer --->
 		[*] Block layer bio throttling support
 		[*] Block layer debugging information in debugfs
@@ -389,59 +429,65 @@ Binary Emulations --->
 			< > Kyber I/O scheduler
 			<*> BFQ I/O scheduler
 				[*] BFQ hierarchical scheduling support
-[*] Networking support  --->
+				
+[*] Networking support  ---> # cambia los ajustes según tu sistema
 		Networking options  --->
     		<*> The IPv6 protocol
-   			<*> 802.1d Ethernet Bridging
-Device Drivers --->
+			<*> Packet socket
+   		<*> 802.1d Ethernet Bridging
+ 	 	[*] Wireless  --->
+        	<*>   cfg80211 - wireless configuration API
+        	[*]     cfg80211 wireless extensions compatibility
+		
+Device Drivers ---> # cambia los ajustes según tu sistema
 	[*] Virtio drivers  --->
-        <*> PCI driver for virtio devices
+        	<*> PCI driver for virtio devices
 	[*] Staging drivers  --->
-    	[v] Enable modesetting on radeon by default # para GPU de AMD
+    [v] Enable modesetting on radeon by default # para GPU de AMD
 	Generic Driver Options --->
-    	[*] Maintain a devtmpfs filesystem to mount at /dev
-    	[*] Automount devtmpfs at /dev, after the kernel mounted the rootfs
+    		[*] Maintain a devtmpfs filesystem to mount at /dev
+    		[*] Automount devtmpfs at /dev, after the kernel mounted the rootfs
   	SCSI device support  ---> 
-    	<*> SCSI device support
-    	<*> SCSI disk support
+    		<*> SCSI device support
+    		<*> SCSI disk support
 		<*> SCSI CDROM support
 		[*] Asynchronous SCSI scanning
 		<*> Virtual (SCSI) Host Bus Adapter
 		[*] SCSI low-level drivers  --->
-            [*] virtio-scsi support
+            	[*] virtio-scsi support
   	<*> Serial ATA and Parallel ATA drivers (libata)  --->
-    	[*] ATA ACPI Support
-    	[*] SATA Port Multiplier support
-    	<*> AHCI SATA support (ahci)
-    	[*] ATA BMDMA support
-    	[*] ATA SFF support (for legacy IDE and PATA)
-    	<*> Intel ESB, ICH, PIIX3, PIIX4 PATA/SATA support (ata_piix)
+    		[*] ATA ACPI Support
+    		[*] SATA Port Multiplier support
+    		<*> AHCI SATA support (ahci)
+    		[*] ATA BMDMA support
+    		[*] ATA SFF support (for legacy IDE and PATA)
+    		<*> Intel ESB, ICH, PIIX3, PIIX4 PATA/SATA support (ata_piix)
   	NVME Support --->
-    	<*> NVM Express block device
-    	[*] NVMe multipath support
-    	[*] NVMe hardware monitoring
-    	<M> NVM Express over Fabrics FC host driver
-    	<M> NVM Express over Fabrics TCP host driver
-    	<M> NVMe Target support
-    	[*] NVMe Target Passthrough support
-    	<M> NVMe loopback device support
-    	<M> NVMe over Fabrics FC target driver
-    	< > NVMe over Fabrics FC Transport Loopback Test driver (NEW)
-    	<M> NVMe over Fabrics TCP target support
+    		<*> NVM Express block device
+    		[*] NVMe multipath support
+    		[*] NVMe hardware monitoring
+    		<M> NVM Express over Fabrics FC host driver
+    		<M> NVM Express over Fabrics TCP host driver
+    		<M> NVMe Target support
+    		[*] NVMe Target Passthrough support
+    		<M> NVMe loopback device support
+    		<M> NVMe over Fabrics FC target driver
+    		< > NVMe over Fabrics FC Transport Loopback Test driver (NEW)
+    		<M> NVMe over Fabrics TCP target support
   	Network device support --->
-    	<*> PPP (point-to-point protocol) support
-    	<*> PPP over Ethernet
-    	<*> PPP support for async serial ports
-    	<*> PPP support for sync tty ports
-		[*] Network core driver support
-    		<*> Universal TUN/TAP device driver support
+	    [*] Network core driver support
+    	    <*> PPP (point-to-point protocol) support
+    	    	<*> PPP over Ethernet
+    	    	<*> PPP support for async serial ports
+    	    	<*> PPP support for sync tty ports
+    	    <*> Universal TUN/TAP device driver support
             <*> Virtio network driver
   	HID support  --->
-    	-*- HID bus support
-    	<*> Generic HID driver
-    	[*] Battery level reporting for HID devices
-    	USB HID support  --->
-        	<*> USB HID transport layer
+    	    -*- HID bus support
+    	    <*> Generic HID driver
+    	    [*] Battery level reporting for HID devices
+    	    USB HID support  --->
+        	    <*> USB HID transport layer
   	[*] USB support  --->
     	<*> xHCI HCD (USB 3.0) support
     	<*> EHCI HCD (USB 2.0) support
@@ -480,6 +526,7 @@ Device Drivers --->
 	Character devices ---> 
     <*> Hardware Random Number Generator Core support --->
     	<*> VirtIO Random Number Generator support
+		
 File systems  --->
     <*> Second extended fs support
     <*> The Extended 3 (ext3) filesystem
@@ -492,19 +539,32 @@ File systems  --->
   Pseudo Filesystems --->
     [*] /proc file system support
     [*] Tmpfs virtual memory file system support (former shm fs)
+	
 -*- Cryptographic API --->
-    <*> XTS support
-    <*> SHA224 and SHA256 digest algorithm
-    <*> AES cipher algorithms
-    <*> AES cipher algorithms (x86_64)
-    <*> User-space interface for hash algorithms
-    <*> User-space interface for symmetric key cipher algorithms
-    <*> RIPEMD-160 digest algorithm 
-    <*> SHA384 and SHA512 digest algorithms 
-    <*> Whirlpool digest algorithms 
-    <*> LRW support 
-    <*> Serpent cipher algorithm 
-    <*> Twofish cipher algorithm
+    Block ciphers --->	
+		<*> AES cipher algorithms
+    	<*> AES cipher algorithms (x86_64)
+		<*> Serpent cipher algorithm 
+    	<*> Twofish cipher algorithm
+	Length-preserving ciphers and modes --->
+	    <*> LRW support 
+		<*> XTS support
+	Hashes, digests and MACs --->
+    	<*> RIPEMD-160 digest algorithm 
+		<*> SHA224 and SHA256 digest algorithm
+    	<*> SHA384 and SHA512 digest algorithms 
+    	<*> Whirlpool digest algorithms
+	Compression --->
+		<*> LZ4
+		<*> LZO
+	Userspace interface --->
+		<*> Hash algorithms
+    	<*> Symmetric key cipher algorithms
+
+Kernel hacking --->
+	RCU Debugging --->
+		(3) RCU CPU stall timeout in seconds
+
 Gentoo Linux --->
   Generic Driver Options --->
     [*] Gentoo Linux support
@@ -515,9 +575,88 @@ Gentoo Linux --->
           [ ] systemd
 ```
 
+Para modificar el archivo "dracut.conf", debes ejecutar el comando `nvim /etc/dracut.conf` y agregar o modificar las siguientes líneas:
+
+```
+# Include only modules from the system:
+hostonly="yes"
+
+# Compression:
+compress="lz4"
+
+# Add modules:
+add_dracutmodules+=" btrfs crypt crypt-gpg crypt-loop dm fs-lib i18n img-lib lvm resume selinux uefi-lib "
+```
+
+Luego, para compilar el kernel y crear la imagen de inicio, debes ejecutar los siguientes comandos:
+- `make -j$(nproc) && make -j$(nproc) modules_install && make -j$(nproc) install`
+- `dracut -H --kver $(cat /usr/src/linux/include/config/kernel.release)`
+                                                                                                                                 
+##### Configuración final (pre-reinicio)
+Ahora queda la configuración final, principalmente, montar los dispostivos al inicio, fijar el nombre para el sistema, colocar una contraseña segura y establecer una conexión a internet. Personalmente uso NetworkManager por su TUI, pero hay opciones más minimalistas si se desea (como netirfc). 
+
+Primero, hay que crear el archivo fstab:
+- `UEFI_UUID=$(blkid -s UUID -o value /dev/disk/by-partlabel/EFI)`
+- `LUKS_UUID=$(blkid -s UUID -o value /dev/disk/by-partlabel/NOMBRE_xxx_sys)`
+- `ROOT_UUID=$(blkid -s UUID -o value /dev/mapper/NOMBRE_vg1-lv1)`
+- `cat luks-$LUKS_UUID UUID=$LUKS_UUID none luks`
+- `cat <<EOF > /etc/fstab`:
+
+```
+/dev/mapper/luks-$LUKS_UUID	/	btrfs	$o_btrfs,subvol=@	0	1
+UUID=$UEFI_UUID	/boot	vfat	$o_boot	0	2
+/dev/mapper/luks-$LUKS_UUID	/home	btrfs	$o_btrfs,subvol=@home	0	2
+/dev/mapper/luks-$LUKS_UUID	/.snapshots	btrfs	$o_btrfs,subvol=@snapshots	0	2
+tmpfs	/tmp	tmpfs	defaults,nosuid,nodev	0	0
+/var/swap/swapfile none swap sw 0 0
+EOF
+```
+
+Luego, se debe fijar un nombre para el sistema y una contraseña segura:
+- `echo NOMBRE > /etc/hostname`
+- `chsh -s /bin/zsh && exec zsh` # Mi recomendación es ocupar zsh, y es seguro hacer el cambio en este punto
+- `passwd` # Recomiendo seguir las mismas directrices de antes
+- `useradd -m -G users,wheel,audio,cdrom,floppy,portage,usb,video -s /bin/zsh nombreusuario` # *(reemplaza nombreusuario con el usuario que ocuparás)*
+- `passwd nombreusuario`
+
+Hay que instalar NetworkManager mediante la fijación de la bandera USE "networkmanager" en `/etc/portage/make.conf` y ejecutar los siguientes comandos:
+- `echo "net-wireless/wpa_supplicant dbus" >> /etc/portage/package.use`
+- `emerge -uvDN @world`
+- `emerge net-misc/networkmanager`
+- `rc-update add NetworkManager default`
+
+También es un buen momento para instalar otros programas necesarios:
+- `echo "sys-process/snooze ~amd64" >> /etc/portage/package.accept_keywords`
+- `emerge app-admin/metalog sys-process/snooze sys-apps/mlocate net-misc/chrony`
+- `rc-update add metalog default && rc-update add sshd default && rc-update add chronyd default`
+
+Finalmente se debe configurar GRUB:
+- `echo "sys-fs/cryptsetup argon2 -static-libs" >> /etc/portage/package.use`
+- `mkdir -p /etc/portage/patches/sys-boot/grub-2.06`
+- `cd /etc/portage/patches/sys-boot/grub-2.06`
+- `curl -O https://leo3418.github.io/res/collections/gentoo-config-luks2-grub-systemd/4500-grub-2.06-runtime-memregion-alloc.patch`
+- `curl -O https://leo3418.github.io/res/collections/gentoo-config-luks2-grub-systemd/5000-grub-2.06-luks2-argon2-v4.patch`
+- `curl -O https://leo3418.github.io/res/collections/gentoo-config-luks2-grub-systemd/9500-grub-AUR-improved-luks2.patch && cd`
+- `mkdir -p /etc/portage/env/sys-boot`
+- `echo 'GRUB_AUTOGEN=1' >> /etc/portage/env/sys-boot/grub-2.06`
+- `emerge sys-boot/grub sys-boot/os-prober dev-libs/libisoburn sys-fs/mdadm`
+- `emerge -uvDN @world`
+- `mount -o remount,rw,nosuid,nodev,noexec --types efivarfs efivarfs /sys/firmware/efi/efivars` # Solo si es necesario
+- `grub-install --target=x86_64-efi --efi-directory=/boot --removable --recheck --bootloader-id="GRUB"`
+
+Hay que editar la configuración de GRUB (precisamente "GRUB_CMDLINE_LINUX_DEFAULT") mediante `nvim /etc/default/grub` *(puede añadirse splash para el uso de Plymouth)*:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet cryptdevice=UUID=$LUKS_UUID:luks-$LUKS_UUID root=/dev/mapper/luks-$LUKS_UUID # reemplaza $LUKS_UUID con el valor correspondiente
+```
+
+Con eso, se puede terminar la configuración y reiniciar el sistema para verificar que todo esté funcionando correctamente:
+- `grub-mkconfig -o /boot/grub/grub.cfg`
+- `reboot`
+
 #### Enlaces de interés
 https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
 https://wiki.gentoo.org/wiki/Project:Musl
-https://leo3418.github.io/collections/gentoo-config-luks2-grub-systemd/packages.html
+https://wiki.gentoo.org/wiki/Project:GURU
 https://github.com/InBetweenNames/gentooLTO
 https://github.com/clang-musl-overlay/clang-musl-overlay
