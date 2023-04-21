@@ -656,7 +656,11 @@ Con eso, se puede terminar la configuración y reiniciar el sistema para verific
 
 #### Enlaces de interés
 https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation
+
 https://wiki.gentoo.org/wiki/Project:Musl
+
 https://wiki.gentoo.org/wiki/Project:GURU
+
 https://github.com/InBetweenNames/gentooLTO
+
 https://github.com/clang-musl-overlay/clang-musl-overlay
