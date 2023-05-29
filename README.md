@@ -1,20 +1,108 @@
-# 💫 Sobre mí:
-¡Saludos! 👋 Soy Franco Gutiérrez (@fraxgut), actualmente estudiante de Ingeniería Civil en la Universidad de Chile, explorando también el universo de los negocios digitales. Mi encomienda principal se encuentra en la creación de portales cautivadores, donde despliego meticulosamente mi destreza en diversas plataformas y lenguajes de programación para tejer soluciones efectivas y encantadoras. Siempre avizorando nuevas oportunidades, me aventuro con determinación en el vasto océano del desarrollo de programas innovadores.
+<a href="https://komarev.com/ghpvc/?username=fraxgut">
+  <img align="right" src="https://komarev.com/ghpvc/?username=fraxgut&label=Visitors&color=62a98b&style=flat" alt="Visitantes" />
+</a>
 
 
-## 🌐 Redes:
-[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/fraxgut) [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/fraxgut) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/fraxgut) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/fraxgut) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/fraxgut) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@fraxgut) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/fraxgut) [![Quora](https://img.shields.io/badge/Quora-%23B92B27.svg?logo=Quora&logoColor=white)](https://quora.com/profile/fraxgut) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/fraxgut) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/fraxgut) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@fraxgut) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/fraxgut) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/fraxgut) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@fraxgut) [![Codepen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/fraxgut) 
+[![wakatime](https://wakatime.com/badge/user/e4c2fb49-f2df-4d39-b468-5b9212e5b6b9.svg)](https://wakatime.com/@e4c2fb49-f2df-4d39-b468-5b9212e5b6b9)
 
-# 💻 Tecnología:
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Codeberg](https://img.shields.io/badge/Codeberg-2185D0?style=for-the-badge&logo=Codeberg&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![ANDROID](https://img.shields.io/badge/android-%2320232a.svg?style=for-the-badge&logo=android&logoColor=%a4c639) ![GODOT](https://img.shields.io/badge/godot-3582bb.svg?style=for-the-badge&logo=godot-engine&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white) ![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=for-the-badge&logo=Adobe%20Audition&logoColor=white) ![Adobe Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Gimp Gnu Image Manipulation Program](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF) ![Inkscape](https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13) ![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+<!-- INTRO  -->
+<h3 align="center">
+        <samp>&gt; ¡Saludos!, soy
+                <b><a target="_blank" href="https://www.fraxgut.net">@fraxgut</a></b>
+        </samp>
+</h3>
 
-# 📊 Estadísticas:
-![](https://github-readme-stats.vercel.app/api?username=fraxgut&theme=gotham&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=fraxgut&theme=gotham&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=fraxgut&theme=gotham&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+
+<p align="center"> 
+  <samp>
+    <a href="https://www.startpage.com/search?q=Franco+Gutiérrez+@fraxgut">「 Búscame 」</a>
+    <br>
+    「 Estudio Ingeniería Civil. Me dedico a la programación y a los negocios digitales. Soy de 🇨🇱 <b>Chile</b>. 」
+    <br>
+    <br>
+  </samp>
+</p>
+
+<p align="center">
+ <a href="https://www.fraxgut.net" target="blank">
+  <img src="https://img.shields.io/badge/Portal-DC143C?style=for-the-badge&logo=medium&logoColor=white" alt="fraxgut" />
+ </a>
+ <a href="https://linkedin.com/in/fraxgut" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="fraxgut"/>
+ </a>
+ <a href="https://twitter.com/fraxgut" target="_blank">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+ </a>
+ <a href="https://instagram.com/fraxgut" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-fe4164?style=for-the-badge&logo=instagram&logoColor=white" alt="fraxgut" />
+ </a> 
+ <a href="https://facebook.com/fraxgut" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-20BEFF?&style=for-the-badge&logo=facebook&logoColor=white" alt="fraxgut"  />
+  </a> 
+</p>
+<br />
+
+<!-- SOBRE MI -->
+ # Sobre mi
+ 
+<p>
+ <img align="right" width="350" src="/assets/programmer.gif" alt="Coding gif" />
+  
+ 🖥️ &emsp; Me dedico principalmente a temas digitales. <br/><br/>
+ 💼 &emsp; Actualmente manejo diversos negocios.<br/><br/>
+ 📧 &emsp; Contáctame por acá: [contacto@fraxgut.net](mailto:contacto@fraxgut.net)<br/><br/>
+ 💬 &emsp; Pregúntame lo que quieras [aquí](https://github.com/fraxgut/fraxgut/issues).
+
+</p>
+
+<br/>
+<br/>
+<br/>
+
+## Idiomas
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
+![Nodejs](https://img.shields.io/badge/Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)
+![MariaDB](https://img.shields.io/badge/MariaDB-4EA94B?style=for-the-badge&logo=mariadb&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
+<br/>
+
+## Mis proyectos
+[![@fraxgut](https://github-readme-stats.vercel.app/api/pin/?username=fraxgut&repo=fraxgut&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/alsiam/fraxgut)
+[![Guía Gentoo](https://github-readme-stats.vercel.app/api/pin/?username=fraxgut&repo=guia-instalacion-gentoo&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/fraxgut/guia-instalacion-gentoo)
+
+<p align="left">
+  <a href="https://github.com/fraxgut?tab=repositories" target="_blank"><img alt="Todos" title="Todos" src="https://img.shields.io/badge/-Todos-2962FF?style=for-the-badge&logo=koding&logoColor=white"/></a>
+</p>
+
+<br/>
+<hr/>
+<br/>
+
+<p align="center">
+  <a href="https://github.com/fraxgut">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=fraxgut&theme=radical&border=7F3FBF&background=0D1117" alt="Estadísticas GitHub @fraxgut"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/fraxgut">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=fraxgut&theme=radical" alt="Contribuciones GitHub @fraxgut"/>
+  </a>
+</p>
+
+<a> 
+  <a href="https://github.com/fraxgut"><img alt="Estadísticas" src="https://denvercoder1-github-readme-stats.vercel.app/api?username=fraxgut&show_icons=true&count_private=true&theme=react&border_color=7F3FBF&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
+  <a href="https://github.com/fraxgut"><img alt="Idiomas" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=fraxgut&langs_count=8&layout=compact&theme=react&border_color=7F3FBF&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
+  <br/>
+</a>
+
+
+[![Gráfico](https://github-readme-activity-graph.vercel.app/graph?username=fraxgut&bg_color=000000&color=5cbc97&line=48b184&point=403d3d&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
 
 ## 💰 Donaciones
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/fraxgut) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/fraxgut) [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/fraxgut) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/fraxgut) 
-
-  
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
