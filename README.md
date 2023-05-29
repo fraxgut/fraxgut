@@ -71,7 +71,7 @@
 <br/>
 
 ## Mis proyectos
-[![@fraxgut](https://github-readme-stats.vercel.app/api/pin/?username=fraxgut&repo=fraxgut&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/alsiam/fraxgut)
+[![@fraxgut](https://github-readme-stats.vercel.app/api/pin/?username=fraxgut&repo=fraxgut&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/fraxgut/fraxgut)
 [![Guía Gentoo](https://github-readme-stats.vercel.app/api/pin/?username=fraxgut&repo=guia-instalacion-gentoo&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/fraxgut/guia-instalacion-gentoo)
 
 <p align="left">
