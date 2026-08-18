@@ -57,7 +57,8 @@ The remaining logotypes in `assets/logos/` and the language markers in
 `assets/flags/` come from Wikimedia Commons, from the projects
 themselves, or from the institutions themselves. Each keeps the terms
 of its source; among them the Free Software Foundation logo and the
-Creative Commons marks are in the public domain.
+Creative Commons marks are in the public domain. Where a mark had to
+read against a dark canton, only its colour was changed.
 
 The bitmap letterforms in the stamps come from the Terminus font by
 Dimitar Zhekov,
