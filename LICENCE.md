@@ -68,6 +68,8 @@ source, with attribution as each licence requires:
 | `assets/logos/tux.png` | Tux, by Larry Ewing with The GIMP | Attribution |
 | `assets/logos/aquila.png` and `assets/flags/spqr.png` | Flag of the Roman Empire with Eagle, by OttavianoUrsu | CC BY-SA 4.0 |
 | `assets/logos/gunelve.png` | Wüñellfe from the Mapuche flag, by Ñancu | CC BY-SA 3.0 |
+| `assets/logos/futbol.png` | Soccerball | CC0 |
+| `assets/logos/santiago.png` | Cross of Saint James | CC BY-SA 3.0 |
 | `assets/logos/openbsd.png` | Puffy, by Ty Semaka | CC BY 1.0 |
 
 The remaining logotypes in `assets/logos/` come from Wikimedia Commons,
@@ -98,6 +100,18 @@ the Gentoo Name and Logo Usage Guidelines:
 The alchemical sign of phosphorus in `assets/logos/phosphorus.svg` is a
 historical form that carries no rights. The drawing of it is original
 work under the licence above.
+
+## Club and product marks
+
+`assets/logos/lazio.png` carries the badge of S.S. Lazio, which belongs
+to the club. `assets/stamps/minecraft.gif`, `assets/stamps/dragonball.gif`
+and `assets/stamps/laroja.gif` carry marks drawn for this repository:
+a creeper face on its eight by eight grid, a four-star orb, and a red
+shield with the lone star. They are original drawings, and they stand
+for Minecraft, for Dragon Ball, and for the Chilean national team, whose
+names and trade marks belong to Mojang, to Shueisha and Toei, and to the
+ANFP. This licence grants no rights in any of them, and the stamps claim
+no endorsement: they are the links of someone who follows them.
 
 ## Names and marks
 

@@ -34,8 +34,8 @@ from the shell, primarily with **Neovim**.
 
 ## Currently
 
-My studies at the University of Chile are my primary focus, alongside
-personal software projects and my work at
+My studies at the [**University of Chile**](https://uchile.cl/) are my
+primary focus, alongside personal software projects and my work at
 [**Venturas**](https://venturas.cl/).
 
 ## University
@@ -116,7 +116,9 @@ You can support my public work through
 
 <a href="https://institutonacional.cl/"><img src="assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.gnu.org/"><img src="assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a>
 
-<a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
+<a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.minecraft.net/"><img src="assets/stamps/minecraft.gif" width="99" height="56" alt="Minecraft"></a> <a href="https://www.dragonball-official.com/"><img src="assets/stamps/dragonball.gif" width="99" height="56" alt="Dragon Ball Z"></a>
+
+<a href="https://www.thelatinlibrary.com/"><img src="assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.santiagocapital.cl/"><img src="assets/stamps/santiago.gif" width="99" height="56" alt="Santiago"></a> <a href="https://www.marcachile.cl/"><img src="assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a> <a href="https://www.anfpchile.cl/"><img src="assets/stamps/laroja.gif" width="99" height="56" alt="La Roja"></a> <a href="https://www.sslazio.it/"><img src="assets/stamps/lazio.gif" width="99" height="56" alt="S.S. Lazio"></a> <a href="https://www.fifa.com/"><img src="assets/stamps/futbol.gif" width="99" height="56" alt="Football"></a>
 
 </div>
 
