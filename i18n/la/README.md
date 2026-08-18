@@ -7,7 +7,7 @@ Profile page in Latin
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
+<img src="../../assets/flags/spqr.svg" alt="" height="18"> **Latine** · <img src="../../assets/flags/burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.svg" alt="" height="18"> **[English](../en/README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -95,16 +95,16 @@ Ubi opera mea mercatoria servo.<br>
 
 ## Epistulae
 
-- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="20" alt="Epistula: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
-- <a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clavis GPG 464F905B27A2BA82"></a>
+<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="20" alt="Epistula: franco.gutierrez.1@ug.uchile.cl"></a><br>
+<a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a><br>
+<a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a><br>
+<a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clavis GPG 464F905B27A2BA82"></a>
 
 Epistula optima via est ad me contingendum. Respondeo cum primum possum.
 
 ## Subsidium
 
-- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+<a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
 
 Opus meum publicum per [**Liberapay**](https://liberapay.com/fraxgut/)
 vel per nummos cryptographicos sustinere potes.

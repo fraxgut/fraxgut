@@ -7,7 +7,7 @@ Profile page in Spanish
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.png" alt="" height="14"> **[Latine](../la/README.md)** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **Español** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
+<img src="../../assets/flags/spqr.svg" alt="" height="18"> **[Latine](../la/README.md)** · <img src="../../assets/flags/burgundy.svg" alt="" height="18"> **Español** · <img src="../../assets/flags/england.svg" alt="" height="18"> **[English](../en/README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -95,16 +95,16 @@ Donde mantengo mis proyectos comerciales.<br>
 
 ## Contacto
 
-- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-es.svg" height="20" alt="Correo: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
-- <a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clave GPG 464F905B27A2BA82"></a>
+<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-es.svg" height="20" alt="Correo: franco.gutierrez.1@ug.uchile.cl"></a><br>
+<a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a><br>
+<a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a><br>
+<a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clave GPG 464F905B27A2BA82"></a>
 
 El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 ## Apoyo
 
-- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+<a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
 
 Puede apoyar mi trabajo público a través de
 [**Liberapay**](https://liberapay.com/fraxgut/) o con criptomonedas.

@@ -7,7 +7,7 @@ Profile page in English
 
 <div align="center">
 
-<img src="assets/flags/spqr.png" alt="" height="14"> **[Latine](i18n/la/README.md)** · <img src="assets/flags/burgundy.png" alt="" height="14"> **[Español](i18n/es/README.md)** · <img src="assets/flags/england.png" alt="" height="14"> **English**
+<img src="assets/flags/spqr.svg" alt="" height="18"> **[Latine](i18n/la/README.md)** · <img src="assets/flags/burgundy.svg" alt="" height="18"> **[Español](i18n/es/README.md)** · <img src="assets/flags/england.svg" alt="" height="18"> **English**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -96,16 +96,16 @@ Where I keep my commercial projects.<br>
 
 ## Contact
 
-- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="assets/badges/email.svg" height="20" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
-- <a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
-- <a href="https://github.com/fraxgut.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key 464F905B27A2BA82"></a>
+<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="assets/badges/email.svg" height="20" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a><br>
+<a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a><br>
+<a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="20" alt="X: @fraxgut"></a><br>
+<a href="https://github.com/fraxgut.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key 464F905B27A2BA82"></a>
 
 Email is the best way to reach me. I answer as soon as I can.
 
 ## Support
 
-- <a href="https://liberapay.com/fraxgut/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+<a href="https://liberapay.com/fraxgut/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
 
 You can support my public work through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
