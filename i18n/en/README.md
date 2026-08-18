@@ -91,13 +91,13 @@ projects.
 
 ## Contact
 
-- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email.svg" height="20" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
-- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
+- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email.svg" height="28" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
+- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
+- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
 
 ## Support
 
-- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="28" alt="Liberapay: fraxgut"></a>
 
 You can support my public work through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
@@ -108,6 +108,6 @@ You can support my public work through
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITORS&color=47d813&style=flat-square" alt="Visitor count"> <a href="../../LICENCE.md"><img src="../../assets/badges/licence.svg" height="20" alt="Licence: CC BY-SA 4.0 or later"></a>
+<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITORS&color=47d813&style=for-the-badge" height="31" alt="Visitor count"> <a href="../../LICENCE.md"><img src="../../assets/badges/cc-by-sa.png" height="31" alt="Licence: CC BY-SA 4.0 or later"></a>
 
 </div>

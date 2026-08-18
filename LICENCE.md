@@ -38,7 +38,7 @@ licence above:
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
 | `assets/stamps/*.gif`              | The stamp set                      |
-| `assets/badges/*.svg`              | The flat badges                    |
+| `assets/badges/*.svg`              | The social badges                  |
 | `assets/logos/shell.png`           | The chevron prompt mark            |
 | `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |
 
@@ -73,7 +73,8 @@ source, with attribution as each licence requires:
 The remaining logotypes in `assets/logos/` come from Wikimedia Commons,
 from the projects themselves, or from the institutions themselves.
 Among them the Free Software Foundation logo and the Creative Commons
-marks are in the public domain. Where a mark had to read against a dark
+marks, including `assets/badges/cc-by-sa.png`, are in the public
+domain. Where a mark had to read against a dark
 canton, only its colour was changed; where a mark was cropped to its
 central figure, nothing else was altered.
 
