@@ -93,25 +93,13 @@ Where I keep my commercial projects.<br>
 </tr>
 </table>
 
-## Links
-
-<div align="center">
-
-<a href="https://institutonacional.cl/"><img src="assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a>
-
-<a href="https://www.gnu.org/"><img src="assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a>
-
-<a href="https://www.fsf.org/"><img src="assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
-
-</div>
-
 ## Contact
 
 - <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="assets/badges/email.svg" height="28" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
 - <a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
 - <a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
 
-Email reaches me first. Write in **English**, **Spanish** or **Latin**.
+I'll answer whenever I can.
 
 ## Support
 
@@ -121,6 +109,16 @@ You can support my public work through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
 
 **Monero (XMR) preferred.** Write to me for an address.
+
+---
+
+<div align="center">
+
+<a href="https://institutonacional.cl/"><img src="assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.gnu.org/"><img src="assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a>
+
+<a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
+
+</div>
 
 ---
 

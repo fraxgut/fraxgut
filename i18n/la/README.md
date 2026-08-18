@@ -7,7 +7,7 @@ Profile page in Latin
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../../README.md)**
+<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -92,26 +92,13 @@ Ubi opera mea mercatoria servo.<br>
 </tr>
 </table>
 
-## Nexus
-
-<div align="center">
-
-<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a>
-
-<a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="Cortex imperatorius"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a>
-
-<a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Programmatura libera"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
-
-</div>
-
 ## Epistulae
 
 - <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="28" alt="Epistula: franco.gutierrez.1@ug.uchile.cl"></a>
 - <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
 - <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
 
-Epistula prima ad me pervenit. Scribe **Latine**, **Hispanice** vel
-**Anglice**.
+Respondeo cum possum.
 
 ## Subsidium
 
@@ -121,6 +108,16 @@ Opus meum publicum per [**Liberapay**](https://liberapay.com/fraxgut/)
 vel per nummos cryptographicos sustinere potes.
 
 **Monero (XMR) praelatum.** Scribe mihi ut inscriptionem accipias.
+
+---
+
+<div align="center">
+
+<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a>
+
+<a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="Cortex imperatorius"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Programmatura libera"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
+
+</div>
 
 ---
 
