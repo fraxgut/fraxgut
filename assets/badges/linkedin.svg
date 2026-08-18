@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/badges/linkedin.svg
+@fraxgut
+CC-BY-SA-4.0
+Flat badge: LINKEDIN / in/fraxgut
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="20"
+     role="img" aria-label="LINKEDIN: in/fraxgut">
+  <title>LINKEDIN: in/fraxgut</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <g>
+    <rect width="71" height="20" fill="#555555"/>
+    <rect x="71" width="73" height="20" fill="#47d813"/>
+    <rect width="144" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-size="11"
+     font-family="DejaVu Sans,Verdana,Geneva,sans-serif">
+    <text x="35.5" y="15" fill="#010101" fill-opacity=".3">LINKEDIN</text>
+    <text x="35.5" y="14">LINKEDIN</text>
+    <text x="107.5" y="15" fill="#010101" fill-opacity=".3">in/fraxgut</text>
+    <text x="107.5" y="14">in/fraxgut</text>
+  </g>
+</svg>

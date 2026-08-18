@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/badges/email-la.svg
+@fraxgut
+CC-BY-SA-4.0
+Flat badge: EPISTULA / franco.gutierrez.1@ug.uchile.cl
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="263" height="20"
+     role="img" aria-label="EPISTULA: franco.gutierrez.1@ug.uchile.cl">
+  <title>EPISTULA: franco.gutierrez.1@ug.uchile.cl</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <g>
+    <rect width="72" height="20" fill="#555555"/>
+    <rect x="72" width="191" height="20" fill="#47d813"/>
+    <rect width="263" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-size="11"
+     font-family="DejaVu Sans,Verdana,Geneva,sans-serif">
+    <text x="36.0" y="15" fill="#010101" fill-opacity=".3">EPISTULA</text>
+    <text x="36.0" y="14">EPISTULA</text>
+    <text x="167.5" y="15" fill="#010101" fill-opacity=".3">franco.gutierrez.1@ug.uchile.cl</text>
+    <text x="167.5" y="14">franco.gutierrez.1@ug.uchile.cl</text>
+  </g>
+</svg>

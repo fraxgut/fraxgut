@@ -28,7 +28,7 @@ Estudio **Ingeniería Civil en Computación en la Universidad de Chile
 
 Mis principales intereses son los sistemas, la ingeniería de software,
 el software libre y de código abierto, y los entornos tipo Unix.
-Generalmente trabajo desde la shell, con **zsh** y **Neovim**.
+Generalmente trabajo desde la shell, con **Neovim**.
 
 ## Universidad
 
@@ -37,13 +37,11 @@ Generalmente trabajo desde la shell, con **zsh** y **Neovim**.
 <tr><td><b>Departamento</b></td><td>Departamento de Ciencias de la Computación (DCC)</td></tr>
 <tr><td><b>Facultad</b></td><td>Facultad de Ciencias Físicas y Matemáticas (FCFM)</td></tr>
 <tr><td><b>Universidad</b></td><td>Universidad de Chile</td></tr>
-<tr><td><b>Ubicación</b></td><td>📍 Santiago, Chile</td></tr>
 </table>
 
 ## Computación
 
 <table>
-<tr><td><b>Shell</b></td><td>zsh, ksh</td></tr>
 <tr><td><b>Editor</b></td><td>Neovim</td></tr>
 <tr><td><b>Sistemas</b></td><td>GNU/Linux, BSD</td></tr>
 <tr><td><b>Trabajando con</b></td><td>C, Python, Scala, Kotlin</td></tr>
@@ -83,9 +81,9 @@ comerciales.
 
 <div align="center">
 
-<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a>
+<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a>
 
-<a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://www.zsh.org/"><img src="../../assets/stamps/zsh.gif" width="99" height="56" alt="zsh"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a>
+<a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="La shell"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a>
 
 <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Software libre"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
 
@@ -93,21 +91,13 @@ comerciales.
 
 ## Contacto
 
-<div align="center">
-
-<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/stamps/email.png" width="99" height="56" alt="Escríbame"></a> <a href="https://x.com/fraxgut"><img src="../../assets/stamps/x.png" width="99" height="56" alt="X, arroba fraxgut"></a> <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/stamps/linkedin.png" width="99" height="56" alt="LinkedIn, in fraxgut"></a>
-
-</div>
-
-Correo: [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.cl)
+- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-es.svg" height="20" alt="Correo: franco.gutierrez.1@ug.uchile.cl"></a>
+- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
+- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
 
 ## Apoyo
 
-<div align="center">
-
-<a href="https://liberapay.com/fraxgut/"><img src="../../assets/stamps/liberapay.png" width="99" height="56" alt="Liberapay"></a>
-
-</div>
+- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
 
 Puede apoyar mi trabajo público a través de
 [**Liberapay**](https://liberapay.com/fraxgut/) o con criptomonedas.
@@ -118,6 +108,6 @@ Puede apoyar mi trabajo público a través de
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITAS&color=47d813&style=flat-square" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/stamps/cc-by-sa.gif" width="99" height="56" alt="CC BY-SA 4.0 o posterior"></a>
+<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITAS&color=47d813&style=flat-square" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/badges/licence-es.svg" height="20" alt="Licencia: CC BY-SA 4.0 o posterior"></a>
 
 </div>

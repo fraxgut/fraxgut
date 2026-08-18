@@ -37,17 +37,27 @@ licence above:
 
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
-| `assets/stamps/*`                  | The stamp set                      |
+| `assets/stamps/*.gif`              | The stamp set                      |
+| `assets/badges/*.svg`              | The flat badges                    |
 | `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |
 
 ## Third-party material
 
-The stamps in `assets/stamps/` compose the logotype of the project or
-the institution they name. Those logotypes belong to their owners, and
-this licence grants no rights in them. The language markers in
-`assets/flags/` and the logotypes in `assets/logos/` come from
-Wikimedia Commons, from the projects themselves, or from the
-institutions themselves, and each keeps the terms of its source.
+Each stamp in `assets/stamps/` sets the logotype of the project or the
+institution it names inside a canton. Those logotypes belong to their
+owners, and this licence grants no rights in them. The composition
+around them is original work.
+
+`assets/logos/openbsd.png` is Puffy, by Ty Semaka for the OpenBSD
+project, published under the Creative Commons Attribution 1.0 licence:
+
+<https://creativecommons.org/licenses/by/1.0/>
+
+The remaining logotypes in `assets/logos/` and the language markers in
+`assets/flags/` come from Wikimedia Commons, from the projects
+themselves, or from the institutions themselves. Each keeps the terms
+of its source; among them the Free Software Foundation logo and the
+Creative Commons marks are in the public domain.
 
 The bitmap letterforms in the stamps come from the Terminus font by
 Dimitar Zhekov,

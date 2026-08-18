@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/badges/liberapay.svg
+@fraxgut
+CC-BY-SA-4.0
+Flat badge: LIBERAPAY / fraxgut
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="20"
+     role="img" aria-label="LIBERAPAY: fraxgut">
+  <title>LIBERAPAY: fraxgut</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <g>
+    <rect width="77" height="20" fill="#555555"/>
+    <rect x="77" width="59" height="20" fill="#47d813"/>
+    <rect width="136" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-size="11"
+     font-family="DejaVu Sans,Verdana,Geneva,sans-serif">
+    <text x="38.5" y="15" fill="#010101" fill-opacity=".3">LIBERAPAY</text>
+    <text x="38.5" y="14">LIBERAPAY</text>
+    <text x="106.5" y="15" fill="#010101" fill-opacity=".3">fraxgut</text>
+    <text x="106.5" y="14">fraxgut</text>
+  </g>
+</svg>

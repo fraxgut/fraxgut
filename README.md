@@ -34,7 +34,7 @@ I study Computer Science and Engineering at the
 
 My main interests are systems, free and open-source software,
 Unix-like operating systems, and software engineering. I tend to work
-from the shell, primarily with **zsh** and **Neovim**.
+from the shell, primarily with **Neovim**.
 
 ## Current
 
