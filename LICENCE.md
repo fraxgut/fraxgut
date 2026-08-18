@@ -38,7 +38,6 @@ licence above:
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
 | `assets/buttons/88x31/*.gif`       | The animated button set            |
-| `assets/banners/header.svg`        | The console banner                 |
 | `assets/gifs/boot.gif`             | The console animation              |
 | `assets/flag-*.svg`                | The language markers               |
 | `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |

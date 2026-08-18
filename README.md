@@ -7,10 +7,7 @@ Profile landing page
 
 <div align="center">
 
-<img src="assets/banners/header.svg" width="820"
-  alt="Franco Gutiérrez — Computer Science and Engineering, University of Chile">
-
-# Franco Gutiérrez
+# <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
 **Computer Science and Engineering student at the University of Chile (DCC/FCFM).**<br>
 **Focused on systems, open source, Unix-like systems, and software engineering.**
@@ -65,15 +62,3 @@ personal software projects and my work at
 
 Support for my public work is available through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
-
-**Monero (XMR) preferred.**
-
----
-
-<div align="center">
-
-<a href="https://institutonacional.cl/"><img src="assets/buttons/88x31/instituto-nacional.gif" width="88" height="31" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="assets/buttons/88x31/uchile.gif" width="88" height="31" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="assets/buttons/88x31/dcc-fcfm.gif" width="88" height="31" alt="DCC FCFM"></a> <a href="https://www.gnu.org/software/bash/"><img src="assets/buttons/88x31/bash.gif" width="88" height="31" alt="Bash"></a> <a href="https://neovim.io/"><img src="assets/buttons/88x31/neovim.gif" width="88" height="31" alt="Neovim"></a> <a href="https://la.wikipedia.org/"><img src="assets/buttons/88x31/latine.gif" width="88" height="31" alt="Lingua Latina"></a>
-
-**[CC BY-SA 4.0 or later](LICENCE.md)**
-
-</div>
