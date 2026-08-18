@@ -2,12 +2,12 @@
 i18n/la/README.md
 @fraxgut
 CC-BY-SA-4.0
-Extended profile in Latin
+Profile page in Latin
 -->
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
+<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../../README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -23,12 +23,19 @@ Extended profile in Latin
 
 ## De me
 
-Scientiae computatrali in **Universitate Chilensi (DCC/FCFM)**,
-Sanctiacobi, studeo.
+Scientiae computatrali in **Universitate Chilensi** studeo, in
+Departimento Scientiarum Computatralium (**DCC**) Facultatis
+Scientiarum Physicarum et Mathematicarum (**FCFM**).
 
-Praecipue me tenent systemata, ars ingeniaria programmaturae,
-programmatura libera et aperta, et ambitus generis Unix. Plerumque e
-cortice imperatorio laboro, **Neovim** utens.
+Praecipue me tenent systemata, programmatura libera et aperta,
+systemata operandi generis Unix, et ars ingeniaria programmaturae.
+Plerumque e cortice imperatorio laboro, **Neovim** utens.
+
+## Nunc
+
+Studia mea in Universitate Chilensi praecipua mihi cura sunt, simul cum
+operibus programmaturae propriis et labore meo apud
+[**Venturas**](https://venturas.cl/).
 
 ## Universitas
 
@@ -72,9 +79,18 @@ Ratio colorum propria secundum base16, tam plena quam unicolor.<br>
 
 [**Omnia repositoria publica →**](https://github.com/fraxgut?tab=repositories)
 
-## Venturas
+## Negotia
 
-**[Venturas](https://venturas.cl/)** rego, ubi opera mea mercatoria servo.
+<table>
+<tr>
+<td width="96" align="center"><a href="https://venturas.cl/"><img src="../../assets/logos/venturas.png" width="34" alt="Venturas"></a></td>
+<td>
+<b>Venturas</b><br>
+Ubi opera mea mercatoria servo.<br>
+<a href="https://venturas.cl/"><b>venturas.cl &rarr;</b></a>
+</td>
+</tr>
+</table>
 
 ## Nexus
 
@@ -91,8 +107,11 @@ Ratio colorum propria secundum base16, tam plena quam unicolor.<br>
 ## Epistulae
 
 - <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="28" alt="Epistula: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
 - <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
+- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
+
+Epistula prima ad me pervenit. Scribe **Latine**, **Hispanice** vel
+**Anglice**.
 
 ## Subsidium
 

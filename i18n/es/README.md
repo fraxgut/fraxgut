@@ -2,12 +2,12 @@
 i18n/es/README.md
 @fraxgut
 CC-BY-SA-4.0
-Extended profile in Spanish
+Profile page in Spanish
 -->
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.png" alt="" height="14"> **[Latine](../la/README.md)** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **Español** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
+<img src="../../assets/flags/spqr.png" alt="" height="14"> **[Latine](../la/README.md)** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **Español** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../../README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
@@ -23,12 +23,19 @@ Extended profile in Spanish
 
 ## Sobre mí
 
-Estudio **Ingeniería Civil en Computación en la Universidad de Chile
-(DCC/FCFM)**, en Santiago.
+Estudio Ingeniería Civil en Computación en la **Universidad de
+Chile**, en el Departamento de Ciencias de la Computación (**DCC**) de
+la Facultad de Ciencias Físicas y Matemáticas (**FCFM**).
 
-Mis principales intereses son los sistemas, la ingeniería de software,
-el software libre y de código abierto, y los entornos tipo Unix.
-Generalmente trabajo desde la shell, con **Neovim**.
+Mis principales intereses son los sistemas, el software libre y de
+código abierto, los sistemas operativos tipo Unix y la ingeniería de
+software. Suelo trabajar desde la shell, principalmente con **Neovim**.
+
+## Actualmente
+
+Mis estudios en la Universidad de Chile son mi foco principal, junto con
+proyectos personales de software y mi trabajo en
+[**Venturas**](https://venturas.cl/).
 
 ## Universidad
 
@@ -72,10 +79,18 @@ Un esquema de color base16 personal, en color y en monocromo.<br>
 
 [**Todos los repositorios públicos →**](https://github.com/fraxgut?tab=repositories)
 
-## Venturas
+## Empresas
 
-Llevo **[Venturas](https://venturas.cl/)**, donde mantengo mis proyectos
-comerciales.
+<table>
+<tr>
+<td width="96" align="center"><a href="https://venturas.cl/"><img src="../../assets/logos/venturas.png" width="34" alt="Venturas"></a></td>
+<td>
+<b>Venturas</b><br>
+Donde mantengo mis proyectos comerciales.<br>
+<a href="https://venturas.cl/"><b>venturas.cl &rarr;</b></a>
+</td>
+</tr>
+</table>
 
 ## Enlaces
 
@@ -92,8 +107,11 @@ comerciales.
 ## Contacto
 
 - <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-es.svg" height="28" alt="Correo: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
 - <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
+- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
+
+El correo es lo que me llega primero. Escríbame en **español**,
+**inglés** o **latín**.
 
 ## Apoyo
 
