@@ -2,13 +2,13 @@
 README.md
 @fraxgut
 CC-BY-SA-4.0
-Profile landing page, language selector and short professional summary
+Profile landing page
 -->
 
 <div align="center">
 
-<img src="assets/terminal/identity-card.svg" width="820"
-     alt="Terminal identity card. fraxgut@github. Study: Computer Science and Engineering. Faculty: DCC, FCFM, Universidad de Chile. Location: Santiago, Chile. Focus: systems, free and open-source software, Unix-like systems, software engineering. Shell: Bash. Editor: Neovim. Systems: Gentoo, Artix, Alpine and Void GNU/Linux, and OpenBSD. Exploring: FreeBSD. Learning: C, Python and Scala.">
+<img src="assets/banners/header.svg" width="820"
+  alt="Franco Gutiérrez — Computer Science and Engineering, University of Chile">
 
 # Franco Gutiérrez
 
@@ -17,74 +17,67 @@ Profile landing page, language selector and short professional summary
 
 Santiago, Chile
 
-<a href="LICENCE.md"><img src="https://img.shields.io/badge/licence-CC%20BY--SA%204.0%20or%20later-47d813?style=flat-square" alt="Licence: CC BY-SA 4.0 or later"></a>
+<a href="LICENCE.md"><img src="https://img.shields.io/badge/licence-CC_BY--SA_4.0_or_later-47d813?style=flat-square" alt="Licence: CC BY-SA 4.0 or later"></a>
 
 </div>
 
 ---
 
-## Select your language
+## Languages
 
-The extended profile tells the whole thing, in three languages, and it
-looks like a homepage from 1999.
-
-- <img src="assets/flag-spqr.svg" alt="" height="18"> **[Latine](i18n/la/README.md)**
-- <img src="assets/flag-burgundy.svg" alt="" height="18"> **[Español](i18n/es/README.md)**
-- <img src="assets/flag-england.svg" alt="" height="18"> **[English](i18n/en/README.md)**
+* <img src="assets/flag-spqr.svg" alt="" height="18"> **[Latine](i18n/la/README.md)**
+* <img src="assets/flag-burgundy.svg" alt="" height="18"> **[Español](i18n/es/README.md)**
+* <img src="assets/flag-england.svg" alt="" height="18"> **[English](i18n/en/README.md)**
 
 ## About
 
-I study Computer Science and Engineering at the Universidad de Chile, in
-the Department of Computer Science of the Faculty of Physical and
-Mathematical Sciences.
+I study Computer Science and Engineering at the
+**University of Chile**, in the Department of Computer Science
+(**DCC**) of the Faculty of Physical and Mathematical Sciences
+(**FCFM**).
 
-My interests are systems, free and open-source software, Unix-like
-operating systems, and the command line. I work most of the day in Bash
-and in Neovim. I run several GNU/Linux distributions, and my servers run
-OpenBSD.
+My main interests are systems, free and open-source software,
+Unix-like operating systems, and software engineering. I tend to work
+from the shell, primarily with Bash and Neovim.
 
-## Currently
+## Current
 
-- The university holds most of my attention.
-- I improve my C, my Python and my Scala.
-- I write technical documentation, and I keep it in three languages.
-- I run [Venturas](https://venturas.cl/) part-time, for independent
-  commercial projects.
+I am currently focused primarily on my studies at the University of
+Chile, alongside personal software projects and part-time work through
+[**Venturas**](https://venturas.cl/).
 
 ## Selected work
 
 | Project | Description |
-|---|---|
-| [**gentoo-musl-install-guide**](https://github.com/fraxgut/gentoo-musl-install-guide) | An advanced Gentoo installation guide for AMD64 musl systems: OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO and the Zen kernel. |
-| [**frankifuscus**](https://github.com/fraxgut/frankifuscus) | My personal base16 colour scheme, with a phosphor monochrome variant. This page uses it. |
+| --- | --- |
+| [**gentoo-musl-install-guide**](https://github.com/fraxgut/gentoo-musl-install-guide) | Advanced Gentoo installation documentation for AMD64 musl systems, covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel. |
+| [**frankifuscus**](https://github.com/fraxgut/frankifuscus) | A personal base16 colour scheme with a phosphor monochrome variant. |
 
-All of my public repositories are
-[here](https://github.com/fraxgut?tab=repositories).
+[View all public repositories →](https://github.com/fraxgut?tab=repositories)
 
 ## Contact
 
-- **Email:** [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.cl)
-- **X:** [@fraxgut](https://x.com/fraxgut)
-- **LinkedIn:** [in/fraxgut](https://www.linkedin.com/in/fraxgut)
+* **Email:** [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.cl)
+* **X:** [@fraxgut](https://x.com/fraxgut)
+* **LinkedIn:** [in/fraxgut](https://www.linkedin.com/in/fraxgut)
 
 ## Support
 
-If something that I publish helps you, you can support the work through
-[**Liberapay**](https://liberapay.com/fraxgut/) or with cryptocurrency.
-Monero is my preference. The extended profile lists every address.
+Support for my public work is available through
+[**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
+
+**Monero (XMR) preferred.**
 
 ---
 
 <div align="center">
 
 <img src="assets/buttons/88x31/uchile.png" width="88" height="31" alt="Universidad de Chile">
-<img src="assets/buttons/88x31/bash.png" width="88" height="31" alt="Powered by Bash">
-<img src="assets/buttons/88x31/neovim.png" width="88" height="31" alt="Edited in Neovim">
-<img src="assets/buttons/88x31/foss.png" width="88" height="31" alt="Free software">
+<img src="assets/buttons/88x31/bash.png" width="88" height="31" alt="Bash">
+<img src="assets/buttons/88x31/neovim.png" width="88" height="31" alt="Neovim">
+<img src="assets/buttons/88x31/foss.png" width="88" height="31" alt="Free and open-source software">
 <img src="assets/buttons/88x31/latine.png" width="88" height="31" alt="Lingua Latina">
-<img src="assets/buttons/88x31/chile.png" width="88" height="31" alt="Made in Chile">
-
-`Bash` · `Neovim` · `Unix` · `FOSS` · `Chile`
+<img src="assets/buttons/88x31/chile.png" width="88" height="31" alt="Chile">
 
 **[CC BY-SA 4.0 or later](LICENCE.md)**
 
