@@ -9,12 +9,11 @@ Profile landing page
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
-**Computer Science and Engineering student at the University of Chile (DCC/FCFM).**<br>
-**Focused on systems, open source, Unix-like systems, and software engineering.**
+**Computer Science and Engineering student at the University of Chile (DCC/FCFM).**
 
-Santiago, Chile
+*Focused on systems, open source, Unix-like systems, and software engineering.*
 
-<a href="LICENCE.md"><img src="https://img.shields.io/badge/licence-CC_BY--SA_4.0_or_later-47d813?style=flat-square" alt="Licence: CC BY-SA 4.0 or later"></a>
+📍 Santiago, Chile
 
 </div>
 
@@ -22,9 +21,9 @@ Santiago, Chile
 
 ## Languages
 
-* <img src="assets/flag-spqr.svg" alt="" height="18"> **[Latine](i18n/la/README.md)**
-* <img src="assets/flag-burgundy.svg" alt="" height="18"> **[Español](i18n/es/README.md)**
-* <img src="assets/flag-england.svg" alt="" height="18"> **[English](i18n/en/README.md)**
+* <img src="assets/flags/spqr.png" alt="" height="14"> **[Latine](i18n/la/README.md)**
+* <img src="assets/flags/burgundy.png" alt="" height="14"> **[Español](i18n/es/README.md)**
+* <img src="assets/flags/england.png" alt="" height="14"> **[English](i18n/en/README.md)**
 
 ## About
 
@@ -35,7 +34,7 @@ I study Computer Science and Engineering at the
 
 My main interests are systems, free and open-source software,
 Unix-like operating systems, and software engineering. I tend to work
-from the shell, primarily with Bash and Neovim.
+from the shell, primarily with **zsh** and **Neovim**.
 
 ## Current
 

@@ -7,16 +7,19 @@ Extended profile in Latin
 
 <div align="center">
 
-<img src="../../assets/gifs/boot.gif" width="640"
-     alt="Introductio in terminali antiquo Franci Gutiérrez.">
+<img src="../../assets/flags/spqr.png" alt="" height="14"> **Latine** · <img src="../../assets/flags/burgundy.png" alt="" height="14"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.png" alt="" height="14"> **[English](../en/README.md)**
 
-<img src="../../assets/flag-spqr.svg" alt="" height="18"> **Latine** · <img src="../../assets/flag-burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · <img src="../../assets/flag-england.svg" alt="" height="18"> **[English](../en/README.md)**
+# <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
+
+**Discipulus scientiae computatralis in Universitate Chilensi (DCC/FCFM).**
+
+*Studens systematibus, fonti aperto, systematibus generis Unix et arti ingeniariae programmaturae.*
+
+📍 Santiago, Chile
 
 </div>
 
 ---
-
-# <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
 ## De me
 
@@ -25,28 +28,26 @@ Sanctiacobi, studeo.
 
 Praecipue me tenent systemata, ars ingeniaria programmaturae,
 programmatura libera et aperta, et ambitus generis Unix. Plerumque e
-cortice imperatorio laboro, **Bash** et **Neovim** utens.
+cortice imperatorio laboro, **zsh** et **Neovim** utens.
 
 ## Universitas
 
 <table>
-<tr><td><b>Curriculum</b></td><td>Ingeniería Civil en Computación</td></tr>
-<tr><td><b>Departimentum</b></td><td>Departamento de Ciencias de la Computación (DCC)</td></tr>
-<tr><td><b>Facultas</b></td><td>Facultad de Ciencias Físicas y Matemáticas (FCFM)</td></tr>
-<tr><td><b>Universitas</b></td><td>Universidad de Chile</td></tr>
-<tr><td><b>Schola</b></td><td>Instituto Nacional</td></tr>
-<tr><td><b>Locus</b></td><td>Sanctiacobum, in Chile</td></tr>
+<tr><td><b>Curriculum</b></td><td>Scientia computatralis et ars ingeniaria</td></tr>
+<tr><td><b>Departimentum</b></td><td>Scientiarum computatralium (DCC)</td></tr>
+<tr><td><b>Facultas</b></td><td>Scientiarum physicarum et mathematicarum (FCFM)</td></tr>
+<tr><td><b>Universitas</b></td><td>Universitas Chilensis</td></tr>
+<tr><td><b>Locus</b></td><td>📍 Sanctiacobum, in Chile</td></tr>
 </table>
 
 ## Computatio
 
 <table>
-<tr><td><b>Cortex</b></td><td>Bash</td></tr>
+<tr><td><b>Cortex</b></td><td>zsh, ksh</td></tr>
 <tr><td><b>Scriptorium</b></td><td>Neovim</td></tr>
 <tr><td><b>Systemata</b></td><td>GNU/Linux, BSD</td></tr>
-<tr><td><b>In manibus</b></td><td>C, Python, Scala</td></tr>
+<tr><td><b>In manibus</b></td><td>C, Python, Scala, Kotlin</td></tr>
 <tr><td><b>Tela et notatio</b></td><td>HTML, CSS, JavaScript, Markdown</td></tr>
-<tr><td><b>Alia experientia</b></td><td>Kotlin</td></tr>
 </table>
 
 ## Opera
@@ -75,18 +76,17 @@ Ratio colorum propria secundum base16, tam plena quam unicolor.<br>
 
 ## Venturas
 
-**[Venturas](https://venturas.cl/)** rego, ubi opera mea mercatoria
-servo.
+**[Venturas](https://venturas.cl/)** rego, ubi opera mea mercatoria servo.
 
 ## Nexus
 
 <div align="center">
 
-<a href="https://institutonacional.cl/"><img src="../../assets/buttons/88x31/instituto-nacional.gif" width="88" height="31" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/buttons/88x31/uchile.gif" width="88" height="31" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/buttons/88x31/dcc-fcfm.gif" width="88" height="31" alt="DCC FCFM"></a> <a href="https://es.wikipedia.org/wiki/Chile"><img src="../../assets/buttons/88x31/chile.gif" width="88" height="31" alt="Chile"></a>
+<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a>
 
-<a href="https://www.gnu.org/"><img src="../../assets/buttons/88x31/gnu-linux.gif" width="88" height="31" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/buttons/88x31/openbsd.gif" width="88" height="31" alt="OpenBSD"></a> <a href="https://www.gnu.org/software/bash/"><img src="../../assets/buttons/88x31/bash.gif" width="88" height="31" alt="Bash"></a> <a href="https://neovim.io/"><img src="../../assets/buttons/88x31/neovim.gif" width="88" height="31" alt="Neovim"></a>
+<a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://www.zsh.org/"><img src="../../assets/stamps/zsh.gif" width="99" height="56" alt="zsh"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a>
 
-<a href="https://www.fsf.org/"><img src="../../assets/buttons/88x31/foss.gif" width="88" height="31" alt="Programmatura libera et aperta"></a> <a href="https://www.getmonero.org/"><img src="../../assets/buttons/88x31/monero.gif" width="88" height="31" alt="Monero"></a> <a href="https://la.wikipedia.org/"><img src="../../assets/buttons/88x31/latine.gif" width="88" height="31" alt="Lingua Latina"></a> <a href="../../LICENCE.md"><img src="../../assets/buttons/88x31/cc-by-sa.gif" width="88" height="31" alt="CC BY-SA 4.0 vel posterior"></a>
+<a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Programmatura libera"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a>
 
 </div>
 
@@ -94,7 +94,7 @@ servo.
 
 <div align="center">
 
-<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/buttons/88x31/email.gif" width="88" height="31" alt="Scribe mihi"></a> <a href="https://x.com/fraxgut"><img src="../../assets/buttons/88x31/x.gif" width="88" height="31" alt="X, fraxgut"></a> <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/buttons/88x31/linkedin.gif" width="88" height="31" alt="LinkedIn, in fraxgut"></a>
+<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/stamps/email.png" width="99" height="56" alt="Scribe mihi"></a> <a href="https://x.com/fraxgut"><img src="../../assets/stamps/x.png" width="99" height="56" alt="X, fraxgut"></a> <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/stamps/linkedin.png" width="99" height="56" alt="LinkedIn, in fraxgut"></a>
 
 </div>
 
@@ -104,7 +104,7 @@ Epistula: [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.
 
 <div align="center">
 
-<a href="https://liberapay.com/fraxgut/"><img src="../../assets/buttons/88x31/liberapay.gif" width="88" height="31" alt="Liberapay"></a> <a href="https://www.getmonero.org/"><img src="../../assets/buttons/88x31/monero.gif" width="88" height="31" alt="Monero accipitur"></a>
+<a href="https://liberapay.com/fraxgut/"><img src="../../assets/stamps/liberapay.png" width="99" height="56" alt="Liberapay"></a>
 
 </div>
 
@@ -117,11 +117,6 @@ vel per nummos cryptographicos sustinere potes.
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=HOSPITES&color=47d813&style=flat-square"
-     alt="Numerus hospitum">
-
-<br><br>
-
-**[CC BY-SA 4.0 vel posterior](../../LICENCE.md)** · Franco Gutiérrez
+<img src="https://komarev.com/ghpvc/?username=fraxgut&label=HOSPITES&color=47d813&style=flat-square" alt="Numerus hospitum"> <a href="../../LICENCE.md"><img src="../../assets/stamps/cc-by-sa.gif" width="99" height="56" alt="CC BY-SA 4.0 vel posterior"></a>
 
 </div>

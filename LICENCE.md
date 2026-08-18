@@ -37,22 +37,20 @@ licence above:
 
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
-| `assets/buttons/88x31/*.gif`       | The animated button set            |
-| `assets/gifs/boot.gif`             | The console animation              |
-| `assets/flag-*.svg`                | The language markers               |
+| `assets/stamps/*`                  | The stamp set                      |
 | `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |
 
 ## Third-party material
 
-The waved outline in the language markers `assets/flag-spqr.svg`,
-`assets/flag-burgundy.svg` and `assets/flag-england.svg` follows the
-shared flag silhouette of Noto Emoji, which Google publishes under the
-Apache License 2.0. Each charge on those flags is original work.
+The stamps in `assets/stamps/` compose the logotype of the project or
+the institution they name. Those logotypes belong to their owners, and
+this licence grants no rights in them. The language markers in
+`assets/flags/` and the logotypes in `assets/logos/` come from
+Wikimedia Commons, from the projects themselves, or from the
+institutions themselves, and each keeps the terms of its source.
 
-<https://github.com/googlefonts/noto-emoji>
-
-The bitmap letterforms in `assets/buttons/88x31/*.gif` and in
-`assets/gifs/boot.gif` come from the Terminus font by Dimitar Zhekov,
+The bitmap letterforms in the stamps come from the Terminus font by
+Dimitar Zhekov,
 which carries the SIL Open Font License 1.1. That licence leaves a
 rendered document under its own terms, so the licence above governs
 these images. The attribution stands because the letterforms are the
