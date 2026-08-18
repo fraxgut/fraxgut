@@ -39,6 +39,7 @@ licence above:
 |------------------------------------|------------------------------------|
 | `assets/stamps/*.gif`              | The stamp set                      |
 | `assets/badges/*.svg`              | The flat badges                    |
+| `assets/logos/shell.png`           | The chevron prompt mark            |
 | `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |
 
 ## Third-party material
