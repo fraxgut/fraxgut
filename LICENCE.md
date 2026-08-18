@@ -54,12 +54,28 @@ project, published under the Creative Commons Attribution 1.0 licence:
 
 <https://creativecommons.org/licenses/by/1.0/>
 
-The remaining logotypes in `assets/logos/` and the language markers in
-`assets/flags/` come from Wikimedia Commons, from the projects
-themselves, or from the institutions themselves. Each keeps the terms
-of its source; among them the Free Software Foundation logo and the
-Creative Commons marks are in the public domain. Where a mark had to
-read against a dark canton, only its colour was changed.
+The language markers in `assets/flags/` are real flags cut to the
+shared waved silhouette of Noto Emoji, which Google publishes under the
+Apache License 2.0:
+
+<https://github.com/googlefonts/noto-emoji>
+
+Four marks come from Wikimedia Commons and keep the terms of their
+source, with attribution as each licence requires:
+
+| Mark | Source | Licence |
+|------|--------|---------|
+| `assets/logos/tux.png` | Tux, by Larry Ewing with The GIMP | Attribution |
+| `assets/logos/aquila.png` and `assets/flags/spqr.png` | Flag of the Roman Empire with Eagle, by OttavianoUrsu | CC BY-SA 4.0 |
+| `assets/logos/gunelve.png` | Wüñellfe from the Mapuche flag, by Ñancu | CC BY-SA 3.0 |
+| `assets/logos/openbsd.png` | Puffy, by Ty Semaka | CC BY 1.0 |
+
+The remaining logotypes in `assets/logos/` come from Wikimedia Commons,
+from the projects themselves, or from the institutions themselves.
+Among them the Free Software Foundation logo and the Creative Commons
+marks are in the public domain. Where a mark had to read against a dark
+canton, only its colour was changed; where a mark was cropped to its
+central figure, nothing else was altered.
 
 The bitmap letterforms in the stamps come from the Terminus font by
 Dimitar Zhekov,
