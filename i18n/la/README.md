@@ -70,7 +70,7 @@ complectitur.
 
 ### frankifuscus
 
-Ratio colorum secundum base16 propria, cum forma unicolore phosphorea.
+Ratio colorum propria secundum base16, tam plena quam unicolor.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
 

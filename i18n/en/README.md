@@ -69,7 +69,7 @@ covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.
 
 ### frankifuscus
 
-A personal base16 colour scheme with a phosphor monochrome variant.
+A personal base16 colour scheme, in full colour and in monochrome.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
 

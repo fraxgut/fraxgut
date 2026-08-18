@@ -70,8 +70,7 @@ Zen.
 
 ### frankifuscus
 
-Un esquema de color base16 personal con una variante monocroma de
-fósforo.
+Un esquema de color base16 personal, en color y en monocromo.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
 

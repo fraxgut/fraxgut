@@ -51,7 +51,7 @@ Chile, alongside personal software projects and my work at
 | Project | Description |
 | --- | --- |
 | [**gentoo-musl-install-guide**](https://github.com/fraxgut/gentoo-musl-install-guide) | Advanced Gentoo installation documentation for AMD64 musl systems, covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel. |
-| [**frankifuscus**](https://github.com/fraxgut/frankifuscus) | A personal base16 colour scheme with a phosphor monochrome variant. |
+| [**frankifuscus**](https://github.com/fraxgut/frankifuscus) | A personal base16 colour scheme, in full colour and in monochrome. |
 
 [View all public repositories →](https://github.com/fraxgut?tab=repositories)
 
