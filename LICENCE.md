@@ -70,6 +70,7 @@ source, with attribution as each licence requires:
 | `assets/logos/gunelve.png` | Wüñellfe from the Mapuche flag, by Ñancu | CC BY-SA 3.0 |
 | `assets/logos/futbol.png` | Soccerball | CC0 |
 | `assets/logos/santiago.png` | Cross of Saint James | CC BY-SA 3.0 |
+| `assets/logos/laroja.png` | Federación de Fútbol de Chile badge | Public domain |
 | `assets/logos/openbsd.png` | Puffy, by Ty Semaka | CC BY 1.0 |
 
 The remaining logotypes in `assets/logos/` come from Wikimedia Commons,
@@ -104,13 +105,11 @@ work under the licence above.
 ## Club and product marks
 
 `assets/logos/lazio.png` carries the badge of S.S. Lazio, which belongs
-to the club. `assets/stamps/minecraft.gif`, `assets/stamps/dragonball.gif`
-and `assets/stamps/laroja.gif` carry marks drawn for this repository:
-a creeper face on its eight by eight grid, a four-star orb, and a red
-shield with the lone star. They are original drawings, and they stand
-for Minecraft, for Dragon Ball, and for the Chilean national team, whose
-names and trade marks belong to Mojang, to Shueisha and Toei, and to the
-ANFP. This licence grants no rights in any of them, and the stamps claim
+to the club. `assets/stamps/minecraft.gif` and `assets/stamps/dragonball.gif`
+carry marks drawn for this repository: a creeper face on its eight by
+eight grid, and a four-star orb. They are original drawings, and they
+stand for Minecraft and for Dragon Ball, whose names and trade marks
+belong to Mojang and to Shueisha and Toei. This licence grants no rights in any of them, and the stamps claim
 no endorsement: they are the links of someone who follows them.
 
 ## Names and marks
