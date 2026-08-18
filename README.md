@@ -12,7 +12,7 @@ Profile landing page
 
 # Franco Gutiérrez
 
-**Computer Science and Engineering student at the University of Chile (DCC/FCFM).**
+**Computer Science and Engineering student at the University of Chile (DCC/FCFM).**<br>
 **Focused on systems, open source, Unix-like systems, and software engineering.**
 
 Santiago, Chile
@@ -42,8 +42,8 @@ from the shell, primarily with Bash and Neovim.
 
 ## Current
 
-I am currently focused primarily on my studies at the University of
-Chile, alongside personal software projects and my work at
+My studies at the University of Chile are my primary focus, alongside
+personal software projects and my work at
 [**Venturas**](https://venturas.cl/).
 
 ## Selected work
@@ -72,12 +72,7 @@ Support for my public work is available through
 
 <div align="center">
 
-<img src="assets/buttons/88x31/uchile.png" width="88" height="31" alt="Universidad de Chile">
-<img src="assets/buttons/88x31/bash.png" width="88" height="31" alt="Bash">
-<img src="assets/buttons/88x31/neovim.png" width="88" height="31" alt="Neovim">
-<img src="assets/buttons/88x31/foss.png" width="88" height="31" alt="Free and open-source software">
-<img src="assets/buttons/88x31/latine.png" width="88" height="31" alt="Lingua Latina">
-<img src="assets/buttons/88x31/chile.png" width="88" height="31" alt="Chile">
+<a href="https://institutonacional.cl/"><img src="assets/buttons/88x31/instituto-nacional.gif" width="88" height="31" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="assets/buttons/88x31/uchile.gif" width="88" height="31" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="assets/buttons/88x31/dcc-fcfm.gif" width="88" height="31" alt="DCC FCFM"></a> <a href="https://www.gnu.org/software/bash/"><img src="assets/buttons/88x31/bash.gif" width="88" height="31" alt="Bash"></a> <a href="https://neovim.io/"><img src="assets/buttons/88x31/neovim.gif" width="88" height="31" alt="Neovim"></a> <a href="https://la.wikipedia.org/"><img src="assets/buttons/88x31/latine.gif" width="88" height="31" alt="Lingua Latina"></a>
 
 **[CC BY-SA 4.0 or later](LICENCE.md)**
 

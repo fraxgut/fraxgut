@@ -37,10 +37,11 @@ licence above:
 
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
-| `assets/buttons/88x31/*.png`       | The button set                     |
+| `assets/buttons/88x31/*.gif`       | The animated button set            |
 | `assets/banners/header.svg`        | The console banner                 |
 | `assets/gifs/boot.gif`             | The console animation              |
 | `assets/flag-*.svg`                | The language markers               |
+| `assets/logos/phosphorus.svg`      | The alchemical sign of phosphorus  |
 
 ## Third-party material
 
@@ -51,7 +52,7 @@ Apache License 2.0. Each charge on those flags is original work.
 
 <https://github.com/googlefonts/noto-emoji>
 
-The bitmap letterforms in `assets/buttons/88x31/*.png` and in
+The bitmap letterforms in `assets/buttons/88x31/*.gif` and in
 `assets/gifs/boot.gif` come from the Terminus font by Dimitar Zhekov,
 which carries the SIL Open Font License 1.1. That licence leaves a
 rendered document under its own terms, so the licence above governs
@@ -59,6 +60,18 @@ these images. The attribution stands because the letterforms are the
 work of another author.
 
 <https://terminus-font.sourceforge.net/>
+
+## The Gentoo logo
+
+`assets/logos/gentoo.png` holds the Gentoo logo, which belongs to the
+Gentoo Foundation. This licence grants no rights in it. Its use follows
+the Gentoo Name and Logo Usage Guidelines:
+
+<https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html>
+
+The alchemical sign of phosphorus in `assets/logos/phosphorus.svg` is a
+historical form that carries no rights. The drawing of it is original
+work under the licence above.
 
 ## Names and marks
 

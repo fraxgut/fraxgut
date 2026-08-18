@@ -10,15 +10,7 @@ Extended profile in English
 <img src="../../assets/gifs/boot.gif" width="640"
      alt="Retro terminal-style introduction for Franco Gutiérrez.">
 
-<br>
-
-<img src="../../assets/flag-spqr.svg" alt="" height="18">
-**[Latine](../la/README.md)** ·
-<img src="../../assets/flag-burgundy.svg" alt="" height="18">
-**[Español](../es/README.md)** ·
-<img src="../../assets/flag-england.svg" alt="" height="18">
-**English** ·
-[**Short version**](../../README.md)
+<img src="../../assets/flag-spqr.svg" alt="" height="18"> **[Latine](../la/README.md)** · <img src="../../assets/flag-burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · <img src="../../assets/flag-england.svg" alt="" height="18"> **English**
 
 </div>
 
@@ -37,117 +29,89 @@ from the shell, using **Bash** and **Neovim**.
 
 ## University
 
-| | |
-|---|---|
-| **Degree** | Ingeniería Civil en Computación |
-| **Department** | Departamento de Ciencias de la Computación (DCC) |
-| **Faculty** | Facultad de Ciencias Físicas y Matemáticas (FCFM) |
-| **University** | Universidad de Chile |
-| **Location** | Santiago, Chile |
-
+<table>
+<tr><td><b>Degree</b></td><td>Ingeniería Civil en Computación</td></tr>
+<tr><td><b>Department</b></td><td>Departamento de Ciencias de la Computación (DCC)</td></tr>
+<tr><td><b>Faculty</b></td><td>Facultad de Ciencias Físicas y Matemáticas (FCFM)</td></tr>
+<tr><td><b>University</b></td><td>Universidad de Chile</td></tr>
+<tr><td><b>School</b></td><td>Instituto Nacional</td></tr>
+<tr><td><b>Location</b></td><td>Santiago, Chile</td></tr>
+</table>
 
 ## Computing
 
-| Area | |
-|---|---|
-| **Shell** | Bash |
-| **Editor** | Neovim |
-| **Systems** | GNU/Linux, BSD |
-| **Learning** | C, Python, Scala |
-| **Web & markup** | HTML, CSS, JavaScript, Markdown |
-| **Other experience** | Kotlin |
-
+<table>
+<tr><td><b>Shell</b></td><td>Bash</td></tr>
+<tr><td><b>Editor</b></td><td>Neovim</td></tr>
+<tr><td><b>Systems</b></td><td>GNU/Linux, BSD</td></tr>
+<tr><td><b>Working with</b></td><td>C, Python, Scala</td></tr>
+<tr><td><b>Web &amp; markup</b></td><td>HTML, CSS, JavaScript, Markdown</td></tr>
+<tr><td><b>Other experience</b></td><td>Kotlin</td></tr>
+</table>
 
 ## Projects
 
-### gentoo-musl-install-guide
-
+<table>
+<tr>
+<td width="96" align="center"><a href="https://www.gentoo.org/"><img src="../../assets/logos/gentoo.png" width="58" alt="Gentoo"></a></td>
+<td>
+<b>gentoo-musl-install-guide</b><br>
 Advanced Gentoo installation documentation for AMD64 musl systems,
-covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.
-
-[**fraxgut/gentoo-musl-install-guide →**](https://github.com/fraxgut/gentoo-musl-install-guide)
-
-### frankifuscus
-
-A personal base16 colour scheme, in full colour and in monochrome.
-
-[**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
+covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.<br>
+<a href="https://github.com/fraxgut/gentoo-musl-install-guide"><b>fraxgut/gentoo-musl-install-guide &rarr;</b></a>
+</td>
+</tr>
+<tr>
+<td width="96" align="center"><a href="https://github.com/fraxgut/frankifuscus"><img src="../../assets/logos/phosphorus.svg" width="44" alt="The alchemical sign of phosphorus"></a></td>
+<td>
+<b>frankifuscus</b><br>
+A personal base16 colour scheme, in full colour and in monochrome.<br>
+<a href="https://github.com/fraxgut/frankifuscus"><b>fraxgut/frankifuscus &rarr;</b></a>
+</td>
+</tr>
+</table>
 
 [**All public repositories →**](https://github.com/fraxgut?tab=repositories)
 
 ## Venturas
 
-I run **[Venturas](https://venturas.cl/)**. My commercial projects live
-there.
+I run **[Venturas](https://venturas.cl/)**, where I keep my commercial
+projects.
 
-## 88×31
+## Links
 
 <div align="center">
 
-<img src="../../assets/buttons/88x31/uchile.png"
-     width="88" height="31" alt="Universidad de Chile">
-<img src="../../assets/buttons/88x31/dcc-fcfm.png"
-     width="88" height="31" alt="DCC FCFM">
-<img src="../../assets/buttons/88x31/chile.png"
-     width="88" height="31" alt="Chile">
-<img src="../../assets/buttons/88x31/latine.png"
-     width="88" height="31" alt="Lingua Latina">
+<a href="https://institutonacional.cl/"><img src="../../assets/buttons/88x31/instituto-nacional.gif" width="88" height="31" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/buttons/88x31/uchile.gif" width="88" height="31" alt="Universidad de Chile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/buttons/88x31/dcc-fcfm.gif" width="88" height="31" alt="DCC FCFM"></a> <a href="https://es.wikipedia.org/wiki/Chile"><img src="../../assets/buttons/88x31/chile.gif" width="88" height="31" alt="Chile"></a>
 
-<br>
+<a href="https://www.gnu.org/"><img src="../../assets/buttons/88x31/gnu-linux.gif" width="88" height="31" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/buttons/88x31/openbsd.gif" width="88" height="31" alt="OpenBSD"></a> <a href="https://www.gnu.org/software/bash/"><img src="../../assets/buttons/88x31/bash.gif" width="88" height="31" alt="Bash"></a> <a href="https://neovim.io/"><img src="../../assets/buttons/88x31/neovim.gif" width="88" height="31" alt="Neovim"></a>
 
-<img src="../../assets/buttons/88x31/gnu-linux.png"
-     width="88" height="31" alt="GNU/Linux">
-<img src="../../assets/buttons/88x31/openbsd.png"
-     width="88" height="31" alt="OpenBSD">
-<img src="../../assets/buttons/88x31/bash.png"
-     width="88" height="31" alt="Bash">
-<img src="../../assets/buttons/88x31/neovim.png"
-     width="88" height="31" alt="Neovim">
-
-<br>
-
-<img src="../../assets/buttons/88x31/foss.png"
-     width="88" height="31" alt="Free and open-source software">
-<img src="../../assets/buttons/88x31/monero.png"
-     width="88" height="31" alt="Monero">
-<img src="../../assets/buttons/88x31/cc-by-sa.png"
-     width="88" height="31" alt="CC BY-SA 4.0 or later">
+<a href="https://www.fsf.org/"><img src="../../assets/buttons/88x31/foss.gif" width="88" height="31" alt="Free and open-source software"></a> <a href="https://www.getmonero.org/"><img src="../../assets/buttons/88x31/monero.gif" width="88" height="31" alt="Monero"></a> <a href="https://la.wikipedia.org/"><img src="../../assets/buttons/88x31/latine.gif" width="88" height="31" alt="Lingua Latina"></a> <a href="../../LICENCE.md"><img src="../../assets/buttons/88x31/cc-by-sa.gif" width="88" height="31" alt="CC BY-SA 4.0 or later"></a>
 
 </div>
 
 ## Contact
 
-- **Email:** [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.cl)
-- **X:** [@fraxgut](https://x.com/fraxgut)
-- **LinkedIn:** [in/fraxgut](https://www.linkedin.com/in/fraxgut)
+<div align="center">
+
+<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/buttons/88x31/email.gif" width="88" height="31" alt="Email me"></a> <a href="https://x.com/fraxgut"><img src="../../assets/buttons/88x31/x.gif" width="88" height="31" alt="X, at fraxgut"></a> <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/buttons/88x31/linkedin.gif" width="88" height="31" alt="LinkedIn, in fraxgut"></a>
+
+</div>
+
+Email: [franco.gutierrez.1@ug.uchile.cl](mailto:franco.gutierrez.1@ug.uchile.cl)
 
 ## Support
+
+<div align="center">
+
+<a href="https://liberapay.com/fraxgut/"><img src="../../assets/buttons/88x31/liberapay.gif" width="88" height="31" alt="Liberapay"></a> <a href="https://www.getmonero.org/"><img src="../../assets/buttons/88x31/monero.gif" width="88" height="31" alt="Monero accepted"></a>
+
+</div>
 
 You can support my public work through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
 
-**Monero (XMR) preferred.**
-
-<details>
-<summary><b>Cryptocurrency addresses</b></summary>
-
-<br>
-
-| Currency | Address |
-|---|---|
-| **Monero (XMR)** | — |
-| Bitcoin (BTC) | — |
-| Ethereum (ETH) | — |
-| Solana (SOL) | — |
-| pUSD | — |
-
-<!--
-TODO(fraxgut): replace each dash with the real address, wrapped in
-backticks so a reader can copy it. Check every address twice against
-your wallet before committing it.
--->
-
-</details>
+**Monero (XMR) preferred.** Write to me for an address.
 
 ---
 
