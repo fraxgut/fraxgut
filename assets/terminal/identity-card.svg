@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/terminal/identity-card.svg
+@fraxgut
+CC-BY-SA-4.0
+Neofetch-style identity card with a cathode-ray terminal illustration
+
+The card states an identity and it does not report any activity metric.
+Each row places its label and its value in two independent text elements,
+so the columns hold their alignment with any monospaced font that the
+reader's browser selects. The colours come from the Frankifuscus
+Phosphor Mono palette by @fraxgut.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860"
+     height="430" role="img"
+     aria-label="fraxgut at github. Computer Science and Engineering student, DCC and FCFM, Universidad de Chile, Santiago, Chile. Focus: systems, free and open-source software, Unix-like systems, software engineering. Shell: Bash. Editor: Neovim. Systems: Gentoo, Artix, Alpine and Void GNU/Linux, and OpenBSD. Exploring FreeBSD. Languages: C, Python and Scala.">
+  <title>fraxgut@github</title>
+
+  <defs>
+    <!-- The scanline pattern gives the screen its cathode-ray texture. -->
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000000" opacity="0.34"/>
+    </pattern>
+    <!-- The phosphor glow softens the text edges inside the screen. -->
+    <radialGradient id="glow" cx="50%" cy="46%" r="62%">
+      <stop offset="0%" stop-color="#13d83b" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#13d83b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="screen">
+      <rect x="52" y="112" width="196" height="150" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- === WINDOW CHROME === -->
+  <rect x="1" y="1" width="858" height="428" rx="10" fill="#0b0c0b"
+        stroke="#3e433e" stroke-width="2"/>
+  <rect x="1" y="1" width="858" height="34" rx="10" fill="#212421"/>
+  <rect x="1" y="26" width="858" height="9" fill="#212421"/>
+  <line x1="1" y1="35" x2="859" y2="35" stroke="#3e433e" stroke-width="2"/>
+  <circle cx="24" cy="18" r="6" fill="#d81323"/>
+  <circle cx="45" cy="18" r="6" fill="#d89613"/>
+  <circle cx="66" cy="18" r="6" fill="#47d813"/>
+  <text x="430" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="14" fill="#829682" text-anchor="middle">fraxgut@github — neofetch</text>
+
+  <!-- === CATHODE-RAY TERMINAL === -->
+  <!-- The illustration replaces the distribution logo that neofetch
+       prints, because no single operating system defines this profile. -->
+  <g>
+    <rect x="34" y="94" width="232" height="186" rx="20" fill="#212421"
+          stroke="#3e433e" stroke-width="2"/>
+    <rect x="52" y="112" width="196" height="150" rx="12" fill="#000000"
+          stroke="#43423e" stroke-width="1"/>
+    <g clip-path="url(#screen)">
+      <rect x="52" y="112" width="196" height="150" fill="url(#glow)"/>
+      <text x="70" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="15" fill="#47d813">$ whoami</text>
+      <text x="70" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="15" fill="#ccffcc">fraxgut</text>
+      <text x="70" y="202" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="15" fill="#47d813">$ uname</text>
+      <text x="70" y="226" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+            font-size="15" fill="#ccffcc">Unix-like</text>
+      <rect x="70" y="240" width="10" height="16" fill="#47d813"/>
+      <rect x="52" y="112" width="196" height="150" fill="url(#scan)"/>
+    </g>
+    <!-- Stand and base. -->
+    <path d="M126 280 h48 l10 30 h-68 z" fill="#212421" stroke="#3e433e"
+          stroke-width="2"/>
+    <rect x="96" y="310" width="108" height="10" rx="5" fill="#212421"
+          stroke="#3e433e" stroke-width="2"/>
+    <circle cx="240" cy="272" r="3" fill="#47d813"/>
+  </g>
+
+  <!-- === IDENTITY TABLE === -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+     font-size="15">
+    <text x="300" y="78" fill="#47d813" font-weight="bold">fraxgut</text>
+    <text x="366" y="78" fill="#5f6a5f">@</text>
+    <text x="380" y="78" fill="#13d883" font-weight="bold">github</text>
+    <line x1="300" y1="88" x2="828" y2="88" stroke="#3e433e"
+          stroke-width="2"/>
+
+    <text x="300" y="116" fill="#5f6a5f">study</text>
+    <text x="410" y="116" fill="#ccffcc">Computer Science &amp; Engineering</text>
+    <text x="300" y="138" fill="#5f6a5f">faculty</text>
+    <text x="410" y="138" fill="#ccffcc">DCC · FCFM · Universidad de Chile</text>
+    <text x="300" y="160" fill="#5f6a5f">location</text>
+    <text x="410" y="160" fill="#ccffcc">Santiago, Chile</text>
+
+    <text x="300" y="196" fill="#5f6a5f">focus</text>
+    <text x="410" y="196" fill="#ccffcc">systems · free and open-source software</text>
+    <text x="410" y="218" fill="#ccffcc">Unix-like systems · software engineering</text>
+
+    <text x="300" y="254" fill="#5f6a5f">shell</text>
+    <text x="410" y="254" fill="#96d813">Bash</text>
+    <text x="300" y="276" fill="#5f6a5f">editor</text>
+    <text x="410" y="276" fill="#96d813">Neovim</text>
+
+    <text x="300" y="312" fill="#5f6a5f">systems</text>
+    <text x="410" y="312" fill="#ccffcc">Gentoo · Artix · Alpine · Void GNU/Linux</text>
+    <text x="410" y="334" fill="#ccffcc">OpenBSD</text>
+    <text x="300" y="356" fill="#5f6a5f">exploring</text>
+    <text x="410" y="356" fill="#829682">FreeBSD</text>
+
+    <text x="300" y="392" fill="#5f6a5f">learning</text>
+    <text x="410" y="392" fill="#ccffcc">C · Python · Scala</text>
+
+    <!-- The colour strip repeats the terminal palette footer that
+         neofetch prints under its report. -->
+    <g>
+      <rect x="410" y="404" width="26" height="12" fill="#000000" stroke="#3e433e"/>
+      <rect x="436" y="404" width="26" height="12" fill="#47d813"/>
+      <rect x="462" y="404" width="26" height="12" fill="#7cd813"/>
+      <rect x="488" y="404" width="26" height="12" fill="#9dd813"/>
+      <rect x="514" y="404" width="26" height="12" fill="#b7d813"/>
+      <rect x="540" y="404" width="26" height="12" fill="#d1d813"/>
+      <rect x="566" y="404" width="26" height="12" fill="#13d83b"/>
+      <rect x="592" y="404" width="26" height="12" fill="#13d883"/>
+      <rect x="618" y="404" width="26" height="12" fill="#13d8d8"/>
+      <rect x="644" y="404" width="26" height="12" fill="#a7c8a7"/>
+      <rect x="670" y="404" width="26" height="12" fill="#ccffcc"/>
+    </g>
+  </g>
+</svg>
