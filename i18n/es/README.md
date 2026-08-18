@@ -45,7 +45,6 @@ Generalmente trabajo desde la shell, con **Bash** y **Neovim**.
 | **Universidad** | Universidad de Chile |
 | **Ubicación** | Santiago, Chile |
 
-La universidad es actualmente mi foco principal.
 
 ## Computación
 
@@ -53,13 +52,11 @@ La universidad es actualmente mi foco principal.
 |---|---|
 | **Shell** | Bash |
 | **Editor** | Neovim |
-| **Sistemas** | GNU/Linux, OpenBSD |
+| **Sistemas** | GNU/Linux, BSD |
 | **Aprendiendo** | C, Python, Scala |
 | **Web y marcado** | HTML, CSS, JavaScript, Markdown |
 | **Otra experiencia** | Kotlin |
 
-También me interesan los sistemas BSD más allá de OpenBSD, en
-particular FreeBSD.
 
 ## Proyectos
 
@@ -73,7 +70,7 @@ Zen.
 
 ### frankifuscus
 
-Mi esquema de color base16 personal, con una variante monocroma de
+Un esquema de color base16 personal con una variante monocroma de
 fósforo.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
@@ -82,8 +79,8 @@ fósforo.
 
 ## Venturas
 
-Llevo **[Venturas](https://venturas.cl/)** a tiempo parcial, junto con
-la universidad. Ahí mantengo mis proyectos comerciales.
+Llevo **[Venturas](https://venturas.cl/)**. Ahí viven mis proyectos
+comerciales.
 
 ## 88×31
 

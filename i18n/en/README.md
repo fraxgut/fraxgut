@@ -45,7 +45,6 @@ from the shell, using **Bash** and **Neovim**.
 | **University** | Universidad de Chile |
 | **Location** | Santiago, Chile |
 
-University is currently my primary focus.
 
 ## Computing
 
@@ -53,13 +52,11 @@ University is currently my primary focus.
 |---|---|
 | **Shell** | Bash |
 | **Editor** | Neovim |
-| **Systems** | GNU/Linux, OpenBSD |
+| **Systems** | GNU/Linux, BSD |
 | **Learning** | C, Python, Scala |
 | **Web & markup** | HTML, CSS, JavaScript, Markdown |
 | **Other experience** | Kotlin |
 
-I also have an interest in BSD systems beyond OpenBSD, particularly
-FreeBSD.
 
 ## Projects
 
@@ -72,8 +69,7 @@ covering OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.
 
 ### frankifuscus
 
-My personal base16 colour scheme, including a phosphor monochrome
-variant.
+A personal base16 colour scheme with a phosphor monochrome variant.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
 
@@ -81,8 +77,8 @@ variant.
 
 ## Venturas
 
-I run **[Venturas](https://venturas.cl/)** part-time alongside
-university. It is where I keep my commercial projects.
+I run **[Venturas](https://venturas.cl/)**. My commercial projects live
+there.
 
 ## 88×31
 

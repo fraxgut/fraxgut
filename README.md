@@ -43,7 +43,7 @@ from the shell, primarily with Bash and Neovim.
 ## Current
 
 I am currently focused primarily on my studies at the University of
-Chile, alongside personal software projects and part-time work through
+Chile, alongside personal software projects and my work at
 [**Venturas**](https://venturas.cl/).
 
 ## Selected work

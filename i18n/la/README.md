@@ -45,7 +45,6 @@ cortice imperatorio laboro, **Bash** et **Neovim** utens.
 | **Universitas** | Universidad de Chile |
 | **Locus** | Sanctiacobum, in Chile |
 
-Studia universitatis nunc praecipua mihi cura sunt.
 
 ## Computatio
 
@@ -53,12 +52,11 @@ Studia universitatis nunc praecipua mihi cura sunt.
 |---|---|
 | **Cortex** | Bash |
 | **Scriptorium** | Neovim |
-| **Systemata** | GNU/Linux, OpenBSD |
+| **Systemata** | GNU/Linux, BSD |
 | **Disco** | C, Python, Scala |
 | **Tela et notatio** | HTML, CSS, JavaScript, Markdown |
 | **Alia experientia** | Kotlin |
 
-Systemata BSD praeter OpenBSD quoque me tenent, praesertim FreeBSD.
 
 ## Opera
 
@@ -72,8 +70,7 @@ complectitur.
 
 ### frankifuscus
 
-Ratio colorum mea propria secundum base16, cum forma unicolore
-phosphorea.
+Ratio colorum secundum base16 propria, cum forma unicolore phosphorea.
 
 [**fraxgut/frankifuscus →**](https://github.com/fraxgut/frankifuscus)
 
@@ -81,8 +78,8 @@ phosphorea.
 
 ## Venturas
 
-**[Venturas](https://venturas.cl/)** parte temporis, simul cum studiis,
-rego. Ibi opera mea mercatoria servo.
+**[Venturas](https://venturas.cl/)** rego. Ibi opera mea mercatoria
+vivunt.
 
 ## 88×31
 

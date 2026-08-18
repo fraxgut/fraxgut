@@ -6,8 +6,8 @@ CC-BY-SA-4.0
 Phosphor console banner for the landing page
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 140" width="820"
-     height="140" role="img" aria-label="A phosphor console banner showing the prompt fraxgut at github.">
-  <title>fraxgut@github</title>
+     height="140" role="img" aria-label="A phosphor console banner showing the prompt fraxgut at git.">
+  <title>fraxgut@git</title>
 
   <defs>
     <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
@@ -58,9 +58,9 @@ Phosphor console banner for the landing page
        font-size="26">
       <text x="26" y="96" fill="#47d813" font-weight="bold">fraxgut</text>
       <text x="132" y="96" fill="#2f5c33">@</text>
-      <text x="150" y="96" fill="#ccffcc" font-weight="bold">github</text>
-      <text x="252" y="96" fill="#2f5c33">:~$</text>
-      <rect x="304" y="78" width="14" height="24" fill="#47d813"/>
+      <text x="150" y="96" fill="#ccffcc" font-weight="bold">git</text>
+      <text x="200" y="96" fill="#2f5c33">:~$</text>
+      <rect x="252" y="78" width="14" height="24" fill="#47d813"/>
     </g>
 
     <!-- Block texture, in the manner of a console filling its width. -->
