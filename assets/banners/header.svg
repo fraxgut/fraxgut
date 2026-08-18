@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/banners/header.svg
+@fraxgut
+CC-BY-SA-4.0
+Phosphor console banner for the landing page
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 140" width="820"
+     height="140" role="img" aria-label="A phosphor console banner showing the prompt fraxgut at github.">
+  <title>fraxgut@github</title>
+
+  <defs>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1.5" fill="#000000" opacity="0.30"/>
+    </pattern>
+    <radialGradient id="glow" cx="26%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#47d813" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#47d813" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="818" height="138" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="818" height="138" rx="4" fill="#00110a"
+        stroke="#17331b" stroke-width="2"/>
+
+  <g clip-path="url(#frame)">
+    <rect x="1" y="1" width="818" height="138" fill="url(#glow)"/>
+
+    <!-- Workspace strip. -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+       font-size="12" fill="#2f5c33" letter-spacing="1">
+      <text x="24" y="24">I</text>
+      <text x="58" y="24">II</text>
+      <text x="96" y="24">III</text>
+      <circle cx="146" cy="20" r="3.5" fill="#47d813"/>
+      <text x="176" y="24">V</text>
+      <text x="212" y="24">VI</text>
+      <text x="250" y="24">VII</text>
+      <text x="294" y="24">VIII</text>
+      <text x="342" y="24">IX</text>
+    </g>
+
+    <g fill="#2f5c33">
+      <rect x="726" y="19" width="3" height="6"/>
+      <rect x="733" y="15" width="3" height="10"/>
+      <rect x="740" y="11" width="3" height="14"/>
+      <rect x="747" y="16" width="3" height="9"/>
+      <rect x="754" y="13" width="3" height="12"/>
+    </g>
+    <circle cx="788" cy="20" r="3.5" fill="#d1d813"/>
+
+    <line x1="1" y1="37" x2="819" y2="37" stroke="#17331b" stroke-width="1.5"/>
+
+    <!-- Prompt. -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+       font-size="26">
+      <text x="26" y="96" fill="#47d813" font-weight="bold">fraxgut</text>
+      <text x="132" y="96" fill="#2f5c33">@</text>
+      <text x="150" y="96" fill="#ccffcc" font-weight="bold">github</text>
+      <text x="252" y="96" fill="#2f5c33">:~$</text>
+      <rect x="304" y="78" width="14" height="24" fill="#47d813"/>
+    </g>
+
+    <!-- Block texture, in the manner of a console filling its width. -->
+    <g fill="#47d813">
+      <rect x="600" y="80" width="26" height="20" opacity="0.55"/>
+      <rect x="630" y="80" width="26" height="20" opacity="0.40"/>
+      <rect x="660" y="80" width="26" height="20" opacity="0.28"/>
+      <rect x="690" y="80" width="26" height="20" opacity="0.18"/>
+      <rect x="720" y="80" width="26" height="20" opacity="0.11"/>
+      <rect x="750" y="80" width="26" height="20" opacity="0.06"/>
+    </g>
+
+    <line x1="26" y1="118" x2="794" y2="118" stroke="#17331b"
+          stroke-width="1.5"/>
+
+    <rect x="1" y="1" width="818" height="138" fill="url(#scan)"/>
+  </g>
+</svg>

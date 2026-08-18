@@ -38,7 +38,7 @@ licence above:
 | Asset                              | Description                        |
 |------------------------------------|------------------------------------|
 | `assets/buttons/88x31/*.png`       | The button set                     |
-| `assets/terminal/identity-card.svg`| The identity card                  |
+| `assets/banners/header.svg`        | The console banner                 |
 | `assets/gifs/boot.gif`             | The console animation              |
 | `assets/flag-*.svg`                | The language markers               |
 
