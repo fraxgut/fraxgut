@@ -99,7 +99,7 @@ Donde mantengo mis proyectos comerciales.<br>
 - <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
 - <a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="28" alt="Clave GPG 464F905B27A2BA82"></a>
 
-El correo es la forma más segura de llegar a mí, y respondo cuando puedo.
+El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 ## Apoyo
 
@@ -108,17 +108,17 @@ El correo es la forma más segura de llegar a mí, y respondo cuando puedo.
 Puede apoyar mi trabajo público a través de
 [**Liberapay**](https://liberapay.com/fraxgut/) o con criptomonedas.
 
-**Monero (XMR) de preferencia.** Escríbame por una dirección.
+**Monero (XMR) de preferencia.** Escríbame para conseguir una dirección.
 
 ---
 
 <div align="center">
 
-<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.gnu.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a>
+<a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.linux.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://www.gentoo.org/"><img src="../../assets/stamps/gentoo.gif" width="99" height="56" alt="Gentoo"></a>
 
-<a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="La shell"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Software libre"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.minecraft.net/"><img src="../../assets/stamps/minecraft.gif" width="99" height="56" alt="Minecraft"></a> <a href="https://es.dragon-ball-official.com/"><img src="../../assets/stamps/dragonball.gif" width="99" height="56" alt="Dragon Ball"></a>
+<a href="https://magicant.github.io/yash/"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="La shell"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Software libre"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.minecraft.net/"><img src="../../assets/stamps/minecraft.gif" width="99" height="56" alt="Minecraft"></a> <a href="https://es.dragon-ball-official.com/"><img src="../../assets/stamps/dragonball.gif" width="99" height="56" alt="Dragon Ball"></a> <a href="https://www.paradoxinteractive.com/"><img src="../../assets/stamps/strategy.gif" width="99" height="56" alt="Grand strategy"></a>
 
-<a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.santiagocapital.cl/"><img src="../../assets/stamps/santiago.gif" width="99" height="56" alt="Santiago"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a> <a href="https://laroja.cl/"><img src="../../assets/stamps/laroja.gif" width="99" height="56" alt="La Roja"></a> <a href="https://www.sslazio.it/"><img src="../../assets/stamps/lazio.gif" width="99" height="56" alt="SS Lazio"></a> <a href="https://www.fifa.com/"><img src="../../assets/stamps/futbol.gif" width="99" height="56" alt="Fútbol"></a>
+<a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.santiagocapital.cl/"><img src="../../assets/stamps/santiago.gif" width="99" height="56" alt="Santiago"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a> <a href="https://laroja.cl/"><img src="../../assets/stamps/laroja.gif" width="99" height="56" alt="La Roja"></a> <a href="https://www.sslazio.it/"><img src="../../assets/stamps/lazio.gif" width="99" height="56" alt="SS Lazio"></a> <a href="https://www.fifa.com/"><img src="../../assets/stamps/futbol.gif" width="99" height="56" alt="Fútbol"></a> <a href="https://www.newretrowave.com/"><img src="../../assets/stamps/synthwave.gif" width="99" height="56" alt="Synthwave"></a>
 
 </div>
 
@@ -126,6 +126,6 @@ Puede apoyar mi trabajo público a través de
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITAS&color=47d813&style=for-the-badge" height="31" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/badges/cc-by-sa.png" height="31" alt="Licencia: CC BY-SA 4.0 o posterior"></a>
+<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITAS&color=47d813&style=for-the-badge" height="28" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/badges/cc-by-sa.png" height="28" alt="Licencia: CC BY-SA 4.0 o posterior"></a>
 
 </div>
