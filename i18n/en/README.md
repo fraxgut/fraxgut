@@ -69,11 +69,12 @@ OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.<br>
 </td>
 </tr>
 <tr>
-<td width="96" align="center"><a href="https://github.com/fraxgut/frankifuscus"><img src="../../assets/logos/phosphorus.svg" width="44" alt="The alchemical sign of phosphorus"></a></td>
+<td width="96" align="center"><a href="https://github.com/fraxgut/phosphor"><img src="../../assets/logos/phosphorus.svg" width="44" alt="The alchemical sign of phosphorus"></a></td>
 <td>
-<b>frankifuscus</b><br>
-A personal base16 colour scheme, in full colour and in monochrome.<br>
-<a href="https://github.com/fraxgut/frankifuscus"><b>fraxgut/frankifuscus &rarr;</b></a>
+<b>phosphor</b><br>
+A terminal colour palette on a warm neutral ramp, as Base16 and Base24
+schemes, in seventeen variants.<br>
+<a href="https://github.com/fraxgut/phosphor"><b>fraxgut/phosphor &rarr;</b></a>
 </td>
 </tr>
 </table>
@@ -95,16 +96,16 @@ Where I keep my commercial projects.<br>
 
 ## Contact
 
-- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email.svg" height="28" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
-- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="28" alt="LinkedIn: in/fraxgut"></a>
-- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="28" alt="X: @fraxgut"></a>
-- <a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="28" alt="GPG key 464F905B27A2BA82"></a>
+- <a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email.svg" height="20" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a>
+- <a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a>
+- <a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a>
+- <a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="GPG key 464F905B27A2BA82"></a>
 
 Email is the best way to reach me. I answer as soon as I can.
 
 ## Support
 
-- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="28" alt="Liberapay: fraxgut"></a>
+- <a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
 
 You can support my public work through
 [**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
@@ -117,9 +118,9 @@ You can support my public work through
 
 <a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.linux.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a> <a href="https://www.gentoo.org/"><img src="../../assets/stamps/gentoo.gif" width="99" height="56" alt="Gentoo"></a>
 
-<a href="https://magicant.github.io/yash/"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.minecraft.net/"><img src="../../assets/stamps/minecraft.gif" width="99" height="56" alt="Minecraft"></a> <a href="https://es.dragon-ball-official.com/"><img src="../../assets/stamps/dragonball.gif" width="99" height="56" alt="Dragon Ball"></a> <a href="https://www.paradoxinteractive.com/"><img src="../../assets/stamps/strategy.gif" width="99" height="56" alt="Grand strategy"></a>
+<a href="https://magicant.github.io/yash/"><img src="../../assets/stamps/shell.gif" width="99" height="56" alt="The shell"></a> <a href="https://neovim.io/"><img src="../../assets/stamps/neovim.gif" width="99" height="56" alt="Neovim"></a> <a href="https://www.open-std.org/jtc1/sc22/wg14/"><img src="../../assets/stamps/clang.gif" width="99" height="56" alt="The C language"></a></a> <a href="https://www.fsf.org/"><img src="../../assets/stamps/foss.gif" width="99" height="56" alt="Free software"></a> <a href="https://www.getmonero.org/"><img src="../../assets/stamps/monero.gif" width="99" height="56" alt="Monero"></a> <a href="https://www.minecraft.net/"><img src="../../assets/stamps/minecraft.gif" width="99" height="56" alt="Minecraft"></a> <a href="https://es.dragon-ball-official.com/"><img src="../../assets/stamps/dragonball.gif" width="99" height="56" alt="Dragon Ball">
 
-<a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.santiagocapital.cl/"><img src="../../assets/stamps/santiago.gif" width="99" height="56" alt="Santiago"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a> <a href="https://laroja.cl/"><img src="../../assets/stamps/laroja.gif" width="99" height="56" alt="La Roja"></a> <a href="https://www.sslazio.it/"><img src="../../assets/stamps/lazio.gif" width="99" height="56" alt="SS Lazio"></a> <a href="https://www.fifa.com/"><img src="../../assets/stamps/futbol.gif" width="99" height="56" alt="Football"></a> <a href="https://www.newretrowave.com/"><img src="../../assets/stamps/synthwave.gif" width="99" height="56" alt="Synthwave"></a>
+<a href="https://www.thelatinlibrary.com/"><img src="../../assets/stamps/latine.gif" width="99" height="56" alt="Lingua Latina"></a> <a href="https://www.santiagocapital.cl/"><img src="../../assets/stamps/santiago.gif" width="99" height="56" alt="Santiago"></a> <a href="https://www.marcachile.cl/"><img src="../../assets/stamps/chile.gif" width="99" height="56" alt="Chile"></a> <a href="https://laroja.cl/"><img src="../../assets/stamps/laroja.gif" width="99" height="56" alt="La Roja"></a> <a href="https://www.sslazio.it/"><img src="../../assets/stamps/lazio.gif" width="99" height="56" alt="SS Lazio"></a> <a href="https://www.fifa.com/"><img src="../../assets/stamps/futbol.gif" width="99" height="56" alt="Football"></a> <a href="https://www.linkinpark.com/"><img src="../../assets/stamps/linkinpark.gif" width="99" height="56" alt="Linkin Park"></a>
 
 </div>
 

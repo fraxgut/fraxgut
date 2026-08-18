@@ -42,11 +42,13 @@ OUT = str(REPO / "assets" / "badges")
 os.makedirs(OUT, exist_ok=True)
 
 FONT = "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf"
-font = ImageFont.truetype(FONT, 12)
+font = ImageFont.truetype(FONT, 10)
 
-H = 28
-MARK = 16                 # Height of the logotype inside the badge.
-PAD = 9
+# Twenty pixels is the height a Markdown list bullet sits level with; a
+# taller badge leaves the bullet stranded at its middle.
+H = 20
+MARK = 12                 # Height of the logotype inside the badge.
+PAD = 7
 
 
 def embed(name):
@@ -81,11 +83,11 @@ Social badge: {label}
     <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
     <stop offset="1" stop-opacity=".12"/>
   </linearGradient>
-  <rect width="{total}" height="{H}" rx="3" fill="{colour}"/>
-  <rect width="{total}" height="{H}" rx="3" fill="url(#g)"/>
+  <rect width="{total}" height="{H}" rx="2" fill="{colour}"/>
+  <rect width="{total}" height="{H}" rx="2" fill="url(#g)"/>
   <image x="{PAD}" y="{(H - MARK) / 2}" width="{mark_w}" height="{MARK}"
          href="{embed(mark)}"/>
-  <text x="{PAD + mark_w + 7}" y="19" fill="{text_colour}" font-size="12"
+  <text x="{PAD + mark_w + 7}" y="14" fill="{text_colour}" font-size="10"
         font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
         font-weight="bold">{x.escape(label)}</text>
 </svg>

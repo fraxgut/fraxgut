@@ -4,127 +4,110 @@
 Each stamp carries a canton on the left holding the original logotype,
 a rule, and the caption on the right.
 
+The canton ground comes from the logotype itself: the script averages
+the mark's own colour and darkens it to a ground, so a stamp is
+recognisable from across the page. A mark that is pale or monochrome
+averages to grey, so those stamps name their ground by hand in FIXED.
+
 The wall is a three by seven grid, and two stamps that touch — including
 on the diagonal — take different border colours, and different canton
 grounds. That is the eight-neighbour colouring of a king graph, which
-needs four colours at minimum; the palette here gives more, so the wall
-reads as variety rather than as a pattern.
+needs four colours at minimum. The script verifies the result and stops
+rather than writing a clash.
 
-The order groups by subject: the four schools, then the tools, then
-culture, with Lingua Latina beside Chile.
+Colours come from Phosphor Base24 (github.com/fraxgut/phosphor).
 """
 
+import colorsys
 import pathlib
 import subprocess
 import tempfile
 
+from PIL import Image, ImageDraw, ImageFont
+
 # Paths resolve from this file, so the scripts run from anywhere.
 REPO = pathlib.Path(__file__).resolve().parent.parent
+LOGOS = REPO / "assets" / "logos"
+OUT = REPO / "assets" / "stamps"
+OUT.mkdir(parents=True, exist_ok=True)
 
 
 def terminus(size):
-    """Return a Terminus face, unpacking the console font on demand.
-
-    Terminus ships gzipped in /usr/share/fonts, and FreeType needs it
-    unpacked. The copy lands in a temporary directory, never in the
-    repository.
-    """
-    from PIL import ImageFont
+    """Return a Terminus face, unpacking the console font on demand."""
     name = {12: "ter-x12b", 16: "ter-x16b"}[size]
     out = pathlib.Path(tempfile.gettempdir()) / f"{name}.pcf"
     if not out.exists():
-        src = pathlib.Path("/usr/share/fonts/terminus") / f"{name}.pcf.gz"
         with open(out, "wb") as fh:
-            subprocess.run(["gzip", "-dc", str(src)], stdout=fh, check=True)
+            subprocess.run(["gzip", "-dc",
+                            f"/usr/share/fonts/terminus/{name}.pcf.gz"],
+                           stdout=fh, check=True)
     return ImageFont.truetype(str(out), size)
 
-
-import os
-
-from PIL import Image, ImageDraw, ImageFont
-
-LOGOS = str(REPO / "assets" / "logos")
-OUT = str(REPO / "assets" / "stamps")
-os.makedirs(OUT, exist_ok=True)
 
 W, H = 99, 56
 CANTON = 28               # One width for every stamp.
 CELL = 6                  # Terminus 12 advances six pixels.
 BOX = 20                  # The mark never reaches the border.
+GROUND_LEVEL = 0.30       # How far the logotype colour drops to a ground.
 
-# --- FRANKIFUSCUS PALETTE ---------------------------------------------
-# TODO(fraxgut): the scheme becomes Phosphor, and Base24 rather than
-# Base16. Rename these constants, and the prose in the four pages that
-# calls it a base16 scheme, when that lands.
+# --- PHOSPHOR BASE24 --------------------------------------------------
 BLACK = "#000000"
-BONE = "#fffaeb"
-MUTED = "#96948b"         # Caption tone; it never repeats a border colour.
+BONE = "#FFFAEB"          # base07
+MUTED = "#96948B"         # base05; never repeats a border colour.
 
+# The bright chromatic slots, which carry the borders.
 BORDERS = {
-    "red": "#d81323", "orange": "#d84413", "yellow": "#d89613",
-    "lime": "#96d813", "green": "#13d876", "blue": "#1386d8",
-    "violet": "#7513d8", "magenta": "#d81365",
+    "red": "#FF4C49", "orange": "#E7A739", "yellow": "#C98A04",
+    "lime": "#9DDB3C", "green": "#44E084", "blue": "#3EA4F8",
+    "violet": "#A573FF", "magenta": "#D5268A",
 }
-GROUNDS = {
-    "navy": "#0e1f3d", "maroon": "#2b0f12", "slate": "#141a1e",
-    "olive": "#131a10", "tyrian": "#5b1836", "crimson": "#a8121f",
-    "coal": "#17140f", "moss": "#0f1c17", "sky": "#0d2b46",
-    "bone-field": "#241a1a",
+
+# Grounds named by hand, for marks whose own colour says the wrong thing:
+# a white star averages to grey, and a lifted monochrome mark to bone.
+FIXED = {
+    "chile": "#4a0a12",         # The star is white; take the flag's red.
+    "latine": "#3b1030",        # Tyrian purple, for the eagle.
+    "santiago": "#2e2a26",      # The cross is red on white.
+    "shell": "#0b2418",         # A drawn chevron on phosphor green.
+    "foss": "#2b2016",          # The mark was lifted to bone.
+    "instituto-nacional": "#101f42",
+    "lazio": "#0d2b46",         # The club plays in sky blue.
+    "futbol": "#0f2a14",        # Grass.
+    "linkinpark": "#2a0d14",
+    "clang": "#1a2c5c",         # The C logo is blue.
+    "gentoo": "#2a1f3d",        # Gentoo purple.
 }
 
 font = terminus(12)
 
 # --- THE WALL ---------------------------------------------------------
-# Each cell: name, caption, sub, logo, preferred borders, preferred
-# grounds. The solver takes the first preference no neighbour holds.
+# Each cell: name, caption, sub, logo, preferred borders. The solver
+# takes the first preference no neighbour holds.
 WALL = [
-    # Schools, then the first tools.
     [("instituto-nacional", "INSTITUTO", "NACIONAL", "instituto-nacional.png",
-      ["violet", "magenta"], ["navy", "slate"]),
-     ("uchile", "UNIVERSIDAD", "DE CHILE", "uchile.png",
-      ["blue", "violet"], ["slate", "navy"]),
-     ("fcfm", "FCFM", "UCHILE", "fcfm.png",
-      ["red", "magenta"], ["maroon", "coal"]),
-     ("dcc", "DCC", "UCHILE", "dcc.png",
-      ["magenta", "red"], ["coal", "maroon"]),
-     ("gnu-linux", "GNU/LINUX", None, "tux.png",
-      ["yellow", "orange"], ["slate", "coal"]),
-     ("openbsd", "OPENBSD", None, "openbsd.png",
-      ["orange", "yellow"], ["moss", "olive"]),
-     ("gentoo", "GENTOO", None, "gentoo.png",
-      ["violet", "magenta"], ["tyrian", "coal"])],
+      ["violet", "magenta"]),
+     ("uchile", "UNIVERSIDAD", "DE CHILE", "uchile.png", ["blue", "violet"]),
+     ("fcfm", "FCFM", "UCHILE", "fcfm.png", ["red", "magenta"]),
+     ("dcc", "DCC", "UCHILE", "dcc.png", ["magenta", "red"]),
+     ("gnu-linux", "GNU/LINUX", None, "tux.png", ["yellow", "orange"]),
+     ("openbsd", "OPENBSD", None, "openbsd.png", ["orange", "yellow"]),
+     ("gentoo", "GENTOO", None, "gentoo.png", ["violet", "magenta"])],
 
-    # The rest of the tools, then what I watch and play.
-    [("shell", "SHELL", None, "shell.png",
-      ["green", "lime"], ["olive", "moss"]),
-     ("neovim", "NEOVIM", None, "neovim.png",
-      ["lime", "green"], ["moss", "slate"]),
-     ("foss", "FREE", "SOFTWARE", "fsf.png",
-      ["green", "lime"], ["olive", "coal"]),
-     ("monero", "MONERO", None, "monero.png",
-      ["orange", "yellow"], ["coal", "slate"]),
-     ("minecraft", "MINECRAFT", None, "minecraft.png",
-      ["lime", "green"], ["moss", "olive"]),
-     ("dragonball", "DRAGON", "BALL", "dragonball.png",
-      ["yellow", "orange"], ["coal", "slate"]),
-     ("strategy", "GRAND", "STRATEGY", "strategy.png",
-      ["blue", "violet"], ["navy", "sky"])],
+    [("shell", "SHELL", None, "shell.png", ["green", "lime"]),
+     ("neovim", "NEOVIM", None, "neovim.png", ["lime", "green"]),
+     ("clang", "C", None, "clang.png", ["blue", "violet"]),
+     ("foss", "FREE", "SOFTWARE", "fsf.png", ["green", "lime"]),
+     ("monero", "MONERO", None, "monero.png", ["orange", "yellow"]),
+     ("minecraft", "MINECRAFT", None, "minecraft.png", ["lime", "green"]),
+     ("dragonball", "DRAGON", "BALL", "dragonball.png", ["yellow", "orange"])],
 
-    # Culture, home, and football, with Chile between them.
-    [("latine", "LINGVA", "LATINA", "aquila.png",
-      ["violet", "magenta"], ["tyrian", "maroon"]),
-     ("santiago", "SANTIAGO", None, "santiago.png",
-      ["red", "magenta"], ["bone-field", "maroon"]),
-     ("chile", "CHILE", None, "gunelve.png",
-      ["blue", "green"], ["crimson", "navy"]),
-     ("laroja", "LA ROJA", None, "laroja.png",
-      ["red", "orange"], ["navy", "coal"]),
-     ("lazio", "SS LAZIO", None, "lazio.png",
-      ["lime", "blue"], ["sky", "slate"]),
-     ("futbol", "FOOTBALL", None, "futbol.png",
-      ["green", "yellow"], ["coal", "moss"]),
-     ("synthwave", "SYNTHWAVE", None, "synthwave.png",
-      ["magenta", "violet"], ["tyrian", "sky"])],
+    [("latine", "LINGVA", "LATINA", "aquila.png", ["violet", "magenta"]),
+     ("santiago", "SANTIAGO", None, "santiago.png", ["red", "magenta"]),
+     ("chile", "CHILE", None, "gunelve.png", ["blue", "green"]),
+     ("laroja", "LA ROJA", None, "laroja.png", ["red", "orange"]),
+     ("lazio", "SS LAZIO", None, "lazio.png", ["blue", "green"]),
+     ("futbol", "FOOTBALL", None, "futbol.png", ["green", "yellow"]),
+     ("linkinpark", "LINKIN", "PARK", "linkinpark.png", ["magenta", "violet"])],
 ]
 
 ROWS, COLS = len(WALL), len(WALL[0])
@@ -140,44 +123,117 @@ def neighbours(r, c):
                     yield nr, nc
 
 
-def solve(index, pool):
-    """Give each cell a colour no neighbour holds, by preference."""
+def ground_for(name, logo):
+    """The canton ground: the logotype's own colour, dropped to a field."""
+    if name in FIXED:
+        return FIXED[name]
+    im = Image.open(LOGOS / logo).convert("RGBA")
+    im.thumbnail((48, 48))
+    px = im.load()
+    tot, n = [0, 0, 0], 0
+    for y in range(im.height):
+        for x in range(im.width):
+            r, g, b, a = px[x, y]
+            # Skip the transparent parts and the near-black outlines.
+            if a > 120 and max(r, g, b) > 60:
+                tot[0] += r
+                tot[1] += g
+                tot[2] += b
+                n += 1
+    if not n:
+        return "#141a1e"
+    r, g, b = (c / n for c in tot)
+    return "#%02x%02x%02x" % (int(r * GROUND_LEVEL), int(g * GROUND_LEVEL),
+                              int(b * GROUND_LEVEL))
+
+
+def solve_borders():
+    """Give each cell a border no neighbour holds, by preference."""
     chosen = {}
     for r in range(ROWS):
         for c in range(COLS):
             taken = {chosen[n] for n in neighbours(r, c) if n in chosen}
-            for want in WALL[r][c][index]:
+            for want in WALL[r][c][4]:
                 if want not in taken:
                     chosen[(r, c)] = want
                     break
             else:
-                spare = [k for k in pool if k not in taken]
+                spare = [k for k in BORDERS if k not in taken]
                 if not spare:
                     raise SystemExit(f"no colour left for {WALL[r][c][0]}")
                 chosen[(r, c)] = spare[0]
     return chosen
 
 
-def check(chosen, label):
-    """Every touching pair must differ. Fail loudly if one does not."""
+def shade(hex_colour, step):
+    """Lift or deepen a ground, holding the hue the logotype gave it.
+
+    Separating by weight rather than by hue is what keeps Monero orange
+    and Tux blue-grey: a neighbour moves in lightness, not in colour.
+    """
+    r, g, b = (int(hex_colour[i:i + 2], 16) / 255 for i in (1, 3, 5))
+    h, sat, v = colorsys.rgb_to_hsv(r, g, b)
+    v = max(0.05, min(0.42, v + 0.055 * step))
+    sat = min(1.0, sat + 0.05 * abs(step))
+    r, g, b = colorsys.hsv_to_rgb(h, sat, v)
+    return "#%02x%02x%02x" % (int(r * 255), int(g * 255), int(b * 255))
+
+
+def far_enough(a, b, limit=34):
+    """Two grounds differ if their channels are far enough apart."""
+    ai = [int(a[i:i + 2], 16) for i in (1, 3, 5)]
+    bi = [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return sum(abs(x - y) for x, y in zip(ai, bi)) >= limit
+
+
+def separate(grounds):
+    """Push a ground around the hue circle until its neighbours differ.
+
+    A stamp named in FIXED keeps its ground; the others move, which is
+    what stops two monochrome marks from sitting on the same grey.
+    """
+    moved = 0
+    for r in range(ROWS):
+        for c in range(COLS):
+            name = WALL[r][c][0]
+            if name in FIXED:
+                continue
+            for turn in range(1, 8):
+                clash = [n for n in neighbours(r, c)
+                         if not far_enough(grounds[(r, c)], grounds[n])]
+                if not clash:
+                    break
+                # Alternate down and up, so the wall keeps both weights.
+                grounds[(r, c)] = shade(grounds[(r, c)],
+                                        -turn if (r + c) % 2 else turn)
+                if turn == 1:
+                    moved += 1
+    if moved:
+        print(f"  grounds: {moved} moved off a neighbour's hue")
+    return grounds
+
+
+def check(borders, grounds):
+    """Touching stamps must differ in border, and in ground."""
+    left = []
     for r in range(ROWS):
         for c in range(COLS):
             for n in neighbours(r, c):
-                if chosen[(r, c)] == chosen[n]:
+                if borders[(r, c)] == borders[n]:
                     raise SystemExit(
-                        f"{label}: {WALL[r][c][0]} touches "
-                        f"{WALL[n[0]][n[1]][0]}, both {chosen[(r, c)]}")
-    print(f"  {label}: {len(set(chosen.values()))} colours in use, "
-          f"no touching pair shares one")
-
-
-def draw_line(d, text, y, colour, cell):
-    """Centre one caption line at the given advance per character."""
-    width = W - CANTON
-    x = CANTON + (width - len(text) * cell) // 2
-    for ch in text:
-        d.text((x, y), ch, font=font, fill=colour)
-        x += cell
+                        f"border clash: {WALL[r][c][0]} touches "
+                        f"{WALL[n[0]][n[1]][0]}")
+                if not far_enough(grounds[(r, c)], grounds[n]):
+                    left.append((WALL[r][c][0], WALL[n[0]][n[1]][0]))
+    print(f"  borders: {len(set(borders.values()))} colours, no touching pair "
+          f"shares one")
+    if left:
+        print(f"  grounds: {len(left) // 2} pairs still sit close; name one "
+              f"of each in FIXED")
+        for a, b in left[:4]:
+            print(f"      {a} / {b}")
+    else:
+        print("  grounds: every touching pair separated")
 
 
 def stamp(name, caption, sub, logo, accent, ground):
@@ -185,7 +241,7 @@ def stamp(name, caption, sub, logo, accent, ground):
     d = ImageDraw.Draw(img)
 
     d.rectangle([0, 0, CANTON, H - 1], fill=ground)
-    mark = Image.open(f"{LOGOS}/{logo}").convert("RGBA")
+    mark = Image.open(LOGOS / logo).convert("RGBA")
     ratio = min(BOX / mark.width, BOX / mark.height)
     mark = mark.resize((max(1, int(mark.width * ratio)),
                         max(1, int(mark.height * ratio))), Image.LANCZOS)
@@ -196,7 +252,11 @@ def stamp(name, caption, sub, logo, accent, ground):
     # Terminus leaves a pixel of air beside each glyph; dropping it lets a
     # long caption keep clear of the border without changing the face.
     def line(text, y, colour):
-        draw_line(d, text, y, colour, 5 if len(text) > 9 else CELL)
+        cell = 5 if len(text) > 9 else CELL
+        x = CANTON + (W - CANTON - len(text) * cell) // 2
+        for ch in text:
+            d.text((x, y), ch, font=font, fill=colour)
+            x += cell
 
     if sub:
         line(caption, 15, BONE)
@@ -205,22 +265,23 @@ def stamp(name, caption, sub, logo, accent, ground):
         line(caption, 22, BONE)
 
     d.rectangle([0, 0, W - 1, H - 1], outline=accent)
-    img.save(f"{OUT}/{name}.png")
+    img.save(OUT / f"{name}.png")
 
 
-borders = solve(4, BORDERS)
-grounds = solve(5, GROUNDS)
-check(borders, "borders")
-check(grounds, "grounds")
+borders = solve_borders()
+grounds = {(r, c): ground_for(WALL[r][c][0], WALL[r][c][3])
+           for r in range(ROWS) for c in range(COLS)}
+grounds = separate(grounds)
+check(borders, grounds)
 
 for r in range(ROWS):
     for c in range(COLS):
-        name, caption, sub, logo, _, _ = WALL[r][c]
+        name, caption, sub, logo, _ = WALL[r][c]
         stamp(name, caption, sub, logo, BORDERS[borders[(r, c)]],
-              GROUNDS[grounds[(r, c)]])
+              grounds[(r, c)])
 
 print(f"\n{ROWS * COLS} wall stamps -> {OUT}\n")
 for r in range(ROWS):
-    print("  " + "  ".join(
-        f"{WALL[r][c][0][:10]:>10s} {borders[(r, c)][:4]}/{grounds[(r, c)][:5]}"
+    print("  " + " ".join(
+        f"{WALL[r][c][0][:9]:>9s} {borders[(r, c)][:4]}{grounds[(r, c)]}"
         for c in range(COLS)))

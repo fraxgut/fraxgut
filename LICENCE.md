@@ -72,6 +72,7 @@ source, with attribution as each licence requires:
 | `assets/logos/futbol.png` | Soccerball | CC0 |
 | `assets/logos/santiago.png` | Cross of Saint James | CC BY-SA 3.0 |
 | `assets/logos/laroja.png` | Federación de Fútbol de Chile badge | Public domain |
+| `assets/logos/clang.png` | The C programming language logo | CC BY-SA 4.0 |
 | `assets/logos/openbsd.png` | Puffy, by Ty Semaka | CC BY 1.0 |
 
 The remaining logotypes in `assets/logos/` come from Wikimedia Commons,
@@ -108,11 +109,11 @@ work under the licence above.
 `assets/logos/lazio.png` carries the badge of S.S. Lazio, which belongs
 to the club. `assets/stamps/minecraft.gif` and `assets/stamps/dragonball.gif`
 carry marks drawn for this repository: a creeper face on its eight by
-eight grid, a four-star orb, a meridian globe for grand strategy, and a
-banded sun over its horizon grid. They are original drawings, and they
-stand for Minecraft, for Dragon Ball, and for the games of Paradox
-Interactive, whose names and trade marks belong to Mojang, to Shueisha
-and Toei, and to Paradox. This licence grants no rights in any of them, and the stamps claim
+eight grid, a four-star orb, and the angular mark Linkin Park used
+between 2014 and 2017. They are original drawings, and they
+stand for Minecraft, for Dragon Ball, and for Linkin Park, whose names
+and trade marks belong to Mojang, to Shueisha and Toei, and to the
+band. This licence grants no rights in any of them, and the stamps claim
 no endorsement: they are the links of someone who follows them.
 
 ## Names and marks
