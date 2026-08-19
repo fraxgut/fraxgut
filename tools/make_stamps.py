@@ -150,8 +150,8 @@ def ground_for(name, logo):
     if not n:
         return "#141a1e"
     r, g, b = (c / n for c in tot)
-    return "#%02x%02x%02x" % (int(r * GROUND_LEVEL), int(g * GROUND_LEVEL),
-                              int(b * GROUND_LEVEL))
+    return (f"#{int(r * GROUND_LEVEL):02x}{int(g * GROUND_LEVEL):02x}"
+            f"{int(b * GROUND_LEVEL):02x}")
 
 
 def solve_borders():
@@ -189,7 +189,7 @@ def shade(hex_colour, step):
     v = max(0.05, min(0.42, v + 0.055 * step))
     sat = min(1.0, sat + 0.05 * abs(step))
     r, g, b = colorsys.hsv_to_rgb(h, sat, v)
-    return "#%02x%02x%02x" % (int(r * 255), int(g * 255), int(b * 255))
+    return f"#{int(r * 255):02x}{int(g * 255):02x}{int(b * 255):02x}"
 
 
 def far_enough(a, b, limit=34):

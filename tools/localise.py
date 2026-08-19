@@ -31,7 +31,6 @@ def terminus(size):
     return ImageFont.truetype(str(out), size)
 
 
-SP = str(REPO) + "/"
 base = (REPO / "README.md").read_text(encoding="utf-8")
 SEL = next(l for l in base.split("\n")
            if l.startswith('<img src="assets/flags/spqr.svg"'))

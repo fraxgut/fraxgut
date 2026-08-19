@@ -52,7 +52,8 @@ PAD = 7
 
 
 def embed(name):
-    blob = open(f"{MARKS}/{name}.png", "rb").read()
+    with open(f"{MARKS}/{name}.png", "rb") as fh:
+        blob = fh.read()
     return "data:image/png;base64," + base64.b64encode(blob).decode()
 
 
@@ -92,7 +93,8 @@ Social badge: {label}
         font-weight="bold">{x.escape(label)}</text>
 </svg>
 '''
-    open(f"{OUT}/{name}.svg", "w", encoding="utf-8").write(svg)
+    with open(f"{OUT}/{name}.svg", "w", encoding="utf-8") as fh:
+        fh.write(svg)
     print(f"  {name:16s} {total:>4d}x{H}  {label}")
 
 
