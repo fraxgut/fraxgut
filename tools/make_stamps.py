@@ -62,14 +62,21 @@ BORDERS = {
     "violet": "#A573FF", "magenta": "#D5268A",
 }
 
+# Borders that must hold, whatever the solver would prefer. The solver
+# places these first and then keeps them off every neighbour.
+PINNED = {
+    "laroja": "red",
+}
+
 # Grounds named by hand, for marks whose own colour says the wrong thing:
 # a white star averages to grey, and a lifted monochrome mark to bone.
 FIXED = {
     "chile": "#4a0a12",         # The star is white; take the flag's red.
+    "laroja": "#6b0f18",        # The team is called the red one.
     "latine": "#3b1030",        # Tyrian purple, for the eagle.
     "santiago": "#2e2a26",      # The cross is red on white.
     "shell": "#0b2418",         # A drawn chevron on phosphor green.
-    "foss": "#2b2016",          # The mark was lifted to bone.
+    "foss": "#5f2408",          # The Free Software Foundation runs red.
     "instituto-nacional": "#101f42",
     "lazio": "#0d2b46",         # The club plays in sky blue.
     "futbol": "#0f2a14",        # Grass.
@@ -90,13 +97,13 @@ WALL = [
      ("fcfm", "FCFM", "UCHILE", "fcfm.png", ["red", "magenta"]),
      ("dcc", "DCC", "UCHILE", "dcc.png", ["magenta", "red"]),
      ("gnu-linux", "GNU/LINUX", None, "tux.png", ["yellow", "orange"]),
-     ("openbsd", "OPENBSD", None, "openbsd.png", ["orange", "yellow"]),
-     ("gentoo", "GENTOO", None, "gentoo.png", ["violet", "magenta"])],
+     ("gentoo", "GENTOO", None, "gentoo.png", ["violet", "magenta"]),
+     ("openbsd", "OPENBSD", None, "openbsd.png", ["orange", "yellow"])],
 
     [("shell", "SHELL", None, "shell.png", ["green", "lime"]),
-     ("neovim", "NEOVIM", None, "neovim.png", ["lime", "green"]),
      ("clang", "C", None, "clang.png", ["blue", "violet"]),
-     ("foss", "FREE", "SOFTWARE", "fsf.png", ["green", "lime"]),
+     ("neovim", "NEOVIM", None, "neovim.png", ["lime", "green"]),
+     ("foss", "FREE", "SOFTWARE", "fsf.png", ["magenta", "red"]),
      ("monero", "MONERO", None, "monero.png", ["orange", "yellow"]),
      ("minecraft", "MINECRAFT", None, "minecraft.png", ["lime", "green"]),
      ("dragonball", "DRAGON", "BALL", "dragonball.png", ["yellow", "orange"])],
@@ -104,7 +111,7 @@ WALL = [
     [("latine", "LINGVA", "LATINA", "aquila.png", ["violet", "magenta"]),
      ("santiago", "SANTIAGO", None, "santiago.png", ["red", "magenta"]),
      ("chile", "CHILE", None, "gunelve.png", ["blue", "green"]),
-     ("laroja", "LA ROJA", None, "laroja.png", ["red", "orange"]),
+     ("laroja", "LA ROJA", None, "laroja.png", ["red", "magenta"]),
      ("lazio", "SS LAZIO", None, "lazio.png", ["blue", "green"]),
      ("futbol", "FOOTBALL", None, "futbol.png", ["green", "yellow"]),
      ("linkinpark", "LINKIN", "PARK", "linkinpark.png", ["magenta", "violet"])],
@@ -152,6 +159,12 @@ def solve_borders():
     chosen = {}
     for r in range(ROWS):
         for c in range(COLS):
+            if WALL[r][c][0] in PINNED:
+                chosen[(r, c)] = PINNED[WALL[r][c][0]]
+    for r in range(ROWS):
+        for c in range(COLS):
+            if (r, c) in chosen:
+                continue
             taken = {chosen[n] for n in neighbours(r, c) if n in chosen}
             for want in WALL[r][c][4]:
                 if want not in taken:
