@@ -95,21 +95,41 @@ Ubi opera mea mercatoria servo.<br>
 
 ## Epistulae
 
-<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="20" alt="Epistula: franco.gutierrez.1@ug.uchile.cl"></a><br>
-<a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a><br>
-<a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X: @fraxgut"></a><br>
-<a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clavis GPG 464F905B27A2BA82"></a>
+<table>
+<tr>
+<td><a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="../../assets/badges/email-la.svg" height="20" alt="Epistula"></a></td>
+<td><a href="mailto:franco.gutierrez.1@ug.uchile.cl">franco.gutierrez.1@ug.uchile.cl</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg-la.svg" height="20" alt="Clavis GPG"></a></td>
+<td><code>83EB 6096 ECF3 75F4 1E08&nbsp; 4AFA 464F 905B 27A2 BA82</code></td>
+</tr>
+<tr>
+<td><a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
+<td><a href="https://www.linkedin.com/in/fraxgut">linkedin.com/in/fraxgut</a></td>
+</tr>
+<tr>
+<td><a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X"></a></td>
+<td><a href="https://x.com/fraxgut">x.com/fraxgut</a></td>
+</tr>
+</table>
 
 Epistula optima via est ad me contingendum. Respondeo cum primum possum.
 
 ## Subsidium
 
-<a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+<table>
+<tr>
+<td><a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
+<td><a href="https://liberapay.com/fraxgut/">liberapay.com/fraxgut</a></td>
+</tr>
+<tr>
+<td><b>Monero</b></td>
+<td>Praelatum. Scribe mihi ut inscriptionem accipias.</td>
+</tr>
+</table>
 
-Opus meum publicum per [**Liberapay**](https://liberapay.com/fraxgut/)
-vel per nummos cryptographicos sustinere potes.
-
-**Monero (XMR) praelatum.** Scribe mihi ut inscriptionem accipias.
+Opus meum publicum per Liberapay vel per nummos cryptographicos sustinere potes.
 
 ---
 

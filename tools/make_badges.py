@@ -96,14 +96,17 @@ Social badge: {label}
     print(f"  {name:16s} {total:>4d}x{H}  {label}")
 
 
+# The badge names the service; the value sits beside it, in text a
+# reader can select and copy.
 SET = [
     ("email", "EMAIL", "#2f6f3a", "email", 44 / 30, "#ffffff"),
-    ("linkedin", "IN/FRAXGUT", "#0a66c2", "linkedin", 160 / 158, "#ffffff"),
-    ("x", "@FRAXGUT", "#1c1f24", "x", 160 / 145, "#ffffff"),
+    ("gpg", "GPG", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
+    ("linkedin", "LINKEDIN", "#0a66c2", "linkedin", 160 / 158, "#ffffff"),
+    ("x", "X", "#1c1f24", "x", 160 / 145, "#ffffff"),
     ("liberapay", "LIBERAPAY", "#f6c915", "liberapay", 125 / 160, "#1a1a1a"),
-    ("gpg", "464F905B27A2BA82", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
     ("email-es", "CORREO", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("email-la", "EPISTULA", "#2f6f3a", "email", 44 / 30, "#ffffff"),
+    ("gpg-la", "CLAVIS", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
 ]
 WIDTH = max(measure(lbl, ratio) for _, lbl, _, _, ratio, _ in SET)
 print(f"  one width for all: {WIDTH}px")

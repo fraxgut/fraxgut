@@ -96,21 +96,41 @@ Where I keep my commercial projects.<br>
 
 ## Contact
 
-<a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="assets/badges/email.svg" height="20" alt="Email: franco.gutierrez.1@ug.uchile.cl"></a><br>
-<a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn: in/fraxgut"></a><br>
-<a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="20" alt="X: @fraxgut"></a><br>
-<a href="https://github.com/fraxgut.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key 464F905B27A2BA82"></a>
+<table>
+<tr>
+<td><a href="mailto:franco.gutierrez.1@ug.uchile.cl"><img src="assets/badges/email.svg" height="20" alt="Email"></a></td>
+<td><a href="mailto:franco.gutierrez.1@ug.uchile.cl">franco.gutierrez.1@ug.uchile.cl</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/fraxgut.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key"></a></td>
+<td><code>83EB 6096 ECF3 75F4 1E08&nbsp; 4AFA 464F 905B 27A2 BA82</code></td>
+</tr>
+<tr>
+<td><a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
+<td><a href="https://www.linkedin.com/in/fraxgut">linkedin.com/in/fraxgut</a></td>
+</tr>
+<tr>
+<td><a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="20" alt="X"></a></td>
+<td><a href="https://x.com/fraxgut">x.com/fraxgut</a></td>
+</tr>
+</table>
 
 Email is the best way to reach me. I answer as soon as I can.
 
 ## Support
 
-<a href="https://liberapay.com/fraxgut/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay: fraxgut"></a>
+<table>
+<tr>
+<td><a href="https://liberapay.com/fraxgut/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
+<td><a href="https://liberapay.com/fraxgut/">liberapay.com/fraxgut</a></td>
+</tr>
+<tr>
+<td><b>Monero</b></td>
+<td>Preferred. Write to me for an address.</td>
+</tr>
+</table>
 
-You can support my public work through
-[**Liberapay**](https://liberapay.com/fraxgut/) or cryptocurrency.
-
-**Monero (XMR) preferred.** Write to me for an address.
+You can support my public work through Liberapay or cryptocurrency.
 
 ---
 
