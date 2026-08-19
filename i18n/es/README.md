@@ -118,6 +118,11 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 ## Apoyo
 
+<details>
+<summary>Puede apoyar mi trabajo público a través de Liberapay o criptomonedas. <b>Monero de preferencia.</b></summary>
+
+<br>
+
 <table>
 <tr>
 <td><a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
@@ -125,11 +130,11 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 </tr>
 <tr>
 <td><b>Monero</b></td>
-<td>De preferencia. Escríbame para conseguir una dirección.</td>
+<td>Escríbame para conseguir una dirección.</td>
 </tr>
 </table>
 
-Puede apoyar mi trabajo público a través de Liberapay o criptomonedas.
+</details>
 
 ---
 

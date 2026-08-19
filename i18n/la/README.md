@@ -118,6 +118,11 @@ Epistula optima via est ad me contingendum. Respondeo cum primum possum.
 
 ## Subsidium
 
+<details>
+<summary>Opus meum publicum per Liberapay vel per nummos cryptographicos sustinere potes. <b>Monero praelatum.</b></summary>
+
+<br>
+
 <table>
 <tr>
 <td><a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
@@ -125,11 +130,11 @@ Epistula optima via est ad me contingendum. Respondeo cum primum possum.
 </tr>
 <tr>
 <td><b>Monero</b></td>
-<td>Praelatum. Scribe mihi ut inscriptionem accipias.</td>
+<td>Scribe mihi ut inscriptionem accipias.</td>
 </tr>
 </table>
 
-Opus meum publicum per Liberapay vel per nummos cryptographicos sustinere potes.
+</details>
 
 ---
 

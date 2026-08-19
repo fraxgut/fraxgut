@@ -119,6 +119,11 @@ Email is the best way to reach me. I answer as soon as I can.
 
 ## Support
 
+<details>
+<summary>You can support my public work through Liberapay or cryptocurrency. <b>Monero preferred.</b></summary>
+
+<br>
+
 <table>
 <tr>
 <td><a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
@@ -126,11 +131,11 @@ Email is the best way to reach me. I answer as soon as I can.
 </tr>
 <tr>
 <td><b>Monero</b></td>
-<td>Preferred. Write to me for an address.</td>
+<td>Write to me for an address.</td>
 </tr>
 </table>
 
-You can support my public work through Liberapay or cryptocurrency.
+</details>
 
 ---
 
