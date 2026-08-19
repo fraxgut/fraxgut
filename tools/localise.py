@@ -37,15 +37,15 @@ SEL = next(l for l in base.split("\n")
 NAMES = {"en": "English", "es": "Spanish", "la": "Latin"}
 F = '<img src="../../assets/flags/'
 SELECTOR = {
- "en": (f'{F}spqr.svg" alt="" height="18"> **[Latine](../la/README.md)** · '
-        f'{F}burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · '
-        f'{F}england.svg" alt="" height="18"> **English**'),
- "es": (f'{F}spqr.svg" alt="" height="18"> **[Latine](../la/README.md)** · '
-        f'{F}burgundy.svg" alt="" height="18"> **Español** · '
-        f'{F}england.svg" alt="" height="18"> **[English](../en/README.md)**'),
- "la": (f'{F}spqr.svg" alt="" height="18"> **Latine** · '
-        f'{F}burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · '
-        f'{F}england.svg" alt="" height="18"> **[English](../en/README.md)**'),
+ "en": (f'{F}spqr.svg" alt="" height="18" align="middle"> **[Latine](../la/README.md)** · '
+        f'{F}burgundy.svg" alt="" height="18" align="middle"> **[Español](../es/README.md)** · '
+        f'{F}england.svg" alt="" height="18" align="middle"> **English**'),
+ "es": (f'{F}spqr.svg" alt="" height="18" align="middle"> **[Latine](../la/README.md)** · '
+        f'{F}burgundy.svg" alt="" height="18" align="middle"> **Español** · '
+        f'{F}england.svg" alt="" height="18" align="middle"> **[English](../en/README.md)**'),
+ "la": (f'{F}spqr.svg" alt="" height="18" align="middle"> **Latine** · '
+        f'{F}burgundy.svg" alt="" height="18" align="middle"> **[Español](../es/README.md)** · '
+        f'{F}england.svg" alt="" height="18" align="middle"> **[English](../en/README.md)**'),
 }
 
 

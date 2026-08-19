@@ -7,7 +7,7 @@ Profile page in Latin
 
 <div align="center">
 
-<img src="../../assets/flags/spqr.svg" alt="" height="18"> **Latine** · <img src="../../assets/flags/burgundy.svg" alt="" height="18"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.svg" alt="" height="18"> **[English](../en/README.md)**
+<img src="../../assets/flags/spqr.svg" alt="" height="18" align="middle"> **Latine** · <img src="../../assets/flags/burgundy.svg" alt="" height="18" align="middle"> **[Español](../es/README.md)** · <img src="../../assets/flags/england.svg" alt="" height="18" align="middle"> **[English](../en/README.md)**
 
 # <span title="Franco Gutiérrez">𝕱𝖗𝖆𝖓𝖈𝖔 𝕲𝖚𝖙𝖎𝖊́𝖗𝖗𝖊𝖟</span>
 
