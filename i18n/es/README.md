@@ -141,25 +141,6 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 </details>
 
----
-
-<details>
-<summary>Estadísticas</summary>
-
-<div align="center">
-
-<a href="https://github.com/guterion"><img src="https://streak-stats.demolab.com/?user=guterion&amp;theme=radical&amp;border=7F3FBF&amp;background=0D1117" alt="Racha de GitHub"></a>
-
-<a href="https://github.com/guterion"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=guterion&amp;theme=radical" alt="Contribuciones de GitHub"></a>
-
-<a href="https://github.com/guterion"><img src="https://denvercoder1-github-readme-stats.vercel.app/api?username=guterion&amp;show_icons=true&amp;count_private=true&amp;theme=react&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=F85D7F&amp;icon_color=F8D866" height="192" width="49%" alt="Estadísticas de GitHub"></a> <a href="https://github.com/guterion"><img src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=guterion&amp;langs_count=8&amp;layout=compact&amp;theme=react&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=F85D7F&amp;icon_color=F8D866" height="192" width="49%" alt="Lenguajes más usados"></a>
-
-<a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=guterion&amp;bg_color=000000&amp;color=5cbc97&amp;line=48b184&amp;point=403d3d&amp;area=true&amp;hide_border=true" alt="Actividad en GitHub"></a>
-
-</div>
-
-</details>
-
 <div align="center">
 
 <a href="https://institutonacional.cl/"><img src="../../assets/stamps/instituto-nacional.gif" width="99" height="56" alt="Instituto Nacional"></a> <a href="https://www.uchile.cl/"><img src="../../assets/stamps/uchile.gif" width="99" height="56" alt="Universidad de Chile"></a> <a href="https://ingenieria.uchile.cl/"><img src="../../assets/stamps/fcfm.gif" width="99" height="56" alt="FCFM UChile"></a> <a href="https://www.dcc.uchile.cl/"><img src="../../assets/stamps/dcc.gif" width="99" height="56" alt="DCC UChile"></a> <a href="https://www.linux.org/"><img src="../../assets/stamps/gnu-linux.gif" width="99" height="56" alt="GNU/Linux"></a> <a href="https://www.gentoo.org/"><img src="../../assets/stamps/gentoo.gif" width="99" height="56" alt="Gentoo"></a> <a href="https://www.openbsd.org/"><img src="../../assets/stamps/openbsd.gif" width="99" height="56" alt="OpenBSD"></a>
@@ -171,6 +152,17 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 </div>
 
 ---
+
+<details>
+<summary><sub>Estadísticas</sub></summary>
+
+<p align="center">
+<a href="https://github.com/guterion?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fguterion&amp;query=%24.public_repos&amp;label=Repositorios&amp;color=3a3f4b&amp;style=flat-square" height="20" alt="Repositorios públicos"></a>
+<a href="https://github.com/guterion?tab=followers"><img src="https://img.shields.io/github/followers/guterion?label=Seguidores&amp;color=3a3f4b&amp;style=flat-square" height="20" alt="Seguidores en GitHub"></a>
+<a href="https://github.com/guterion?tab=repositories"><img src="https://img.shields.io/github/stars/guterion?label=Estrellas&amp;color=3a3f4b&amp;style=flat-square" height="20" alt="Estrellas en GitHub"></a>
+</p>
+
+</details>
 
 <div align="center">
 

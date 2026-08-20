@@ -12,7 +12,7 @@ Social badge: ORCID
     <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
     <stop offset="1" stop-opacity=".12"/>
   </linearGradient>
-  <rect width="93" height="20" rx="2" fill="#3a3f4b"/>
+  <rect width="93" height="20" rx="2" fill="#a6ce39"/>
   <rect width="93" height="20" rx="2" fill="url(#g)"/>
   <image x="7" y="2.0" width="16" height="16"
          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEUAAACmzjmmzjmmzjmmzjmmzjn////0+ebj8MHe7bXT55y82mus0UWmzjmSwCmNJ4LqAAAABnRSTlMAIGC/z+8mlFLTAAAAYElEQVR42m2PWw7AIAgEEdA+l/sft4Km1tj5IUwIsOSwoCJMjaToaIo+o5yGILtRDAElYgBmLm43TIKYKJW9KiF0Ybi2A8BH4CqT8Po7IfMOIZ6vcDw20Pb6S05ruCX+A9I+CQ+hA8ZPAAAAAElFTkSuQmCC"/>
