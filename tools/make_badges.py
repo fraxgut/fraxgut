@@ -49,6 +49,7 @@ font = ImageFont.truetype(FONT, 10)
 H = 20
 MARK = 12                 # Height of the logotype inside the badge.
 PAD = 7
+MARK_COLUMN = 18          # Fixed column keeps every label on one axis.
 
 
 def embed(name):
@@ -65,9 +66,8 @@ def mark_height(mark):
     return 16 if mark == "orcid" else MARK
 
 
-def measure(label, mark, mark_ratio):
-    return PAD + max(1, round(mark_height(mark) * mark_ratio)) + 7 + \
-        int(font.getlength(label)) + PAD
+def measure(label):
+    return PAD + MARK_COLUMN + 7 + int(font.getlength(label)) + PAD
 
 
 def badge(name, label, colour, mark, mark_ratio, text_colour="#ffffff"):
@@ -94,7 +94,7 @@ Social badge: {label}
   <rect width="{total}" height="{H}" rx="2" fill="url(#g)"/>
   <image x="{PAD}" y="{(H - mark_h) / 2}" width="{mark_w}" height="{mark_h}"
          href="{embed(mark)}"/>
-  <text x="{PAD + mark_w + 7}" y="14" fill="{text_colour}" font-size="10"
+  <text x="{PAD + MARK_COLUMN + 7}" y="14" fill="{text_colour}" font-size="10"
         font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
         font-weight="bold">{x.escape(label)}</text>
 </svg>
@@ -117,8 +117,7 @@ SET = [
     ("email-la", "EPISTULA", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg-la", "CLAVIS", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
 ]
-WIDTH = max(measure(lbl, mark, ratio)
-            for _, lbl, _, mark, ratio, _ in SET)
+WIDTH = max(measure(lbl) for _, lbl, _, _, _, _ in SET)
 print(f"  one width for all: {WIDTH}px")
 for name, lbl, colour, mark, ratio, tc in SET:
     badge(name, lbl, colour, mark, ratio, tc)

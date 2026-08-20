@@ -5,18 +5,18 @@ assets/badges/gpg.svg
 CC-BY-SA-4.0
 Social badge: GPG
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="93" height="20"
+<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20"
      role="img" aria-label="GPG">
   <title>GPG</title>
   <linearGradient id="g" x2="0" y2="100%">
     <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
     <stop offset="1" stop-opacity=".12"/>
   </linearGradient>
-  <rect width="93" height="20" rx="2" fill="#3a3f4b"/>
-  <rect width="93" height="20" rx="2" fill="url(#g)"/>
+  <rect width="99" height="20" rx="2" fill="#3a3f4b"/>
+  <rect width="99" height="20" rx="2" fill="url(#g)"/>
   <image x="7" y="4.0" width="11" height="12"
          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAsCAYAAAAXb/p7AAADv0lEQVR4nNWYy4sdRRTGf6dvT3SUxAQ3KhJcSFBXvtDZBFEM6kJ04x/gItkEYRauJeL/4EKI+heIiBsf4EIQXUUUIlnoIuDgSsNMjJn76M9FnTO3pu+d++jueyEfFNXdVfWdr069TrXRApIKoABkZqNaWQ8woDKzqqkNayjMgCIX5YKO++u+mf1Xq29NhC4tUFIvhEl6GHgLOAs8Bjzo1W4CvwE/AJ+Z2S/1tiuBewlJD0n6WNKu5mMo6WtJW962cI+uTNwrknYyAfuSbruQQJV9Dwwkba9EZCbufGawXxMlSf94yr+PXFzl7x9JsuDsUty5zGAu4FdJ70p6TtIpT09IelvSVzWhfX++5JxlW3GF9/YBSX+5F4ae9yVtSzo2h+M1SX9O8ebLuQOaCgzvfZoNaxh5IatXZp0xfy6V9slYVL87x8Dza5I2o00TcZaR38yESePJvjGPXNKG51tKCyfneT13xLICS8+3nWzf86uSep4W6nnG9Ylz3PZh/nyewGIWr+dna++XfbM1M9Nks6M0yoAPgQooSYfEM5I2zWx0VGdnCawk3Q087qQG7APfOdkyx1bUvQpcd64BcD/wiJctLlBSeOde4IzXi9X6h5ct6j28vpnZv8CO820Am8DpWQLnTfAS2HIygCHwo5kNFhU3hfMp4CSpgwZcMbMbmVPuLMxdhfUV1jYa8b0xt1vN8tyEwEabZoe444b5kLfceyfwML5evmKEvT0zG8bH2OFjBd0HXPF83QiBbwDfy6PverhjpM3zeL31GrGRv0yLxwak3qx7iCvGU+sA0wQaY2HLCgzyJh3L7R5g1lm8DASMMiMjljurj0QXAmMq9IBbwA1/nhiuJmgrMMTtABdId+NHgTeBn7ysvSez6PmUpL89qIxb2FGoPO1IOj2Fs5T0jdet3/6mYeT5i96+B+08GDHie2Z2XdJdGt9Jjvlm+w7Qb2OnaUOR5tke8KWPQN/M5KnvQcE10sYfC2dtAgNDUpQ9C7faGGgqMDxyEnjej8mDsMy9B+lUeprk8Ua22ngw9rwPJBVmNsxCtfjVdol0rsd8XavAwg0/C3zhF6yDX2yS3gcukjzd+O9B2zlopOE7B9wTlyMve7UlN9DNSWLALpOnxl4H3J2dxT2g8MUReSe/19r9/hpDpEi4Im3MSBrObrIY2gqM+XYC+NZFxbx80stajVJXHiwZ/8Opo1XQO01g5WmZiFpMRi31++88RPuZEXV+q1sWbRdF2DykqYRDl+Vd4KV6pTXjZ887ichXjv8BlFebOKamHcYAAAAASUVORK5CYII="/>
-  <text x="25" y="14" fill="#ffffff" font-size="10"
+  <text x="32" y="14" fill="#ffffff" font-size="10"
         font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
         font-weight="bold">GPG</text>
 </svg>
