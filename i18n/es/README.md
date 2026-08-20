@@ -1,6 +1,6 @@
 <!--
 i18n/es/README.md
-@fraxgut
+@guterion
 CC-BY-SA-4.0
 Profile page in Spanish
 -->
@@ -23,9 +23,10 @@ Profile page in Spanish
 
 ## Sobre mí
 
-Estudio Ingeniería Civil en Computación en la **Universidad de
-Chile**, en el Departamento de Ciencias de la Computación (**DCC**) de
-la Facultad de Ciencias Físicas y Matemáticas (**FCFM**).
+Soy Franco Gutiérrez. Estudio Ingeniería Civil en Computación en la
+**Universidad de Chile**, en el Departamento de Ciencias de la
+Computación (**DCC**) de la Facultad de Ciencias Físicas y Matemáticas
+(**FCFM**).
 
 Mis principales intereses son los sistemas, el software libre y de
 código abierto, los sistemas operativos tipo Unix y la ingeniería de
@@ -64,21 +65,21 @@ en [**Venturas**](https://venturas.cl/).
 <b>gentoo-musl-install-guide</b><br>
 Documentación avanzada de instalación de Gentoo para sistemas musl en AMD64,
 que cubre OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO y el kernel Zen.<br>
-<a href="https://github.com/fraxgut/gentoo-musl-install-guide"><b>fraxgut/gentoo-musl-install-guide &rarr;</b></a>
+<a href="https://github.com/guterion/gentoo-musl-install-guide"><b>guterion/gentoo-musl-install-guide &rarr;</b></a>
 </td>
 </tr>
 <tr>
-<td width="96" align="center"><a href="https://github.com/fraxgut/phosphor"><img src="../../assets/logos/phosphorus.svg" width="44" alt="El signo alquímico del fósforo"></a></td>
+<td width="96" align="center"><a href="https://github.com/guterion/phosphor"><img src="../../assets/logos/phosphorus.svg" width="44" alt="El signo alquímico del fósforo"></a></td>
 <td>
 <b>phosphor</b><br>
 Una paleta de color para terminal sobre una rampa neutra cálida, como
 esquemas Base16 y Base24, en diecisiete variantes.<br>
-<a href="https://github.com/fraxgut/phosphor"><b>fraxgut/phosphor &rarr;</b></a>
+<a href="https://github.com/guterion/phosphor"><b>guterion/phosphor &rarr;</b></a>
 </td>
 </tr>
 </table>
 
-[**Todos los repositorios públicos →**](https://github.com/fraxgut?tab=repositories)
+[**Todos los repositorios públicos →**](https://github.com/guterion?tab=repositories)
 
 ## Empresas
 
@@ -101,16 +102,16 @@ Donde mantengo mis proyectos comerciales.<br>
 <td><a href="mailto:franco.gutierrez.1@ug.uchile.cl">franco.gutierrez.1@ug.uchile.cl</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/fraxgut.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clave GPG"></a></td>
+<td><a href="https://github.com/guterion.gpg"><img src="../../assets/badges/gpg.svg" height="20" alt="Clave GPG"></a></td>
 <td><code>83EB 6096 ECF3 75F4 1E08&nbsp; 4AFA 464F 905B 27A2 BA82</code></td>
 </tr>
 <tr>
-<td><a href="https://www.linkedin.com/in/fraxgut"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
-<td><a href="https://www.linkedin.com/in/fraxgut">linkedin.com/in/fraxgut</a></td>
+<td><a href="https://www.linkedin.com/in/guterion"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
+<td><a href="https://www.linkedin.com/in/guterion">linkedin.com/in/guterion</a></td>
 </tr>
 <tr>
-<td><a href="https://x.com/fraxgut"><img src="../../assets/badges/x.svg" height="20" alt="X"></a></td>
-<td><a href="https://x.com/fraxgut">x.com/fraxgut</a></td>
+<td><a href="https://x.com/guterion"><img src="../../assets/badges/x.svg" height="20" alt="X"></a></td>
+<td><a href="https://x.com/guterion">x.com/guterion</a></td>
 </tr>
 </table>
 
@@ -125,8 +126,8 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 <table>
 <tr>
-<td><a href="https://liberapay.com/fraxgut/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
-<td><a href="https://liberapay.com/fraxgut/">liberapay.com/fraxgut</a></td>
+<td><a href="https://liberapay.com/guterion/"><img src="../../assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
+<td><a href="https://liberapay.com/guterion/">liberapay.com/guterion</a></td>
 </tr>
 <tr>
 <td><b>Monero</b></td>
@@ -152,6 +153,6 @@ El correo es la mejor forma de contactarme. Respondo apenas puedo.
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITAS&color=47d813&style=for-the-badge" height="28" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/badges/cc-by-sa.png" height="28" alt="Licencia: CC BY-SA 4.0 o posterior"></a>
+<img src="https://komarev.com/ghpvc/?username=guterion&label=VISITAS&color=47d813&style=for-the-badge" height="28" alt="Contador de visitas"> <a href="../../LICENCE.md"><img src="../../assets/badges/cc-by-sa.png" height="28" alt="Licencia: CC BY-SA 4.0 o posterior"></a>
 
 </div>

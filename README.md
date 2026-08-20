@@ -1,6 +1,6 @@
 <!--
 README.md
-@fraxgut
+@guterion
 CC-BY-SA-4.0
 Profile page in English
 -->
@@ -23,7 +23,7 @@ Profile page in English
 
 ## About
 
-I study Computer Science and Engineering at the
+I'm Franco Gutiérrez. I study Computer Science and Engineering at the
 **University of Chile**, in the Department of Computer Science
 (**DCC**) of the Faculty of Physical and Mathematical Sciences
 (**FCFM**).
@@ -65,21 +65,21 @@ primary focus, alongside personal software projects and my work at
 <b>gentoo-musl-install-guide</b><br>
 Advanced Gentoo installation documentation for AMD64 musl systems, covering
 OpenRC, LUKS2, Btrfs, LLVM/Clang, ThinLTO, and the Zen kernel.<br>
-<a href="https://github.com/fraxgut/gentoo-musl-install-guide"><b>fraxgut/gentoo-musl-install-guide &rarr;</b></a>
+<a href="https://github.com/guterion/gentoo-musl-install-guide"><b>guterion/gentoo-musl-install-guide &rarr;</b></a>
 </td>
 </tr>
 <tr>
-<td width="96" align="center"><a href="https://github.com/fraxgut/phosphor"><img src="assets/logos/phosphorus.svg" width="44" alt="The alchemical sign of phosphorus"></a></td>
+<td width="96" align="center"><a href="https://github.com/guterion/phosphor"><img src="assets/logos/phosphorus.svg" width="44" alt="The alchemical sign of phosphorus"></a></td>
 <td>
 <b>phosphor</b><br>
 A terminal colour palette on a warm neutral ramp, as Base16 and Base24
 schemes, in seventeen variants.<br>
-<a href="https://github.com/fraxgut/phosphor"><b>fraxgut/phosphor &rarr;</b></a>
+<a href="https://github.com/guterion/phosphor"><b>guterion/phosphor &rarr;</b></a>
 </td>
 </tr>
 </table>
 
-[**All public repositories →**](https://github.com/fraxgut?tab=repositories)
+[**All public repositories →**](https://github.com/guterion?tab=repositories)
 
 ## Enterprises
 
@@ -102,16 +102,16 @@ Where I keep my commercial projects.<br>
 <td><a href="mailto:franco.gutierrez.1@ug.uchile.cl">franco.gutierrez.1@ug.uchile.cl</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/fraxgut.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key"></a></td>
+<td><a href="https://github.com/guterion.gpg"><img src="assets/badges/gpg.svg" height="20" alt="GPG key"></a></td>
 <td><code>83EB 6096 ECF3 75F4 1E08&nbsp; 4AFA 464F 905B 27A2 BA82</code></td>
 </tr>
 <tr>
-<td><a href="https://www.linkedin.com/in/fraxgut"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
-<td><a href="https://www.linkedin.com/in/fraxgut">linkedin.com/in/fraxgut</a></td>
+<td><a href="https://www.linkedin.com/in/guterion"><img src="assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
+<td><a href="https://www.linkedin.com/in/guterion">linkedin.com/in/guterion</a></td>
 </tr>
 <tr>
-<td><a href="https://x.com/fraxgut"><img src="assets/badges/x.svg" height="20" alt="X"></a></td>
-<td><a href="https://x.com/fraxgut">x.com/fraxgut</a></td>
+<td><a href="https://x.com/guterion"><img src="assets/badges/x.svg" height="20" alt="X"></a></td>
+<td><a href="https://x.com/guterion">x.com/guterion</a></td>
 </tr>
 </table>
 
@@ -126,8 +126,8 @@ Email is the best way to reach me. I answer as soon as I can.
 
 <table>
 <tr>
-<td><a href="https://liberapay.com/fraxgut/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
-<td><a href="https://liberapay.com/fraxgut/">liberapay.com/fraxgut</a></td>
+<td><a href="https://liberapay.com/guterion/"><img src="assets/badges/liberapay.svg" height="20" alt="Liberapay"></a></td>
+<td><a href="https://liberapay.com/guterion/">liberapay.com/guterion</a></td>
 </tr>
 <tr>
 <td><b>Monero</b></td>
@@ -153,6 +153,6 @@ Email is the best way to reach me. I answer as soon as I can.
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=fraxgut&label=VISITORS&color=47d813&style=for-the-badge" height="28" alt="Visitor count"> <a href="LICENCE.md"><img src="assets/badges/cc-by-sa.png" height="28" alt="Licence: CC BY-SA 4.0 or later"></a>
+<img src="https://komarev.com/ghpvc/?username=guterion&label=VISITORS&color=47d813&style=for-the-badge" height="28" alt="Visitor count"> <a href="LICENCE.md"><img src="assets/badges/cc-by-sa.png" height="28" alt="Licence: CC BY-SA 4.0 or later"></a>
 
 </div>

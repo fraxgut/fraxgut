@@ -15,7 +15,7 @@ grounds. That is the eight-neighbour colouring of a king graph, which
 needs four colours at minimum. The script verifies the result and stops
 rather than writing a clash.
 
-Colours come from Phosphor Base24 (github.com/fraxgut/phosphor).
+Colours come from Phosphor Base24 (github.com/guterion/phosphor).
 """
 
 import colorsys

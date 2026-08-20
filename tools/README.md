@@ -1,6 +1,6 @@
 <!--
 tools/README.md
-@fraxgut
+@guterion
 CC-BY-SA-4.0
 How to rebuild the assets and the translated pages
 -->

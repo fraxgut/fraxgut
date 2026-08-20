@@ -1,6 +1,6 @@
 <!--
 LICENCE.md
-@fraxgut
+@guterion
 CC-BY-SA-4.0
 Licence terms for the profile content and the original assets
 -->
@@ -32,7 +32,7 @@ of any later version that Creative Commons publishes.
 
 ## Original assets
 
-The following assets are original work by @fraxgut and they carry the
+The following assets are original work by @guterion and they carry the
 licence above:
 
 | Asset                              | Description                        |

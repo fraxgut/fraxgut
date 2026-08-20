@@ -73,7 +73,7 @@ def badge(name, label, colour, mark, mark_ratio, text_colour="#ffffff"):
     svg = f'''<?xml version="1.0" encoding="UTF-8"?>
 <!--
 assets/badges/{name}.svg
-@fraxgut
+@guterion
 CC-BY-SA-4.0
 Social badge: {label}
 -->

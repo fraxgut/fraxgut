@@ -54,8 +54,8 @@ def build(lang, pairs):
     s = s.replace('src="assets/', 'src="../../assets/')
     s = s.replace('href="LICENCE.md"', 'href="../../LICENCE.md"')
     s = s.replace("@@SEL@@", SELECTOR[lang])
-    s = s.replace("README.md\n@fraxgut\nCC-BY-SA-4.0\nProfile page in English",
-                  f"i18n/{lang}/README.md\n@fraxgut\nCC-BY-SA-4.0\n"
+    s = s.replace("README.md\n@guterion\nCC-BY-SA-4.0\nProfile page in English",
+                  f"i18n/{lang}/README.md\n@guterion\nCC-BY-SA-4.0\n"
                   f"Profile page in {NAMES[lang]}")
     missing = [o for o, _ in pairs if o not in s]
     for old, new in pairs:
@@ -71,8 +71,8 @@ ES = [
  ("Computer Science and Engineering student at the University of Chile (DCC/FCFM).**\n\n*Focused on systems, open source, Unix-like systems, and software engineering.*",
   "Estudiante de Ingeniería Civil en Computación en la Universidad de Chile (DCC/FCFM).**\n\n*Enfocado en sistemas, código abierto, sistemas tipo Unix e ingeniería de software.*"),
  ("## About", "## Sobre mí"),
- ("I study Computer Science and Engineering at the\n**University of Chile**, in the Department of Computer Science\n(**DCC**) of the Faculty of Physical and Mathematical Sciences\n(**FCFM**).",
-  "Estudio Ingeniería Civil en Computación en la **Universidad de\nChile**, en el Departamento de Ciencias de la Computación (**DCC**) de\nla Facultad de Ciencias Físicas y Matemáticas (**FCFM**)."),
+ ("I'm Franco Gutiérrez. I study Computer Science and Engineering at the\n**University of Chile**, in the Department of Computer Science\n(**DCC**) of the Faculty of Physical and Mathematical Sciences\n(**FCFM**).",
+  "Soy Franco Gutiérrez. Estudio Ingeniería Civil en Computación en la\n**Universidad de Chile**, en el Departamento de Ciencias de la\nComputación (**DCC**) de la Facultad de Ciencias Físicas y Matemáticas\n(**FCFM**)."),
  ("My main interests are systems, free and open-source software,\nUnix-like operating systems, and software engineering. I tend to work\nfrom the shell, primarily with **Neovim**.",
   "Mis principales intereses son los sistemas, el software libre y de\ncódigo abierto, los sistemas operativos tipo Unix y la ingeniería de\nsoftware. Suelo trabajar desde la shell, principalmente con **Neovim**."),
  ("## Currently", "## Actualmente"),
@@ -118,8 +118,8 @@ LA = [
  ("Computer Science and Engineering student at the University of Chile (DCC/FCFM).**\n\n*Focused on systems, open source, Unix-like systems, and software engineering.*",
   "Discipulus scientiae computatralis in Universitate Chilensi (DCC/FCFM).**\n\n*Studens systematibus, fonti aperto, systematibus generis Unix et arti ingeniariae programmaturae.*"),
  ("## About", "## De me"),
- ("I study Computer Science and Engineering at the\n**University of Chile**, in the Department of Computer Science\n(**DCC**) of the Faculty of Physical and Mathematical Sciences\n(**FCFM**).",
-  "Scientiae computatrali in **Universitate Chilensi** studeo, in\nDepartimento Scientiarum Computatralium (**DCC**) Facultatis\nScientiarum Physicarum et Mathematicarum (**FCFM**)."),
+ ("I'm Franco Gutiérrez. I study Computer Science and Engineering at the\n**University of Chile**, in the Department of Computer Science\n(**DCC**) of the Faculty of Physical and Mathematical Sciences\n(**FCFM**).",
+  "Franco Gutiérrez sum. Scientiae computatrali in **Universitate\nChilensi** studeo, in Departimento Scientiarum Computatralium (**DCC**)\nFacultatis Scientiarum Physicarum et Mathematicarum (**FCFM**)."),
  ("My main interests are systems, free and open-source software,\nUnix-like operating systems, and software engineering. I tend to work\nfrom the shell, primarily with **Neovim**.",
   "Praecipue me tenent systemata, programmatura libera et aperta,\nsystemata operandi generis Unix, et ars ingeniaria programmaturae.\nPlerumque e cortice imperatorio laboro, **Neovim** utens."),
  ("## Currently", "## Nunc"),
