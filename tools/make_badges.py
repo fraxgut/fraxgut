@@ -44,6 +44,11 @@ os.makedirs(OUT, exist_ok=True)
 FONT = "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf"
 font = ImageFont.truetype(FONT, 10)
 
+WEB_BADGES = {
+    "venturas": ("FRANKOVIA Venturas SpA", "Lumen"),
+    "guterion-net": ("@guterion", "Terminal"),
+}
+
 # Twenty pixels is the height a Markdown list bullet sits level with; a
 # taller badge leaves the bullet stranded at its middle.
 H = 20
@@ -75,14 +80,19 @@ def badge(name, label, colour, mark, mark_ratio, text_colour="#ffffff"):
     mark_h = mark_height(mark)
     mark_w = max(1, round(mark_h * mark_ratio))
     total = WIDTH
+    web_badge = WEB_BADGES.get(name)
+    author, theme = web_badge or ("@guterion", None)
+    hallmark = "" if theme is None else f'''Hallmark · component: badge · genre: atmospheric · theme: {theme}
+Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V5
+'''
 
     svg = f'''<?xml version="1.0" encoding="UTF-8"?>
 <!--
 assets/badges/{name}.svg
-@guterion
+{author}
 CC-BY-SA-4.0
-Social badge: {label}
--->
+{"Web" if web_badge else "Social"} badge: {label}
+{hallmark}-->
 <svg xmlns="http://www.w3.org/2000/svg" width="{total}" height="{H}"
      role="img" aria-label="{x.escape(label)}">
   <title>{x.escape(label)}</title>
@@ -117,6 +127,8 @@ SET = [
     ("email-es", "CORREO", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("email-la", "EPISTULA", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg-la", "CLAVIS", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
+    ("venturas", "venturas", "#20211f", "venturas", 90 / 134, "#f0b82d"),
+    ("guterion-net", "Mi Portal", "#073832", "web", 1, "#65f7cf"),
 ]
 WIDTH = max(measure(lbl) for _, lbl, _, _, _, _ in SET)
 print(f"  one width for all: {WIDTH}px")
