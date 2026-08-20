@@ -56,6 +56,13 @@ the icon without changes and follows the ORCID iD display guidelines:
 
 <https://info.orcid.org/documentation/integration-guide/orcid-id-display-guidelines/>
 
+The Forgejo logo in `tools/marks/forgejo.png` and
+`assets/badges/git.svg` comes from the official Forgejo source. Forgejo
+and its logo belong to their owners. This licence grants no rights in
+the mark:
+
+<https://code.forgejo.org/forgejo/forgejo/src/branch/forgejo/assets/logo.svg>
+
 `assets/logos/openbsd.png` is Puffy, by Ty Semaka for the OpenBSD
 project, published under the Creative Commons Attribution 1.0 licence:
 

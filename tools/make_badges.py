@@ -109,6 +109,7 @@ Social badge: {label}
 SET = [
     ("email", "EMAIL", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg", "GPG", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
+    ("git", "GIT", "#3a3f4b", "forgejo", 1, "#ffffff"),
     ("orcid", "ORCID", "#a6ce39", "orcid", 1, "#ffffff"),
     ("linkedin", "LINKEDIN", "#0a66c2", "linkedin", 160 / 158, "#ffffff"),
     ("x", "X", "#1c1f24", "x", 160 / 145, "#ffffff"),
