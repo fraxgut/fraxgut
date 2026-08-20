@@ -127,8 +127,8 @@ SET = [
     ("email-es", "CORREO", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("email-la", "EPISTULA", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg-la", "CLAVIS", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
-    ("venturas", "venturas", "#20211f", "venturas", 90 / 134, "#f0b82d"),
-    ("guterion-net", "Mi Portal", "#073832", "web", 1, "#65f7cf"),
+    ("venturas", "VENTURAS", "#20211f", "venturas", 90 / 134, "#f0b82d"),
+    ("guterion-net", "MI PORTAL", "#073832", "web", 1, "#65f7cf"),
 ]
 WIDTH = max(measure(lbl) for _, lbl, _, _, _, _ in SET)
 print(f"  one width for all: {WIDTH}px")
