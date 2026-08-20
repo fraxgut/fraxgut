@@ -43,6 +43,7 @@ A new phrase needs an entry in the `ES` and `LA` dictionaries inside
 
 ## Marks
 
-`tools/marks/` holds the white silhouettes that the badges embed.
+`tools/marks/` holds the marks that the badges embed. Most marks are
+white silhouettes. The ORCID mark keeps its official colours.
 `assets/logos/` holds the logotypes. `LICENCE.md` records the source of
 each one.

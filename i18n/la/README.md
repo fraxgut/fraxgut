@@ -105,6 +105,10 @@ Ubi opera mea mercatoria servo.<br>
 <td><code>83EB 6096 ECF3 75F4 1E08&nbsp; 4AFA 464F 905B 27A2 BA82</code></td>
 </tr>
 <tr>
+<td><a href="https://orcid.org/0009-0000-3485-5937" aria-label="Vide tabulam ORCID - 0009-0000-3485-5937"><img src="../../assets/badges/orcid.svg" height="20" alt="ORCID iD"></a></td>
+<td><a href="https://orcid.org/0009-0000-3485-5937" aria-label="Vide tabulam ORCID - 0009-0000-3485-5937">0009-0000-3485-5937</a></td>
+</tr>
+<tr>
 <td><a href="https://www.linkedin.com/in/guterion"><img src="../../assets/badges/linkedin.svg" height="20" alt="LinkedIn"></a></td>
 <td><a href="https://www.linkedin.com/in/guterion">linkedin.com/in/guterion</a></td>
 </tr>
@@ -137,6 +141,23 @@ Epistula optima via est ad me contingendum. Respondeo cum primum possum.
 </details>
 
 ---
+
+<details>
+<summary>Statistica</summary>
+
+<div align="center">
+
+<a href="https://github.com/guterion"><img src="https://streak-stats.demolab.com/?user=guterion&amp;theme=radical&amp;border=7F3FBF&amp;background=0D1117" alt="Series GitHub"></a>
+
+<a href="https://github.com/guterion"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=guterion&amp;theme=radical" alt="Contributiones GitHub"></a>
+
+<a href="https://github.com/guterion"><img src="https://denvercoder1-github-readme-stats.vercel.app/api?username=guterion&amp;show_icons=true&amp;count_private=true&amp;theme=react&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=F85D7F&amp;icon_color=F8D866" height="192" width="49%" alt="Statistica GitHub"></a> <a href="https://github.com/guterion"><img src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=guterion&amp;langs_count=8&amp;layout=compact&amp;theme=react&amp;border_color=7F3FBF&amp;bg_color=0D1117&amp;title_color=F85D7F&amp;icon_color=F8D866" height="192" width="49%" alt="Linguae maxime usitatae"></a>
+
+<a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=guterion&amp;bg_color=000000&amp;color=5cbc97&amp;line=48b184&amp;point=403d3d&amp;area=true&amp;hide_border=true" alt="Acta GitHub"></a>
+
+</div>
+
+</details>
 
 <div align="center">
 

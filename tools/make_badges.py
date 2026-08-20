@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the social badges, each carrying its own logotype.
 
-A badge is twenty-eight pixels tall: the mark on a field in the brand's
+A badge is 20 pixels tall: the mark on a field in the brand's
 own colour, then the name. The mark travels inside the file as a data
 URI, so the badge needs no other host.
 """
@@ -60,14 +60,20 @@ def embed(name):
 WIDTH = 0                 # Filled in below: the widest badge sets them all.
 
 
-def measure(label, mark_ratio):
-    return PAD + max(1, round(MARK * mark_ratio)) + 7 + \
+def mark_height(mark):
+    """Use the minimum size that the ORCID display rules permit."""
+    return 16 if mark == "orcid" else MARK
+
+
+def measure(label, mark, mark_ratio):
+    return PAD + max(1, round(mark_height(mark) * mark_ratio)) + 7 + \
         int(font.getlength(label)) + PAD
 
 
 def badge(name, label, colour, mark, mark_ratio, text_colour="#ffffff"):
     """Compose one badge: field, mark, then the name, at the set width."""
-    mark_w = max(1, round(MARK * mark_ratio))
+    mark_h = mark_height(mark)
+    mark_w = max(1, round(mark_h * mark_ratio))
     total = WIDTH
 
     svg = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +92,7 @@ Social badge: {label}
   </linearGradient>
   <rect width="{total}" height="{H}" rx="2" fill="{colour}"/>
   <rect width="{total}" height="{H}" rx="2" fill="url(#g)"/>
-  <image x="{PAD}" y="{(H - MARK) / 2}" width="{mark_w}" height="{MARK}"
+  <image x="{PAD}" y="{(H - mark_h) / 2}" width="{mark_w}" height="{mark_h}"
          href="{embed(mark)}"/>
   <text x="{PAD + mark_w + 7}" y="14" fill="{text_colour}" font-size="10"
         font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
@@ -103,6 +109,7 @@ Social badge: {label}
 SET = [
     ("email", "EMAIL", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg", "GPG", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
+    ("orcid", "ORCID", "#3a3f4b", "orcid", 1, "#ffffff"),
     ("linkedin", "LINKEDIN", "#0a66c2", "linkedin", 160 / 158, "#ffffff"),
     ("x", "X", "#1c1f24", "x", 160 / 145, "#ffffff"),
     ("liberapay", "LIBERAPAY", "#f6c915", "liberapay", 125 / 160, "#1a1a1a"),
@@ -110,9 +117,8 @@ SET = [
     ("email-la", "EPISTULA", "#2f6f3a", "email", 44 / 30, "#ffffff"),
     ("gpg-la", "CLAVIS", "#3a3f4b", "gpg", 40 / 44, "#ffffff"),
 ]
-WIDTH = max(measure(lbl, ratio) for _, lbl, _, _, ratio, _ in SET)
+WIDTH = max(measure(lbl, mark, ratio)
+            for _, lbl, _, mark, ratio, _ in SET)
 print(f"  one width for all: {WIDTH}px")
 for name, lbl, colour, mark, ratio, tc in SET:
     badge(name, lbl, colour, mark, ratio, tc)
-
-

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+assets/badges/orcid.svg
+@guterion
+CC-BY-SA-4.0
+Social badge: ORCID
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="93" height="20"
+     role="img" aria-label="ORCID">
+  <title>ORCID</title>
+  <linearGradient id="g" x2="0" y2="100%">
+    <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
+    <stop offset="1" stop-opacity=".12"/>
+  </linearGradient>
+  <rect width="93" height="20" rx="2" fill="#3a3f4b"/>
+  <rect width="93" height="20" rx="2" fill="url(#g)"/>
+  <image x="7" y="2.0" width="16" height="16"
+         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEUAAACmzjmmzjmmzjmmzjmmzjn////0+ebj8MHe7bXT55y82mus0UWmzjmSwCmNJ4LqAAAABnRSTlMAIGC/z+8mlFLTAAAAYElEQVR42m2PWw7AIAgEEdA+l/sft4Km1tj5IUwIsOSwoCJMjaToaIo+o5yGILtRDAElYgBmLm43TIKYKJW9KiF0Ybi2A8BH4CqT8Po7IfMOIZ6vcDw20Pb6S05ruCX+A9I+CQ+hA8ZPAAAAAElFTkSuQmCC"/>
+  <text x="30" y="14" fill="#ffffff" font-size="10"
+        font-family="DejaVu Sans,Verdana,Geneva,sans-serif"
+        font-weight="bold">ORCID</text>
+</svg>

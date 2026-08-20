@@ -50,6 +50,12 @@ institution it names inside a canton. Those logotypes belong to their
 owners, and this licence grants no rights in them. The composition
 around them is original work.
 
+The ORCID iD icon in `tools/marks/orcid.png` and
+`assets/badges/orcid.svg` is a trademark of ORCID, Inc. The badge uses
+the icon without changes and follows the ORCID iD display guidelines:
+
+<https://info.orcid.org/documentation/integration-guide/orcid-id-display-guidelines/>
+
 `assets/logos/openbsd.png` is Puffy, by Ty Semaka for the OpenBSD
 project, published under the Creative Commons Attribution 1.0 licence:
 
